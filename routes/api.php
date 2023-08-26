@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\PartnerController;
 use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\AreaController;
 use App\Http\Controllers\Api\FavoriteController;
+use App\Http\Controllers\Api\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +79,10 @@ Route::post('partner/edit/{id}', [PartnerController::class, 'edit']);
 Route::get('premium-partners', [PartnerController::class, 'premiumPartners']);
 
 
+//getPartnersByCategory
+Route::get('partners-by-category/{id}', [CategoryController::class, 'getPartnersByCategory']);
+
+
 //city
 Route::get('cities', [CityController::class, 'list']);
 Route::post('city-create', [CityController::class, 'save']);
@@ -102,6 +107,12 @@ Route::get('favorite/delete/{partner_id}/{user_id}', [FavoriteController::class,
 Route::post('partner-fav', [FavoriteController::class, 'isFav']);
 
 
+//reviews
+Route::get('reviews', [ReviewController::class, 'list']);
+Route::post('review-create', [ReviewController::class, 'save']);
+Route::get('review/{id}', [ReviewController::class, 'view']);
+Route::get('review/delete/{id}', [ReviewController::class, 'delete']);
+Route::post('review/edit/{id}', [ReviewController::class, 'edit']);
 
 
     });

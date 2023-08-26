@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Category;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Controllers\ApiController;
 use App\Http\Resources\CategoryResource;
-use App\Http\Resources\CategoryWithSubResource;
+use App\Http\Resources\PartnerResource;
 
 class CategoryController extends ApiController
 {
@@ -31,10 +32,21 @@ class CategoryController extends ApiController
 
     }
 
-    public function getParnersByCategory($id)
+    public function getPartnersByCategory($id)
     {
-        $category = Category::with(['subcategories','subcategories.partners'])->find($id);
-        return $this->returnData('data', new CategoryWithSubResource($category), __('Get successfully'));
+
+        $category = Category::find($id);
+
+        $partners = array(); // the best way right now for each cuze our time i will do it
+        foreach (Partner::all() as $partner) {
+            if ( $partner?->subcategory?->category?->id == $id ) {
+                // dd($service?->subcategory?->parent?->name);
+                array_push($partners, $partner);
+            }
+        }
+        return $this->returnData('data', PartnerResource::collection($partners), __('Get  succesfully'));
+
+
 
     }
 

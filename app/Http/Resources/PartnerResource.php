@@ -65,7 +65,7 @@ class PartnerResource extends JsonResource
             'city'=> $this->area?->city?->name,
             'user'=> new UserResource($this?->user),
 
-            // 'rating'=>(double)$this?->reviews?->avg('points'),
+            'rating'=>(double)$this?->reviews?->avg('points'),
 
             // 'reviews' => ReviewResource::collection($this?->reviews),
         ];
