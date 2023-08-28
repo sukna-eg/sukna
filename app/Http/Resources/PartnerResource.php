@@ -52,12 +52,14 @@ class PartnerResource extends JsonResource
             'period' => $this->period,
             'views' => $this->views,
             'video_url' => $this->video_url,
+            'music_url' => $this->music_url,
             'from' => $this->from,
             'to' => $this->to,
             'direction' => $this->direction,
             'Property' => $this->Property,
             'purpose' => $this->purpose,
             'price' => $this->price,
+            'is_smart' => $this->is_smart,
             'subcategory_id'=> $this->subcategory?->id,
             'subcategory_name'=> $this->subcategory?->name,
             'created_at'=> $this->created_at,
@@ -67,7 +69,7 @@ class PartnerResource extends JsonResource
 
             'rating'=>(double)$this?->reviews?->avg('points'),
 
-            // 'reviews' => ReviewResource::collection($this?->reviews),
+            'images' => PimageResource::collection($this?->images),
         ];
     }
 }

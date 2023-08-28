@@ -26,6 +26,7 @@ class UserResource extends JsonResource
             'image'=> $this?->image,
             'type'=> $this?->type,
             'active'=> $this?->active,
+            // 'partners' => PartnerResource::collection($this->partners),
         ];
     }
 }

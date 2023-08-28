@@ -31,4 +31,14 @@ class Partner extends Model
     {
         return $this->hasMany(Review::class);
     }
+
+    public function images()
+    {
+        return $this->hasMany(Pimage::class);
+    }
+
+    public function appointments()
+    {
+        return $this->hasMany(Appointment::class);
+    }
 }

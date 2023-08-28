@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class SubcategoryResource extends JsonResource
+class AppointmentResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,10 +17,13 @@ class SubcategoryResource extends JsonResource
         return [
 
             'id'=>$this->id,
-            'name'=> $this->name,
-            'category_id'=> $this->category?->id,
-            'category_name'=> $this->category?->name,
-            'partners' => PartnerResource::collection($this->partners),
+            'from'=> $this->from,
+            'to'=> $this->to,
+            'partner_id'=> $this->partner?->id,
+            // 'question'=> $this->question?->question,
+            'user_id'=> $this->user?->id,
+            // 'question'=> $this->question?->question,
+
         ];
     }
 }

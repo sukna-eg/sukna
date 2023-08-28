@@ -18,10 +18,10 @@ return new class extends Migration
             $table->boolean('type');
             $table->boolean('show')->default(0);
             $table->double('space');
-            $table->integer('bedrooms_count');
-            $table->integer('bathrooms_count');
-            $table->string('cladding');
-			$table->string('floor');
+            $table->integer('bedrooms_count')->nullable();
+            $table->integer('bathrooms_count')->nullable();
+            $table->string('cladding')->nullable();
+			$table->string('floor')->nullable();
             $table->boolean('furnished')->default(0);
             $table->double('lat')->nullable();
             $table->double('long')->nullable();
@@ -36,6 +36,7 @@ return new class extends Migration
             $table->date('from')->nullable();
             $table->date('to')->nullable();
             $table->string('video_url')->nullable();
+            $table->string('music_url')->nullable();
             $table->string('direction');
             $table->string('Property');
             $table->string('purpose');

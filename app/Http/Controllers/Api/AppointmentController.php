@@ -1,0 +1,58 @@
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Models\Appointment;
+use App\Models\User;
+use Illuminate\Http\Request;
+use App\Repositories\Repository;
+use App\Http\Requests\AreaRequest;
+use App\Http\Resources\AppointmentResource;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
+use Illuminate\Support\Facades\Auth;
+
+
+class AppointmentController extends ApiController
+{
+    public function __construct()
+    {
+        $this->resource = AppointmentResource::class;
+        $this->model = app(Appointment::class);
+        $this->repositry =  new Repository($this->model);
+    }
+
+
+
+    public function save( Request $request ){
+        return $this->store( $request->all() );
+    }
+
+    public function edit($id,Request $request){
+
+
+        return $this->update($id,$request->all());
+
+    }
+
+    public function myOrders()
+    {
+
+        $ownerId = auth()->user()->id; // Assuming you're using authentication
+
+        $owner = User::with(['partners.appointments'])->find($ownerId);
+        $appointments = array();
+
+        // Now you can access appointments for all partners owned by the owner
+        foreach ($owner->partners as $partner) {
+            foreach ($partner->appointments as $appointment) {
+
+                array_push($appointments, $appointment);
+
+    }
+}
+
+return $this->returnData('data', AppointmentResource::collection($appointments), __('Get  succesfully'));
+
+    }
+}

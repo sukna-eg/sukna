@@ -10,6 +10,14 @@ use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\AreaController;
 use App\Http\Controllers\Api\FavoriteController;
 use App\Http\Controllers\Api\ReviewController;
+use App\Http\Controllers\Api\PimageController;
+use App\Http\Controllers\Api\QuestionController;
+use App\Http\Controllers\Api\AnswerController;
+use App\Http\Controllers\Api\AppointmentController;
+use App\Http\Controllers\Api\ServiceController;
+use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\PrimageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +60,7 @@ Route::get('delete-user/{id}', [AuthController::class, 'delete']);
 Route::middleware('changeLang')->group(function () {
 
     //Category
-Route::get('categories', [CategoryController::class, 'list']);
+Route::get('categories', [CategoryController::class, 'pagination']);
 Route::post('category-create', [CategoryController::class, 'save']);
 Route::get('category/{id}', [CategoryController::class, 'view']);
 Route::get('category/delete/{id}', [CategoryController::class, 'delete']);
@@ -61,7 +69,7 @@ Route::post('category/edit/{id}', [CategoryController::class, 'edit']);
 
 
 //Subcategory
-Route::get('subcategories', [SubcategoryController::class, 'list']);
+Route::get('subcategories', [SubcategoryController::class, 'pagination']);
 Route::post('subcategory-create', [SubcategoryController::class, 'save']);
 Route::get('subcategory/{id}', [SubcategoryController::class, 'view']);
 Route::get('subcategory/delete/{id}', [SubcategoryController::class, 'delete']);
@@ -69,7 +77,7 @@ Route::post('subcategory/edit/{id}', [SubcategoryController::class, 'edit']);
 
 
 //partner
-Route::get('partners', [PartnerController::class, 'list']);
+Route::get('partners', [PartnerController::class, 'partners']);
 Route::post('partner-create', [PartnerController::class, 'save']);
 Route::get('partner/{id}', [PartnerController::class, 'view']);
 Route::get('partner/delete/{id}', [PartnerController::class, 'delete']);
@@ -82,16 +90,44 @@ Route::get('premium-partners', [PartnerController::class, 'premiumPartners']);
 //getPartnersByCategory
 Route::get('partners-by-category/{id}', [CategoryController::class, 'getPartnersByCategory']);
 
+//filter
+Route::post('partners-filter', [PartnerController::class, 'getPartnersOfSubOrCategortInArea']);
+
+//sortAndFilter
+Route::post('sort-filter', [PartnerController::class, 'sortAndFilter']);
+
+//price for filter
+Route::get('partners-prices', [PartnerController::class, 'prices']);
+
+//spaces for filter
+Route::get('partners-spaces', [PartnerController::class, 'spaces']);
+
+//bedrooms for filter
+Route::get('partners-bedrooms', [PartnerController::class, 'bedrooms']);
+
+//bathrooms for filter
+Route::get('partners-bathrooms', [PartnerController::class, 'bathrooms']);
+
+
+//prices range
+Route::get('prices-range', [PartnerController::class, 'getMinAndMaxOfPrice']);
+
+//sortAndFilter
+Route::get('spaces-range', [PartnerController::class, 'getMinAndMaxOfSpace']);
+
+//sortPartnersInCatOrSub
+Route::post('category-sort', [PartnerController::class, 'sortPartnersInCatOrSub']);
+
 
 //city
-Route::get('cities', [CityController::class, 'list']);
+Route::get('cities', [CityController::class, 'pagination']);
 Route::post('city-create', [CityController::class, 'save']);
 Route::get('city/{id}', [CityController::class, 'view']);
 Route::get('city/delete/{id}', [CityController::class, 'delete']);
 Route::post('city/edit/{id}', [CityController::class, 'edit']);
 
 //area
-Route::get('areas', [AreaController::class, 'list']);
+Route::get('areas', [AreaController::class, 'pagination']);
 Route::post('area-create', [AreaController::class, 'save']);
 Route::get('area/{id}', [AreaController::class, 'view']);
 Route::get('area/delete/{id}', [AreaController::class, 'delete']);
@@ -108,12 +144,68 @@ Route::post('partner-fav', [FavoriteController::class, 'isFav']);
 
 
 //reviews
-Route::get('reviews', [ReviewController::class, 'list']);
+Route::get('reviews', [ReviewController::class, 'pagination']);
 Route::post('review-create', [ReviewController::class, 'save']);
 Route::get('review/{id}', [ReviewController::class, 'view']);
 Route::get('review/delete/{id}', [ReviewController::class, 'delete']);
 Route::post('review/edit/{id}', [ReviewController::class, 'edit']);
 
+
+//partner image
+Route::get('images', [PimageController::class, 'pagination']);
+Route::post('image-create', [PimageController::class, 'save']);
+Route::get('image/{id}', [PimageController::class, 'view']);
+Route::get('image/delete/{id}', [PimageController::class, 'delete']);
+Route::post('image/edit/{id}', [PimageController::class, 'edit']);
+
+//question
+Route::get('questions', [QuestionController::class, 'questions']);
+Route::post('question-create', [QuestionController::class, 'save']);
+Route::get('question/{id}', [QuestionController::class, 'view']);
+Route::get('question/delete/{id}', [QuestionController::class, 'delete']);
+Route::post('question/edit/{id}', [QuestionController::class, 'edit']);
+
+
+//answer
+Route::get('answers', [AnswerController::class, 'pagination']);
+Route::post('answer-create', [AnswerController::class, 'save']);
+Route::get('answer/{id}', [AnswerController::class, 'view']);
+Route::get('answer/delete/{id}', [AnswerController::class, 'delete']);
+Route::post('answer/edit/{id}', [AnswerController::class, 'edit']);
+
+//Appointment
+Route::get('appointments', [AppointmentController::class, 'pagination']);
+Route::post('appointment-create', [AppointmentController::class, 'save']);
+Route::get('appointment/{id}', [AppointmentController::class, 'view']);
+Route::get('appointment/delete/{id}', [AppointmentController::class, 'delete']);
+Route::post('appointment/edit/{id}', [AppointmentController::class, 'edit']);
+
+
+//Service
+Route::get('services', [ServiceController::class, 'pagination']);
+Route::post('service-create', [ServiceController::class, 'save']);
+Route::get('service/{id}', [ServiceController::class, 'view']);
+Route::get('service/delete/{id}', [ServiceController::class, 'delete']);
+Route::post('service/edit/{id}', [ServiceController::class, 'edit']);
+
+
+//project
+Route::get('projects', [ProjectController::class, 'pagination']);
+Route::post('project-create', [ProjectController::class, 'save']);
+Route::get('project/{id}', [ProjectController::class, 'view']);
+Route::get('project/delete/{id}', [ProjectController::class, 'delete']);
+Route::post('project/edit/{id}', [ProjectController::class, 'edit']);
+
+//partner image
+Route::get('pimages', [PrimageController::class, 'pagination']);
+Route::post('pimage-create', [PrimageController::class, 'save']);
+Route::get('pimage/{id}', [PrimageController::class, 'view']);
+Route::get('pimage/delete/{id}', [PrimageController::class, 'delete']);
+Route::post('pimage/edit/{id}', [PrimageController::class, 'edit']);
+
+
+//getTrendingServices
+Route::get('trending', [CategoryController::class, 'getTrendingServices']);
 
     });
 
@@ -121,5 +213,8 @@ Route::post('review/edit/{id}', [ReviewController::class, 'edit']);
 
         //myFavorites
 Route::get('my-favorites', [FavoriteController::class, 'myFavorites']);
+
+  //myOrders
+  Route::get('my-orders', [AppointmentController::class, 'myOrders']);
 
     });
