@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Subcategory;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
 use App\Http\Requests\SubcategoryRequest;
 use App\Http\Resources\SubcategoryResource;
+use App\Http\Resources\PartnerResource;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ApiController;
 
@@ -28,5 +30,16 @@ class SubcategoryController extends ApiController
 
         return $this->update($id,$request->all());
 
+    }
+
+    public function getPartnersBySub($id)
+    {
+        $sub = Subcategory::find($id);
+
+        $partners = Partner::where('show', 1)->whereHas('subcategory', function ($query) use ($id) {
+            $query->where('id', $id);
+        })->paginate(10);
+
+        return $this->returnData('data', PartnerResource::collection($partners), __('Get successfully'));
     }
 }

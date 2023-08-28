@@ -90,6 +90,9 @@ Route::get('premium-partners', [PartnerController::class, 'premiumPartners']);
 //getPartnersByCategory
 Route::get('partners-by-category/{id}', [CategoryController::class, 'getPartnersByCategory']);
 
+//getPartnersBySub
+Route::get('partners-by-subcategory/{id}', [SubcategoryController::class, 'getPartnersBySub']);
+
 //filter
 Route::post('partners-filter', [PartnerController::class, 'getPartnersOfSubOrCategortInArea']);
 

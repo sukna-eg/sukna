@@ -75,6 +75,10 @@ class User extends Authenticatable
         return $this->belongsToMany(Partner::class,'favorites','user_id','partner_id');
     }
 
+    public function pagfavorites(){
+        return $this->belongsToMany(Partner::class,'favorites','user_id','partner_id')->paginate(10);
+    }
+
       public function reviews(){
         return $this->HasMany(Review::class);
     }
