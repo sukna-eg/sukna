@@ -10,7 +10,7 @@ class Category extends Model
 {
     use HasFactory,HasTranslations;
     protected $guarded=[];
-    public $translatable = ['name'];
+    public $translatable = ['name','card_title','card_body'];
 
     public function setImageAttribute($value){
         if ($value){

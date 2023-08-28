@@ -96,6 +96,12 @@ class PartnerController extends ApiController
            return $this->returnData('data', $prices, __('Get successfully'));
        }
 
+       public function floors()
+       {
+           $floors = Partner::where('show', 1)->distinct()->pluck('floor');
+           return $this->returnData('data', $floors, __('Get successfully'));
+       }
+
        public function getPartnersOfSubOrCategortInArea(Request $request)
        {
            $resources = [];
@@ -169,6 +175,12 @@ class PartnerController extends ApiController
         if (!is_null($request->premium)) {
             $partners = $partners->filter(function ($partner) use ($request) {
                 return is_null($partner->premium) || $partner->premium == $request->premium;
+            });
+        }
+
+        if (!is_null($request->floor)) {
+            $partners = $partners->filter(function ($partner) use ($request) {
+                return is_null($partner->floor) || $partner->floor == $request->floor;
             });
         }
 
@@ -286,6 +298,11 @@ foreach ($paginatedPartners as $partner) {
             });
         }
 
+        if (!is_null($request->floor)) {
+            $partners = $partners->filter(function ($partner) use ($request) {
+                return is_null($partner->floor) || $partner->floor == $request->floor;
+            });
+        }
 
            if (!is_null($request->the_oldest)) {
 

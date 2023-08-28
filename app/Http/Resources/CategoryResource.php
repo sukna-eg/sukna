@@ -18,6 +18,8 @@ class CategoryResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'image' => $this->image,
+            'card_title' => $this->card_title,
+            'card_body' => $this->card_body,
             'subcategories'=> SubcategoryResource::collection($this?->subcategories),
             'services'=> ServiceResource::collection($this?->services),
         ];

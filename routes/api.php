@@ -111,6 +111,8 @@ Route::get('partners-bedrooms', [PartnerController::class, 'bedrooms']);
 //bathrooms for filter
 Route::get('partners-bathrooms', [PartnerController::class, 'bathrooms']);
 
+//floors
+Route::get('partners-floors', [PartnerController::class, 'floors']);
 
 //prices range
 Route::get('prices-range', [PartnerController::class, 'getMinAndMaxOfPrice']);
