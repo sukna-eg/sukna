@@ -65,7 +65,7 @@ class FavoriteController extends ApiController
     public function myFavorites()
     {
 
-        $favorites = Auth::user()->pagfavorites;
+        $favorites = Auth::user()->favorites()->paginate(10);
         return $this->returnData('data',  PartnerResource::collection( $favorites ), __('Get  succesfully'));
 
     }
