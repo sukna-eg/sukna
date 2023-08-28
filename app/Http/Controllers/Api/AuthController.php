@@ -253,7 +253,8 @@ class AuthController extends Controller
     {
 
 
-        if ($user) {$user = User::where('phone', $request->phone)->first();
+        $user = User::where('phone', $request->phone)->first();
+        if ($user) {
 
             return $this->returnData('user',new UserResource( $user ), 'successful');
         }
