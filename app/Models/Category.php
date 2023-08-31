@@ -17,7 +17,7 @@ class Category extends Model
             $file = $value;
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $filename =time().mt_rand(1000,9999).'.'.$extension;
-            $file->move(base_path('../img/categories/'), $filename);
+            $file->move(public_path('imag/categories/'), $filename);
             $this->attributes['image'] =  'img/categories/'.$filename;
         }
     }

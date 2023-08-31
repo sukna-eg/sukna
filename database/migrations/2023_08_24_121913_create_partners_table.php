@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('partners', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
+            $table->text('address');
 			$table->text('description');
             $table->boolean('type');
             $table->boolean('show')->default(0);

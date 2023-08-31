@@ -17,21 +17,21 @@ class PartnerResource extends JsonResource
     public function toArray(Request $request): array
     {
 
-        // $fav = false;
-        // if(Auth::user()){
-        // $favorite = Favorite::where('user_id',Auth::user()->id)->where('partner_id',$this->id)->first();
-        //     if($favorite){
-        //         $fav = true ;
-        //     }
-        // }
+        $fav = false;
+        if(Auth::user()){
+        $favorite = Favorite::where('user_id',Auth::user()->id)->where('partner_id',$this->id)->first();
+            if($favorite){
+                $fav = true ;
+            }
+        }
 
 
 
         return [
 
             'id' => $this->id,
-            // 'is_favorite'=>$fav,
-            'name' => $this->name,
+            'is_favorite'=>$fav,
+            'address' => $this->address,
             'description' => $this->description,
             'type' => $this->type,
             'show' => $this->show,
@@ -68,6 +68,7 @@ class PartnerResource extends JsonResource
             'user'=> new UserResource($this?->user),
 
             'rating'=>(double)$this?->reviews?->avg('points'),
+            'rating_count'=>(double)$this?->reviews?->count(),
 
             'images' => PimageResource::collection($this?->images),
         ];

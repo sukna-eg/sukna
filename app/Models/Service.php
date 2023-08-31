@@ -17,7 +17,7 @@ class Service extends Model
             $file = $value;
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $filename =time().mt_rand(1000,9999).'.'.$extension;
-            $file->move(base_path('../images/services/'), $filename);
+            $file->move(public_path('images/services/'), $filename);
             $this->attributes['image'] =  'images/services/'.$filename;
         }
     }
@@ -28,8 +28,8 @@ class Service extends Model
             $file = $value;
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $filename =time().mt_rand(1000,9999).'.'.$extension;
-            $file->move(base_path('../img/service_logo/'), $filename);
-            $this->attributes['logo'] =  'img/service_logo/'.$filename;
+            $file->move(public_path('logo/services/'), $filename);
+            $this->attributes['logo'] =  'logo/services/'.$filename;
         }
     }
 

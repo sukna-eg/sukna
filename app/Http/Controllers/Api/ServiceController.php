@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Service;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
 use App\Http\Requests\AreaRequest;
@@ -30,5 +31,25 @@ class ServiceController extends ApiController
 
         return $this->update($id,$request->all());
 
+    }
+
+
+    public function ourPartners()
+    {
+        $userImages = User::where('type', 1)
+            ->inRandomOrder()
+            ->limit(20)
+            ->pluck('image')
+            ->toArray();
+
+        $serviceImages = Service::where('premium', 1)
+            ->inRandomOrder()
+            ->limit(10)
+            ->pluck('image')
+            ->toArray();
+
+        $images = array_merge($userImages, $serviceImages);
+
+        return $this->returnSuccessMessage($images);
     }
 }

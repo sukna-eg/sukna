@@ -153,7 +153,11 @@ class AuthController extends Controller
 
 
 
+                if ($request->has('image')) {
+                    $image = $this->userRepositry->insertImage($request->image, $user, true);
+                }
 
+                DB::commit();
 
 
 

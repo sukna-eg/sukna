@@ -17,6 +17,8 @@ use App\Http\Controllers\Api\AppointmentController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\PrimageController;
+use App\Http\Controllers\Api\SmartController;
+use App\Http\Controllers\Api\WorkController;
 
 
 /*
@@ -79,7 +81,7 @@ Route::post('subcategory/edit/{id}', [SubcategoryController::class, 'edit']);
 //partner
 Route::get('partners', [PartnerController::class, 'partners']);
 Route::post('partner-create', [PartnerController::class, 'save']);
-Route::get('partner/{id}', [PartnerController::class, 'view']);
+
 Route::get('partner/delete/{id}', [PartnerController::class, 'delete']);
 Route::post('partner/edit/{id}', [PartnerController::class, 'edit']);
 
@@ -212,6 +214,27 @@ Route::post('pimage/edit/{id}', [PrimageController::class, 'edit']);
 //getTrendingServices
 Route::get('trending', [CategoryController::class, 'getTrendingServices']);
 
+//ourPartners
+Route::get('our-partners', [ServiceController::class, 'ourPartners']);
+
+
+
+//Smart
+Route::get('smarts', [SmartController::class, 'pagination']);
+Route::post('smart-create', [SmartController::class, 'save']);
+Route::get('smart/{id}', [SmartController::class, 'view']);
+Route::get('smart/delete/{id}', [SmartController::class, 'delete']);
+Route::post('smart/edit/{id}', [SmartController::class, 'edit']);
+
+//Work
+Route::get('works', [WorkController::class, 'pagination']);
+Route::post('work-create', [WorkController::class, 'save']);
+Route::get('work/{id}', [WorkController::class, 'view']);
+Route::get('work/delete/{id}', [WorkController::class, 'delete']);
+Route::post('work/edit/{id}', [WorkController::class, 'edit']);
+
+
+
     });
 
     Route::middleware(['auth:api','changeLang'])->group(function () {
@@ -221,5 +244,7 @@ Route::get('my-favorites', [FavoriteController::class, 'myFavorites']);
 
   //myOrders
   Route::get('my-orders', [AppointmentController::class, 'myOrders']);
+
+  Route::get('partner/{id}', [PartnerController::class, 'view']);
 
     });

@@ -16,7 +16,7 @@ class Pimage extends Model
             $file = $value;
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $filename =time().mt_rand(1000,9999).'.'.$extension;
-            $file->move(base_path('../images/partners/'), $filename);
+            $file->move(public_path('images/partners/'), $filename);
             $this->attributes['image'] =  'images/partners/'.$filename;
         }
     }
