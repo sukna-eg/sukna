@@ -82,7 +82,7 @@ class CategoryController extends ApiController
         $categories = Category::with(['services' => function ($query) {
             // Filter services to include only trending ones
             $query->where('premium', 1);
-        }])->get();
+        }])->paginate(10);
 
 
         return $this->returnData('data', TrendingResource::collection($categories), __('Get  succesfully'));

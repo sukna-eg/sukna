@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('primages', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->integer('project_id');
+            // $table->integer('project_id');
+            $table->foreignId('project_id')->constrained('projects')->cascadeOnDelete();
             $table->timestamps();
         });
     }

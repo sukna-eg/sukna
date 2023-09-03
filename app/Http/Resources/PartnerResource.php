@@ -52,7 +52,7 @@ class PartnerResource extends JsonResource
             'period' => $this->period,
             'views' => $this->views,
             'video_url' => $this->video_url,
-            'music_url' => $this->music_url,
+            'music' => $this->music,
             'from' => $this->from,
             'to' => $this->to,
             'direction' => $this->direction,

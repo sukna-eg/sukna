@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('pimages', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->integer('partner_id');
+            // $table->integer('partner_id');
+            $table->foreignId('partner_id')->constrained('partners')->cascadeOnDelete();
             $table->timestamps();
         });
     }

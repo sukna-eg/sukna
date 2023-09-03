@@ -36,13 +36,15 @@ return new class extends Migration
             $table->date('from')->nullable();
             $table->date('to')->nullable();
             $table->string('video_url')->nullable();
-            $table->string('music_url')->nullable();
+            $table->string('music')->nullable();
             $table->string('direction');
             $table->string('Property');
             $table->string('purpose');
             $table->double('price');
-            $table->integer('subcategory_id');
-            $table->integer('user_id');
+            // $table->integer('subcategory_id');
+            // $table->integer('user_id');
+            $table->foreignId('subcategory_id')->constrained('subcategories')->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }

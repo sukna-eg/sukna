@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->date('from');
             $table->date('to');
-            $table->integer('partner_id');
-            $table->integer('user_id');
+            // $table->integer('partner_id');
+            // $table->integer('user_id');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('partner_id')->constrained('partners')->cascadeOnDelete();
             $table->timestamps();
         });
     }

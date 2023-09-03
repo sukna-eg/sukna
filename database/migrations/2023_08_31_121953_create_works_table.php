@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('url')->nullable();
             $table->string('duration')->nullable();
             $table->double('cost')->nullable();
-            $table->integer('smart_id');
+            // $table->integer('smart_id');
+            $table->foreignId('smart_id')->constrained('smarts')->cascadeOnDelete();
             $table->timestamps();
         });
     }

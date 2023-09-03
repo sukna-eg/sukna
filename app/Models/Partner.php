@@ -12,6 +12,16 @@ class Partner extends Model
     protected $guarded=[];
     public $translatable = ['address','description'];
 
+    public function setMusicAttribute($value){
+        if ($value){
+            $file = $value;
+            $extension = $file->getClientOriginalExtension(); // getting file extension
+            $filename =time().mt_rand(1000,9999).'.'.$extension;
+            $file->move(public_path('music/partners/'), $filename);
+            $this->attributes['music'] =  'music/partners/'.$filename;
+        }
+    }
+
     public function subcategory()
 	{
 		return $this->belongsTo(Subcategory::class);

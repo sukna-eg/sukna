@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('whatsapp')->nullable();
             $table->string('facebook')->nullable();
             $table->boolean('premium')->default(0);
-            $table->integer('category_id');
+            // $table->integer('category_id');
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
             $table->timestamps();
         });
     }

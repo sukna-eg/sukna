@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('partners', function (Blueprint $table) {
-            $table->integer('area_id');
+            // $table->integer('area_id');
+            $table->foreignId('area_id')->constrained('areas')->cascadeOnDelete();
         });
     }
 

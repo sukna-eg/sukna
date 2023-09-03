@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Partner;
 use App\Models\City;
+use App\Models\User;
 use App\Models\Area;
 use App\Models\Category;
 use App\Models\Subcategory;
@@ -16,6 +17,7 @@ use App\Http\Controllers\ApiController;
 // use App\Http\Resources\PriceResource;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Auth;
 
 class PartnerController extends ApiController
 {
@@ -66,7 +68,7 @@ class PartnerController extends ApiController
     public function premiumPartners(){
 
 
-        $data=Partner::where('show',1)->where('premium', 1)->orderBy('order', 'ASC')->get();
+        $data=Partner::where('show',1)->where('premium', 1)->orderBy('order', 'ASC')->paginate(10);
         return $this->returnData('data',  PartnerResource::collection( $data ), __('Get  succesfully'));
 
        }
@@ -441,6 +443,14 @@ public function getMinAndMaxOfSpace(Request $request)
     $max = $partners->max('space');
 
     return $this->returnData('data', ['min' => $min, 'max' => $max], 'Get min and max of partners successfully');
+}
+
+public function myPartners()
+{
+
+    $partners = Auth::user()->partners()->paginate(10);
+    return $this->returnData('data',  PartnerResource::collection( $partners ), __('Get  succesfully'));
+
 }
 
 }

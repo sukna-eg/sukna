@@ -35,24 +35,44 @@ class AppointmentController extends ApiController
 
     }
 
-    public function myOrders()
-    {
+//     public function myOrders()
+//     {
 
-        $ownerId = auth()->user()->id; // Assuming you're using authentication
+//         $ownerId = auth()->user()->id; // Assuming you're using authentication
 
-        $owner = User::with(['partners.appointments'])->find($ownerId);
-        $appointments = array();
+//         $owner = User::with(['partners.appointments'])->find($ownerId);
+//         $appointments = array();
 
-        // Now you can access appointments for all partners owned by the owner
-        foreach ($owner->partners as $partner) {
-            foreach ($partner->appointments as $appointment) {
+//         // Now you can access appointments for all partners owned by the owner
+//         foreach ($owner->partners as $partner) {
+//             foreach ($partner->appointments as $appointment) {
 
-                array_push($appointments, $appointment);
+//                 array_push($appointments, $appointment);
 
+//     }
+// }
+
+// return $this->returnData('data', AppointmentResource::collection($appointments), __('Get  succesfully'));
+
+//     }
+
+public function myOrders()
+{
+    $ownerId = auth()->user()->id; // Assuming you're using authentication
+
+    $owner = User::with(['partners.appointments'])->find($ownerId);
+    $appointments = collect();
+
+    // Now you can access appointments for all partners owned by the owner
+    foreach ($owner->partners as $partner) {
+        foreach ($partner->appointments as $appointment) {
+            $appointments->push($appointment);
+        }
     }
+
+    $paginatedAppointments = $appointments->paginate(10);
+
+    return $this->returnData('data', AppointmentResource::collection($paginatedAppointments), __('Get successfully'));
 }
 
-return $this->returnData('data', AppointmentResource::collection($appointments), __('Get  succesfully'));
-
-    }
 }

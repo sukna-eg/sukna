@@ -247,4 +247,6 @@ Route::get('my-favorites', [FavoriteController::class, 'myFavorites']);
 
   Route::get('partner/{id}', [PartnerController::class, 'view']);
 
+  //myPartners
+  Route::get('my-partners', [PartnerController::class, 'myPartners']);
     });

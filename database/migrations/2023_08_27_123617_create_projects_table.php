@@ -17,7 +17,8 @@ return new class extends Migration
 			$table->text('description');
             $table->string('url')->nullable();
             $table->string('duration')->nullable();
-            $table->integer('service_id');
+            // $table->integer('service_id');
+            $table->foreignId('service_id')->constrained('services')->cascadeOnDelete();
             $table->timestamps();
         });
     }

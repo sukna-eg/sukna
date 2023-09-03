@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->double('points');
-            $table->integer('user_id');
-            $table->integer('partner_id');
+            // $table->integer('user_id');
+            // $table->integer('partner_id');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('partner_id')->constrained('partners')->cascadeOnDelete();
             $table->timestamps();
         });
     }
