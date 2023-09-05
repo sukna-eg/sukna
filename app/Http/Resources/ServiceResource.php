@@ -28,7 +28,7 @@ class ServiceResource extends JsonResource
             'premium' => $this->premium,
             'category_id'=> $this->category?->id,
             'category_name'=> $this->category?->name,
-
+            'projects' => ProjectResource::collection($this?->projects),
 
             // 'images' => PimageResource::collection($this?->images),
         ];

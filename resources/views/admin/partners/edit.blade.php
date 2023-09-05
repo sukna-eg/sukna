@@ -99,7 +99,7 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" id="visible" type="radio" name="show" value="1" @checked(old('show',$partner->show)==1)>
                                                 <label class="form-check-label" for="visible">
-                                                    Sale
+                                                    Visible
                                                 </label>
                                             </div>
                                             @error('show')
@@ -334,9 +334,9 @@
                                         </div>
 
                                         <div class="col-xl-8 mb-3">
-                                            <label class="form-label">Music Url</label>
-                                            <input type="url" class="form-control" name="music_url" value="{{ old('music_url',$partner->music_url) }}">
-                                            @error('music_url')
+                                            <label class="form-label">Music</label>
+                                            <input type="file" class="form-control" name="music" value="{{ old('music',$partner->music) }}">
+                                            @error('music')
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror
                                         </div>

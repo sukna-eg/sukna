@@ -203,6 +203,9 @@ Route::get('project/{id}', [ProjectController::class, 'view']);
 Route::get('project/delete/{id}', [ProjectController::class, 'delete']);
 Route::post('project/edit/{id}', [ProjectController::class, 'edit']);
 
+//getProjectsByService
+Route::get('projects-by-service/{id}', [ProjectController::class, 'getProjectsByService']);
+
 //partner image
 Route::get('pimages', [PrimageController::class, 'pagination']);
 Route::post('pimage-create', [PrimageController::class, 'save']);

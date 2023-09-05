@@ -95,7 +95,7 @@
 											<div class=" bottom-footer clearfix m-t10 m-b20 row text-center">
 											<div class="col-lg-12 text-center">
 												<span> © Copyright by <span class="heart"></span>
-												<a href="javascript:void(0);" class="text-primary">AMA </a> All rights reserved.</span>
+												<a href="javascript:void(0);" class="text-primary">Shababeek </a> All rights reserved.</span>
 											</div>
 										</div>
 									</div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Project;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
 use App\Http\Requests\AreaRequest;
@@ -29,6 +30,19 @@ class ProjectController extends ApiController
 
 
         return $this->update($id,$request->all());
+
+    }
+
+
+    public function getProjectsByService($servic_id){
+
+        $service = Service::find( $servic_id );
+        if( $service ){
+
+            return $this->returnData('data',  ProjectResource::collection( $service->projects ), __('Get  succesfully'));
+        }
+
+        return $this->returnError(__('Sorry! Failed to get !'));
 
     }
 }

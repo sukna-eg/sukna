@@ -329,13 +329,21 @@
                                         @enderror
                                     </div>
 
-                                    <div class="col-xl-8 mb-3">
+                                    {{-- <div class="col-xl-8 mb-3">
                                         <label class="form-label">Music Url</label>
                                         <input type="url" class="form-control" name="music_url" value="{{ old('music_url') }}">
                                         @error('music_url')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
-                                    </div>
+                                    </div> --}}
+
+                                    <div class="col-xl-8 mb-3">
+    <label class="form-label">Music</label>
+    <input type="file" accept="audio/*" class="form-control" name="music">
+    @error('music')
+        <div class="text-danger">{{ $message }}</div>
+    @enderror
+</div>
 
                                     <div class="col-xl-8 mb-3">
                                         <label class="form-label">Direction</label>

@@ -62,7 +62,13 @@
                                     <p class="mb-3"><strong>From : </strong> {{ $partner->from }}</p>
                                     <p class="mb-3"><strong>To : </strong> {{ $partner->to }}</p>
                                     <p class="mb-3"><strong>Video Url : </strong> {{ $partner->video_url }}</p>
-                                    <p class="mb-3"><strong>Music Url : </strong> {{ $partner->music_url }}</p>
+                                    <p class="mb-3"><strong>Music Url : </strong> {{ $partner->music }}</p>
+                               {{-- <div class="col-xl-8 mb-3">
+    <label class="form-label">Music :</label>
+    <button class="btn btn-primary" onclick="playMusic()"><i class="fas fa-play"></i> Play Music</button>
+    <audio controls id="audioPlayer" ></audio>
+    <div id="errorMessage" class="text-danger"></div>
+    </div> --}}
                                     <p class="mb-3"><strong>Created At :</strong> {{ $partner?->created_at }}</p>
                                     <p class="mb-3"><strong>Direction : </strong> {{ $partner->direction }}</p>
                                     <p class="mb-3"><strong>Property : </strong> {{ $partner->Property }}</p>
@@ -284,6 +290,45 @@
 
         </div>
     </div>
+
+    {{-- <script type="text/javascript">
+        function playMusic(event) {
+            var file = event.target.files[0];
+            var audioPlayer = document.getElementById('audioPlayer');
+            var errorMessage = document.getElementById('errorMessage');
+
+            // Clear any previous error message
+            errorMessage.textContent = '';
+
+            // Check if a file is selected
+            if (file) {
+                // Check if the selected file is an audio file
+                if (file.type.startsWith('audio/')) {
+                    // Create a URL object to represent the audio file
+                    var fileURL = URL.createObjectURL(file);
+                    audioPlayer.src = fileURL;
+                    audioPlayer.style.display = 'block';
+                } else {
+                    // Display an error message if the selected file is not an audio file
+                    errorMessage.textContent = 'Please select an audio file.';
+                }
+            }
+        }
+    </script> --}}
+
+    <script type="text/javascript">
+        function playMusic() {
+            // Get the audio player element
+            var audioPlayer = document.getElementById('audioPlayer');
+
+            // Get the URL of the audio file from the Laravel partner model
+            var fileURL = "{{ asset('music/partners/' . $partner->music) }}";
+
+            // Play the audio file
+            audioPlayer.src = fileURL;
+            audioPlayer.play();
+        }
+    </script>
 
     <!--**********************************
         Content body end

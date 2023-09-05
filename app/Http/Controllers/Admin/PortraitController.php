@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Partner;
 use App\Models\Service;
+use App\Models\Pimage;
 use App\Models\ImageService;
 use Illuminate\Http\Request;
 use App\Models\PortraitImage;
@@ -19,7 +20,7 @@ class PortraitController extends Controller
      */
     public function index()
     {
-        $data = PortraitImage::latest()->with('partner')->orderBy('partner_id')->get();
+        $data = Pimage::latest()->with('partner')->orderBy('partner_id')->get();
         return view('admin.portraits.index',compact('data'));
     }
 
@@ -38,14 +39,10 @@ class PortraitController extends Controller
     public function store(PortraitRequest $request)
     {
         foreach($request->images as $image) {
-                if (PortraitImage::where('partner_id',$request->partner_id)->count()==0) {
-                    $order = 1;
-                }else{
-                    $order = PortraitImage::where('partner_id',$request->partner_id)->max('order')+1;
-                }
-                PortraitImage::create([
+
+                Pimage::create([
                     'image'=>$image,
-                    'order'=>$order,
+
                     'partner_id'=>$request->partner_id,
                 ]);
         }
@@ -60,7 +57,7 @@ class PortraitController extends Controller
     public function edit(string $id)
     {
         $partners = Partner::all();
-        $image = PortraitImage::with('partner')->findOrFail($id);
+        $image = Pimage::with('partner')->findOrFail($id);
         return view('admin.portraits.edit',compact('image','partners'));
     }
 
@@ -69,7 +66,7 @@ class PortraitController extends Controller
      */
     public function update(PortraitRequest $request, string $id)
     {
-        $image = PortraitImage::findOrFail($id);
+        $image = Pimage::findOrFail($id);
 
         if ($request->has('image')&&$image->image  && File::exists($image->image)) {
             unlink($image->image);

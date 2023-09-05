@@ -5,7 +5,7 @@
         <div class="deznav">
             <div class="deznav-scroll">
 				<ul class="metismenu" id="menu">
-					<li class="menu-title">Sukna</li>
+					<li class="menu-title">Shababeek</li>
 					<li><a href="{{ route('admin.dashboard') }}" aria-expanded="false">
 						<div class="menu-icon">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,13 +59,20 @@
 						</a>
                     </li> --}}
 
-                    {{-- <li><a href="{{ route('admin.emergencies.index') }}" class="" aria-expanded="false">
+                    <li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
                         <div class="menu-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="12" cy="12" r="10"></circle>
+								<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+								<line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
 						</div>
-							<span class="nav-text">Emergency</span>
+							<span class="nav-text">Real Estate Expert</span>
 						</a>
-                    </li> --}}
+                       <ul aria-expanded="false" class="mm-collapse">
+                            <li><a href="{{ route('admin.questions.index') }}">Questions</a></li>
+                            <li><a href="{{ route('admin.answers.index') }}">Answers</a></li>
+                        </ul>
+                    </li>
                     {{-- <li><a href="{{ route('admin.faqs.index') }}" class="" href="javascript:void(0);" aria-expanded="false">
 						<div class="menu-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>                                              </div>
@@ -127,15 +134,38 @@
 						</a>
                         <ul aria-expanded="false" class="mm-collapse">
                             <li><a href="{{ route('admin.partners.index') }}">Partners</a></li>
-                            <li><a href="{{ route('admin.portraits.index') }}">Portrait Images</a></li>
-                            <li><a href="{{ route('admin.landscapes.index') }}">landscape Images</a></li>
+                            <li><a href="{{ route('admin.portraits.index') }}">Partner Images</a></li>
+                            {{-- <li><a href="{{ route('admin.landscapes.index') }}">landscape Images</a></li>
                             <li><a href="{{ route('admin.branches.index') }}">Branches</a></li>
                             <li><a href="{{ route('admin.workdays.index') }}">Workdays</a></li>
                             <li><a href="{{ route('admin.partner.whatsapp.counter') }}">Whatsapp Counter</a></li>
                             <li><a href="{{ route('admin.partner.call.counter') }}">Call Counter</a></li>
-                            <li><a href="{{ route('admin.partner.view.counter') }}">View Counter</a></li>
+                            <li><a href="{{ route('admin.partner.view.counter') }}">View Counter</a></li> --}}
                         </ul>
 					</li>
+
+                           <li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
+						<div class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <span class="nav-text">Services</span>
+						</a>
+                        <ul aria-expanded="false" class="mm-collapse">
+                            <li><a href="{{ route('admin.services.index') }}">Services</a></li>
+                            <li><a href="{{ route('admin.projects.index') }}">Projects</a></li>
+                            <li><a href="{{ route('admin.primages.index') }}">Images of Projects</a></li>
+                        </ul>
+
+                           </li>
+{{--
+                     <li><a href="{{ route('admin.blogs.index') }}" class="" href="javascript:void(0);" aria-expanded="false">
+						<div class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"/></svg>                        </div>
+                        <span class="nav-text">Blogs</span>
+						</a>
+
+					</li> --}}
+
                     {{-- <li><a href="{{ route('admin.notifications.index') }}" class="" href="javascript:void(0);" aria-expanded="false">
 						<div class="menu-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></svg>                                              </div>

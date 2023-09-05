@@ -3,7 +3,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-               <p>Copyright © Developed by <a href="" target="_blank">AMA</a> 2023</p>
+               <p>Copyright © Developed by <a href="" target="_blank">Shababeek</a> 2023</p>
             </div>
         </div>
         <!--**********************************

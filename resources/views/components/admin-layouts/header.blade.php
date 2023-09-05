@@ -12,7 +12,7 @@
 	<meta name="format-detection" content="telephone=no">
 
 	<!-- PAGE TITLE HERE -->
-	<title>Sukna</title>
+	<title>Shababeek</title>
 	<!-- FAVICONS ICON -->
 
 	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">

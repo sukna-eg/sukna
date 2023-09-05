@@ -27,6 +27,10 @@ use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\ProfileImageController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\WorkdayController;
+use App\Http\Controllers\Admin\QuestionController;
+use App\Http\Controllers\Admin\AnswerController;
+
+
 
 Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
     Route::get('/login',[AdminLoginController::class, 'getLogin'])->name('login-page');
@@ -54,6 +58,16 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
         // cities
         Route::resource('cities', CityController::class);
         Route::resource('areas', AreaController::class);
+
+          // Questions
+          Route::resource('questions', QuestionController::class);
+          Route::resource('answers', AnswerController::class);
+
+
+           // services
+        Route::resource('services', ServiceController::class);
+        Route::resource('projects', ProjectController::class);
+        Route::resource('primages', PrimageController::class);
 
         // categories
         Route::get('areas/sort/{id}/{direction}',[AreaController::class,'sortData'])->name('areas.sort');
