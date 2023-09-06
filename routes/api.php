@@ -196,6 +196,10 @@ Route::get('service/delete/{id}', [ServiceController::class, 'delete']);
 Route::post('service/edit/{id}', [ServiceController::class, 'edit']);
 
 
+//getServicesByCategory
+Route::get('services-by-category/{id}', [ServiceController::class, 'getServicesByCategory']);
+
+
 //project
 Route::get('projects', [ProjectController::class, 'pagination']);
 Route::post('project-create', [ProjectController::class, 'save']);

@@ -135,12 +135,8 @@
                         <ul aria-expanded="false" class="mm-collapse">
                             <li><a href="{{ route('admin.partners.index') }}">Partners</a></li>
                             <li><a href="{{ route('admin.portraits.index') }}">Partner Images</a></li>
-                            {{-- <li><a href="{{ route('admin.landscapes.index') }}">landscape Images</a></li>
-                            <li><a href="{{ route('admin.branches.index') }}">Branches</a></li>
-                            <li><a href="{{ route('admin.workdays.index') }}">Workdays</a></li>
-                            <li><a href="{{ route('admin.partner.whatsapp.counter') }}">Whatsapp Counter</a></li>
-                            <li><a href="{{ route('admin.partner.call.counter') }}">Call Counter</a></li>
-                            <li><a href="{{ route('admin.partner.view.counter') }}">View Counter</a></li> --}}
+
+
                         </ul>
 					</li>
 
@@ -157,14 +153,19 @@
                         </ul>
 
                            </li>
-{{--
-                     <li><a href="{{ route('admin.blogs.index') }}" class="" href="javascript:void(0);" aria-expanded="false">
+
+                     <li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
 						<div class="menu-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"/></svg>                        </div>
-                        <span class="nav-text">Blogs</span>
+                        <span class="nav-text">Smart Home</span>
 						</a>
+                        <ul aria-expanded="false" class="mm-collapse">
 
-					</li> --}}
+                            <li><a href="{{ route('admin.smarts.index') }}">Smart Home</a></li>
+
+                        </ul>
+
+					</li>
 
                     {{-- <li><a href="{{ route('admin.notifications.index') }}" class="" href="javascript:void(0);" aria-expanded="false">
 						<div class="menu-icon">

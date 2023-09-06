@@ -31,6 +31,10 @@ use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\AnswerController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\PrimageController;
+use App\Http\Controllers\Admin\SmartController;
+use App\Http\Controllers\Admin\WorkController;
+
+
 
 
 Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
@@ -69,6 +73,12 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
         Route::resource('services', ServiceController::class);
         Route::resource('projects', ProjectController::class);
         Route::resource('primages', PrimageController::class);
+
+
+           // smarts
+           Route::resource('smarts', SmartController::class);
+           Route::resource('works', WorkController::class);
+
 
         // categories
         Route::get('areas/sort/{id}/{direction}',[AreaController::class,'sortData'])->name('areas.sort');

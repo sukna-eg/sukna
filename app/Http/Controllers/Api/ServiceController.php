@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Service;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
 use App\Http\Requests\AreaRequest;
@@ -30,6 +31,20 @@ class ServiceController extends ApiController
 
 
         return $this->update($id,$request->all());
+
+    }
+
+
+    public function getServicesByCategory($category_id){
+
+        $category = Category::find( $category_id );
+        if( $category ){
+
+            $services = $category->services()->paginate(10);
+            return $this->returnData('data',  ServiceResource::collection( $services ), __('Get  succesfully'));
+        }
+
+        return $this->returnError(__('Sorry! Failed to get !'));
 
     }
 
