@@ -20,6 +20,7 @@ class AnswerResource extends JsonResource
             'answer'=> $this->answer,
             'question_id'=> $this->question?->id,
             'question'=> $this->question?->question,
+            'created_at'=> $this->created_at,
             'user'=>new UserResource($this?->user),
             // 'user_id'=> $this->user?->id,
             // 'question'=> $this->question?->question,

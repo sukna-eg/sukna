@@ -2,26 +2,24 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Partner;
+use App\Models\Project;
 use App\Models\Service;
-use App\Models\Pimage;
-use App\Models\ImageService;
+use App\Models\Primage;
 use Illuminate\Http\Request;
-use App\Models\PortraitImage;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
-use App\Http\Requests\Admin\PortraitRequest;
+use App\Http\Requests\Admin\PrimageRequest;
 
-class PortraitController extends Controller
+class PrimageController extends Controller
 {
          /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = Pimage::latest()->with('partner')->orderBy('partner_id')->get();
-        return view('admin.portraits.index',compact('data'));
+        $data = Primage::latest()->with('project')->orderBy('project_id')->get();
+        return view('admin.primages.index',compact('data'));
     }
 
     /**
@@ -29,25 +27,25 @@ class PortraitController extends Controller
      */
     public function create()
     {
-        $partners = Partner::all();
-        return view('admin.portraits.create',compact('partners'));
+        $projects = Project::all();
+        return view('admin.primages.create',compact('projects'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(PortraitRequest $request)
+    public function store(PrimageRequest $request)
     {
         foreach($request->images as $image) {
 
-                Pimage::create([
+                Primage::create([
                     'image'=>$image,
 
-                    'partner_id'=>$request->partner_id,
+                    'project_id'=>$request->project_id,
                 ]);
         }
-        return redirect()->route('admin.portraits.index')
-                        ->with('success','Portrait Images has been added successfully');
+        return redirect()->route('admin.primages.index')
+                        ->with('success','Images has been added successfully');
 
     }
 
@@ -56,17 +54,17 @@ class PortraitController extends Controller
      */
     public function edit(string $id)
     {
-        $partners = Partner::all();
-        $image = Pimage::with('partner')->findOrFail($id);
-        return view('admin.portraits.edit',compact('image','partners'));
+        $projects = Project::all();
+        $image = Primage::with('project')->findOrFail($id);
+        return view('admin.primages.edit',compact('image','projects'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(PortraitRequest $request, string $id)
+    public function update(Request $request, string $id)
     {
-        $image = Pimage::findOrFail($id);
+        $image = Primage::findOrFail($id);
 
         if ($request->has('image')&&$image->image  && File::exists($image->image)) {
             unlink($image->image);
@@ -74,8 +72,8 @@ class PortraitController extends Controller
         $image->update($request->all());
 
 
-        return redirect()->route('admin.portraits.index')
-                        ->with('success','Portrait Image has been updated successfully');
+        return redirect()->route('admin.primages.index')
+                        ->with('success','Image has been updated successfully');
     }
 
     /**
@@ -83,8 +81,8 @@ class PortraitController extends Controller
      */
     public function destroy(Request $request)
     {
-        Pimage::findOrFail($request->id)->delete();
-        return redirect()->route('admin.portraits.index')->with('success','Portrait Image has been removed successfully');
+        Primage::findOrFail($request->id)->delete();
+        return redirect()->route('admin.primages.index')->with('success','Image has been removed successfully');
     }
 
     public function sortData($id,$direction = 'up'){

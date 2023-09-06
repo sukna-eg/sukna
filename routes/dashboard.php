@@ -29,7 +29,8 @@ use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\WorkdayController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\AnswerController;
-
+use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\PrimageController;
 
 
 Route::group(['prefix'=>'admin','as'=>'admin.'],function (){

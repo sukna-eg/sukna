@@ -23,7 +23,7 @@ class Primage extends Model
 
     protected static function booted()
     {
-        static::deleted(function ($partner) {
+        static::deleted(function ($project) {
                 if ($project->image  && \Illuminate\Support\Facades\File::exists($project->image)) {
                 unlink($project->image);
             }

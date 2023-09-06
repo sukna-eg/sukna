@@ -153,7 +153,7 @@
                         <ul aria-expanded="false" class="mm-collapse">
                             <li><a href="{{ route('admin.services.index') }}">Services</a></li>
                             <li><a href="{{ route('admin.projects.index') }}">Projects</a></li>
-                            <li><a href="{{ route('admin.primages.index') }}">Images of Projects</a></li>
+                            <li><a href="{{ route('admin.primages.index') }}">Images of Project</a></li>
                         </ul>
 
                            </li>
