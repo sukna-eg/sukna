@@ -1,4 +1,4 @@
-/* .mm-active li a svg > *{
+.mm-active li a svg > *{
     stroke: #D5A559;
 }
 
@@ -10,4 +10,4 @@
 
 .breadcrumb-item.active > * {
         color: #D5A559;
-} */
+}

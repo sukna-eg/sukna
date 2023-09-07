@@ -9,8 +9,8 @@
 	<meta name="author" content="">
 	<meta name="robots" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Jordan Starts Here">
-	<meta property="og:title" content="Jordan Starts Here">
+	<meta name="description" content="Shababeek">
+	<meta property="og:title" content="Shababeek">
 	<meta name="format-detection" content="telephone=no">
 
 

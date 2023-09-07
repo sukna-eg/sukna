@@ -14,7 +14,7 @@
                     </svg>
                     Home </a>
                 </li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ $introduction->title_one }} </a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ $introduction->title }} </a></li>
             </ol>
             <a class="text-primary fs-13" href="{{ route('admin.introductions.index') }}" >{{  __('Introductions') }}</a>
         </div>
@@ -25,23 +25,14 @@
                         <div class="card-body p-0">
                             <div class="offcanvas-body">
                                 <div class="container-fluid">
-                                <h4 class="heading mb-5"> {{ $introduction->title_one }}</h4>
+                                <h4 class="heading mb-5"> {{ $introduction->title }}</h4>
 
-                                    <p class="mb-3"><strong>Title One(En) : </strong> {{ $introduction->getTranslation('title_one','en') }}</p>
-                                    <p class="mb-3"><strong>Title One(Ar) : </strong> {{ $introduction->getTranslation('title_one','ar') }}</p>
-                                    <p class="mb-3"><strong>Title One(Fr) : </strong> {{ $introduction->getTranslation('title_one','fr') }}</p>
-                                    <p class="mb-3"><strong>Title One(Es) : </strong> {{ $introduction->getTranslation('title_one','es') }}</p>
-                                    <p class="mb-3"><strong>Title One(Ru) : </strong> {{ $introduction->getTranslation('title_one','ru') }}</p>
-                                    <p class="mb-3"><strong>Title Two(En) : </strong> {{ $introduction->getTranslation('title_two','en') }}</p>
-                                    <p class="mb-3"><strong>Title Two(Ar) : </strong> {{ $introduction->getTranslation('title_two','ar') }}</p>
-                                    <p class="mb-3"><strong>Title Two(Fr) : </strong> {{ $introduction->getTranslation('title_two','fr') }}</p>
-                                    <p class="mb-3"><strong>Title Two(Es) : </strong> {{ $introduction->getTranslation('title_two','es') }}</p>
-                                    <p class="mb-3"><strong>Title Two(Ru) : </strong> {{ $introduction->getTranslation('title_two','ru') }}</p>
-                                    <p class="mb-3"><strong>Body-En : </strong> {{ $introduction->getTranslation('body', 'en') }}</p>
+                                    <p class="mb-3"><strong>Title(En) : </strong> {{ $introduction->getTranslation('title','en') }}</p>
+                                    <p class="mb-3"><strong>Title(Ar) : </strong> {{ $introduction->getTranslation('title','ar') }}</p>
+
                                     <p class="mb-3"><strong>Body-Ar : </strong> {{ $introduction->getTranslation('body', 'ar') }}</p>
                                     <p class="mb-3"><strong>Body-Fr : </strong> {{ $introduction->getTranslation('body', 'fr') }}</p>
-                                    <p class="mb-3"><strong>Body-Es : </strong> {{ $introduction->getTranslation('body', 'es') }}</p>
-                                    <p class="mb-3"><strong>Body-Ru : </strong> {{ $introduction->getTranslation('body', 'ru') }}</p>
+
 
                                 </div>
 

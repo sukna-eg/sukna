@@ -23,7 +23,7 @@ class CityRequest extends FormRequest
     {
         return [
 
-            'name_en' => 'required|min:4|max:255',
+            // 'name_en' => 'required|min:4|max:255',
             'name_ar' => 'required|min:4|max:255',
 
         ];

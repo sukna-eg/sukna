@@ -37,6 +37,9 @@
                                     {{-- <p class="mb-3"><strong>Email : </strong> {{ $user->email }}</p> --}}
                                     <p class="mb-3"><strong>Phone :</strong> {{ $user->phone }}</p>
                                     <p class="mb-3"><strong>Type :</strong> {{ $user->type==1?'Agent':'User' }}</p>
+                                    <p class="mb-3"><strong>Lat :</strong> {{ $user?->lat}}</p>
+                                    <p class="mb-3"><strong> Long : </strong> {{ $user->long }}</p>
+                                    <p class="mb-3"><strong>Status :</strong> {{ $user->active == 1? 'Active' : 'InActive' }}</p>
                                     <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px"
                                         src="{{ asset($user->image) }}" alt="{{ $user->name }}">
 
@@ -47,112 +50,6 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="card">
-                        <div class="card-body p-0">
-                            <div class="offcanvas-body">
-                                <div class="container-fluid">
-                                    <x-admin-layouts.alerts />
-                                    <div class="table-responsive active-projects manage-client">
-                                        <div class="tbl-caption">
-                                            <h4 class="heading mb-0"> {{ __('Reviews') }}</h4>
-                                        </div>
-                                        <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="Preview" role="tabpanel"
-                                                aria-labelledby="home-tab">
-                                                <div class="card-body pt-0">
-                                                    <div class="table-responsive">
-                                                        <table id="example" class="display table"
-                                                            style="min-width: 845px">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Partner</th>
-                                                                    <th>Points</th>
-
-
-
-                                                                    <th>actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @forelse ($user->reviews as $review)
-                                                                    <tr>
-
-                                                                        <td><span><a
-                                                                                    href="{{ route('admin.partners.show', $review->partner->id) }}">{{ $review->partner->name }}</a></span>
-                                                                        </td>
-
-                                                                        <td>
-                                                                            <span>{{ $review->points }}</span>
-                                                                        </td>
-
-
-                                                                        <td>
-                                                                            <div class="dropdown">
-                                                                                <button type="button"
-                                                                                    class="btn btn-success light sharp"
-                                                                                    data-bs-toggle="dropdown">
-                                                                                    <svg width="20px" height="20px"
-                                                                                        viewBox="0 0 24 24"
-                                                                                        version="1.1">
-                                                                                        <g stroke="none"
-                                                                                            stroke-width="1"
-                                                                                            fill="none"
-                                                                                            fill-rule="evenodd">
-                                                                                            <rect x="0"
-                                                                                                y="0"
-                                                                                                width="24"
-                                                                                                height="24" />
-                                                                                            <circle fill="#000000"
-                                                                                                cx="5"
-                                                                                                cy="12"
-                                                                                                r="2" />
-                                                                                            <circle fill="#000000"
-                                                                                                cx="12"
-                                                                                                cy="12"
-                                                                                                r="2" />
-                                                                                            <circle fill="#000000"
-                                                                                                cx="19"
-                                                                                                cy="12"
-                                                                                                r="2" />
-                                                                                        </g>
-                                                                                    </svg>
-                                                                                </button>
-                                                                                <div class="dropdown-menu">
-                                                                                    <a class="dropdown-item"
-                                                                                        href="{{ route('admin.reviews.edit', $review->id) }}">Edit</a>
-                                                                                    <a class="dropdown-item"
-                                                                                        href="{{ route('admin.reviews.show', $review->id) }}">Show</a>
-
-                                                                                </div>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-
-                                                                @empty
-                                                                    <tr>
-                                                                        <th colspan="5">
-                                                                            <h5 class="text-center">There is No data
-                                                                            </h5>
-                                                                        </th>
-                                                                    </tr>
-                                                                @endforelse
-
-                                                            </tbody>
-
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
             <div class="row">
@@ -176,7 +73,12 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th>Id</th>
-                                                                    <th>Description</th>
+                                                                    <th>Type</th>
+                                                                    <th>Active</th>
+                                                                    {{-- <th>Cladding</th> --}}
+                                                                    <th>Status</th>
+                                                                    <th>Premium</th>
+                                                                    <th>Subcategory</th>
 
 
 
@@ -192,7 +94,20 @@
                                                                         </td>
 
                                                                         <td>
-                                                                            <span>{{ $partner->description }}</span>
+                                                                            <span>{{ $partner->type == 1? 'Sale' : 'Rent' }}</span>
+                                                                        </td>
+
+                                                                        <td>
+                                                                                <span>{{ $partner->show == 1? 'Visible' : 'Hidden' }}</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span>{{ $partner->status == 1? 'Active' : 'InActive' }}</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span>{{ $partner->premium == 1? 'Yes' : 'No' }}</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span>{{ $partner->subcategory->name }}</span>
                                                                         </td>
 
 

@@ -23,8 +23,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        $profiles = ProfileImage::all();
-        return view('admin.users.create',compact('profiles'));
+
+        return view('admin.users.create');
     }
 
     /**

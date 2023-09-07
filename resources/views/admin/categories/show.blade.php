@@ -33,7 +33,8 @@
                                     <p class="mb-3"><strong>Card Body : </strong> {{ $category->card_body}}</p>
 
 
-                                    <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px" src="{{ asset( $category->image ) }}" alt="{{ $category->name }}">
+                                    <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px"
+                                     src="{{ asset( $category->image ) }}" alt="{{ $category->name }}">
 
 
                                 </div>
@@ -44,6 +45,116 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="offcanvas-body">
+                                <div class="container-fluid">
+                                    <x-admin-layouts.alerts />
+                                    <div class="table-responsive active-projects manage-client">
+                                        <div class="tbl-caption">
+                                            <h4 class="heading mb-0"> {{ __('Subcategories') }}</h4>
+                                        </div>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="Preview" role="tabpanel"
+                                                aria-labelledby="home-tab">
+                                                <div class="card-body pt-0">
+                                                    <div class="table-responsive">
+                                                        <table id="example" class="display table"
+                                                            style="min-width: 845px">
+                                                            <thead>
+                                                                <tr>
+
+                                                                    <th>Id</th>
+                                                                    <th>Name-En</th>
+                                                                    <th>Name-Ar</th>
+
+
+                                                                    <th>actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @forelse ($category->subcategories as $sub)
+                                                                    <tr>
+
+                                                                        <td>
+                                                                            <span><a href="{{ route('admin.subcategories.show',$sub->id) }}">{{ $sub->id }}</a></span>
+                                                                        </td>
+
+                                                                        <td><span>{{ $sub->getTranslation('name', 'en') }}</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span>{{ $sub->getTranslation('name', 'ar') }}</span>
+                                                                        </td>
+
+
+                                                                        <td>
+                                                                            <div class="dropdown">
+                                                                                <button type="button"
+                                                                                    class="btn btn-success light sharp"
+                                                                                    data-bs-toggle="dropdown">
+                                                                                    <svg width="20px" height="20px"
+                                                                                        viewBox="0 0 24 24"
+                                                                                        version="1.1">
+                                                                                        <g stroke="none"
+                                                                                            stroke-width="1"
+                                                                                            fill="none"
+                                                                                            fill-rule="evenodd">
+                                                                                            <rect x="0"
+                                                                                                y="0"
+                                                                                                width="24"
+                                                                                                height="24" />
+                                                                                            <circle fill="#000000"
+                                                                                                cx="5"
+                                                                                                cy="12"
+                                                                                                r="2" />
+                                                                                            <circle fill="#000000"
+                                                                                                cx="12"
+                                                                                                cy="12"
+                                                                                                r="2" />
+                                                                                            <circle fill="#000000"
+                                                                                                cx="19"
+                                                                                                cy="12"
+                                                                                                r="2" />
+                                                                                        </g>
+                                                                                    </svg>
+                                                                                </button>
+                                                                                <div class="dropdown-menu">
+                                                                                    <a class="dropdown-item"
+                                                                                        href="{{ route('admin.subcategories.edit', $sub->id) }}">Edit</a>
+                                                                                    <a class="dropdown-item"
+                                                                                        href="{{ route('admin.subcategories.show', $sub->id) }}">Show</a>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                @empty
+                                                                    <tr>
+                                                                        <th colspan="5">
+                                                                            <h5 class="text-center">There is No data
+                                                                            </h5>
+                                                                        </th>
+                                                                    </tr>
+                                                                @endforelse
+
+                                                            </tbody>
+
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>

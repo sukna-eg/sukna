@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Models\Area;
+use App\Models\City;
 use App\Models\Branch;
 use App\Models\Partner;
 use App\Models\User;
@@ -34,13 +35,14 @@ class PartnerController extends Controller
         $subcategories = Subcategory::all();
         $areas = Area::all();
         $users = User::all();
-        return view('admin.partners.create',compact('subcategories','areas','users'));
+        $cities = City::all();
+        return view('admin.partners.create',compact('subcategories','areas','cities','users'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(PartnerRequest $request)
+    public function store(Request $request)
     {
         $request['address']=['en'=>$request->address_en,'ar'=>$request->address_ar];
         $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
@@ -93,7 +95,7 @@ class PartnerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(PartnerRequest $request, string $id)
+    public function update(Request $request, string $id)
     {
         $partner = Partner::findOrFail($id);
 
@@ -125,6 +127,6 @@ class PartnerController extends Controller
     public function openFile($id)
     {
         $partner = Partner::findOrFail($id);
-        return response()->file($partner->file);
+        return response()->file($partner->music);
     }
 }

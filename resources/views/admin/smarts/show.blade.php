@@ -6,7 +6,7 @@
         <!-- row -->
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li><h5 class="bc-title">{{ $service->getTranslation('name', 'ar') }}</h5></li>
+                <li><h5 class="bc-title">{{ $smart->getTranslation('name', 'ar') }}</h5></li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">
                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round"/>
@@ -14,9 +14,9 @@
                     </svg>
                     Home </a>
                 </li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ $service->getTranslation('name', 'ar') }} </a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ $smart->getTranslation('name', 'ar') }} </a></li>
             </ol>
-            <a class="text-primary fs-13" href="{{ route('admin.services.index') }}" >{{  __('Services') }}</a>
+            <a class="text-primary fs-13" href="{{ route('admin.smarts.index') }}" >{{  __('Smarts') }}</a>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -25,20 +25,18 @@
                         <div class="card-body p-0">
                             <div class="offcanvas-body">
                                 <div class="container-fluid">
-                                <h4 class="heading mb-5"> {{ $service->getTranslation('name', 'ar') }}</h4>
-                                    <p class="mb-3"><strong>Name-En : </strong> {!! $service->getTranslation('name', 'en') !!}</p>
-                                    <p class="mb-3"><strong>Name-Ar : </strong> {!! $service->getTranslation('name', 'ar') !!}</p>
-                                    <p class="mb-3"><strong>Address : </strong> {{ $service->address }}</p>
+                                <h4 class="heading mb-5"> {{ $smart->getTranslation('name', 'ar') }}</h4>
+                                    <p class="mb-3"><strong>Name-En : </strong> {!! $smart->getTranslation('name', 'en') !!}</p>
+                                    <p class="mb-3"><strong>Name-Ar : </strong> {!! $smart->getTranslation('name', 'ar') !!}</p>
+
                                     {{-- <p class="mb-3"><strong>Address-Ar : </strong> {{ $service->getTranslation('address', 'ar') }}</p> --}}
-                                    <p class="mb-3"><strong>Description-En : </strong> {{ $service->getTranslation('description', 'en') }}</p>
-                                    <p class="mb-3"><strong>Description-Ar : </strong> {{ $service->getTranslation('description', 'ar') }}</p>
-                                    <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px" src="{{ asset( $service->image ) }}" alt="{{ $service->name }}">
-                                    <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px" src="{{ asset( $service->logo ) }}" alt="{{ $service->name }}">
-                                    <p class="mb-3"><strong>Phone :</strong> {{ $service->phone }}</p>
-                                    <p class="mb-3"><strong>Whatsapp :</strong> {{ $service->whatsapp }}</p>
-                                    <p class="mb-3"><strong>Facebook :</strong> {{ $service->facebook }}</p>
-                                    <p class="mb-3"><strong>Premium :</strong> {{ $service->premium == 1? 'Yes' : 'No' }}</p>
-                                    <p class="mb-3"><strong>Category : </strong> <a href="{{ route('admin.categories.show',$service->category->id) }}">{{ $service->category->name }}</a></p>
+                                    <p class="mb-3"><strong>Description-En : </strong> {{ $smart->getTranslation('description', 'en') }}</p>
+                                    <p class="mb-3"><strong>Description-Ar : </strong> {{ $smart->getTranslation('description', 'ar') }}</p>
+                                    <p class="mb-3"><strong>Link :</strong> {{ $smart->link }}</p>
+                                    <p class="mb-3"><strong>Phone :</strong> {{ $smart->phone }}</p>
+                                    <p class="mb-3"><strong>Whatsapp :</strong> {{ $smart->whatsapp }}</p>
+                                    <p class="mb-3"><strong>Facebook :</strong> {{ $smart->facebook }}</p>
+
 
                                 </div>
 
@@ -56,7 +54,7 @@
                                     <x-admin-layouts.alerts />
                                     <div class="table-responsive active-projects manage-client">
                                         <div class="tbl-caption">
-                                            <h4 class="heading mb-0"> {{ __('Projects') }}</h4>
+                                            <h4 class="heading mb-0"> {{ __('Works') }}</h4>
                                         </div>
                                         <div class="tab-content" id="myTabContent">
                                             <div class="tab-pane fade show active" id="Preview" role="tabpanel"
@@ -70,22 +68,26 @@
                                                                     <th>Name-En</th>
                                                                     <th>Name-Ar</th>
                                                                     <th>Duration-Ar</th>
-
+                                                                    <th>Cost</th>
                                                                     <th>actions</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                @forelse ($service->projects as $project)
+                                                                @forelse ($smart->works as $work)
                                                                     <tr>
 
-                                                                        <td><span>{{ $project->getTranslation('name', 'en') }}</span>
+                                                                        <td><span>{{ $work->getTranslation('name', 'en') }}</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span>{{ $project->getTranslation('name', 'ar') }}</span>
+                                                                            <span>{{ $work->getTranslation('name', 'ar') }}</span>
                                                                         </td>
 
                                                                         <td>
-                                                                            <span>{{ $project->getTranslation('duration', 'ar') }}</span>
+                                                                            <span>{{ $work->getTranslation('duration', 'ar') }}</span>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <span>{{ $work->cost }}</span>
                                                                         </td>
 
                                                                         <td>
@@ -121,9 +123,9 @@
                                                                                 </button>
                                                                                 <div class="dropdown-menu">
                                                                                     <a class="dropdown-item"
-                                                                                        href="{{ route('admin.projects.edit', $project->id) }}">Edit</a>
+                                                                                        href="{{ route('admin.works.edit', $work->id) }}">Edit</a>
                                                                                     <a class="dropdown-item"
-                                                                                        href="{{ route('admin.projects.show', $project->id) }}">Show</a>
+                                                                                        href="{{ route('admin.works.show', $work->id) }}">Show</a>
 
 
                                                                                 </div>

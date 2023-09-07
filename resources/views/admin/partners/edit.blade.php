@@ -69,7 +69,79 @@
                                             @enderror
                                         </div>
 
+
                                         <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Type<span class="text-danger">*</span></label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="rent" type="radio" name="type" value="0" @checked(old('type',$partner->type)==0)>
+                                                <label class="form-check-label" for="rent">
+                                                    Rent
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="sale" type="radio" name="type" value="1" @checked(old('type',$partner->type)==1)>
+                                                <label class="form-check-label" for="sale">
+                                                    Sale
+                                                </label>
+                                            </div>
+                                            @error('type')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3" id="minField">
+                                            <label class="form-label">Min</label>
+                                            <input type="number" class="form-control" name="min" value="{{ old('min',$partner->min) }}">
+                                            @error('min')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3" id="maxField">
+                                            <label class="form-label">Max</label>
+                                            <input type="number" class="form-control" name="max" value="{{ old('max',$partner->max) }}">
+                                            @error('max')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3" id="periodField">
+                                            <label class="form-label">Period<span class="text-danger">*</span></label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="monthly" type="radio" name="period" value="monthly" @checked(old('period',$partner->period)=="monthly")>
+                                                <label class="form-check-label" for="monthly">
+                                                    Monthly
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="daily" type="radio" name="period" value="daily" @checked(old('period',$partner->period)=="daily")>
+                                                <label class="form-check-label" for="daily">
+                                                    Daily
+                                                </label>
+                                            </div>
+
+                                            @error('period')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3" id="fromField">
+                                            <label class="form-label">From</label>
+                                            <input type="date" class="form-control" name="from" value="{{ old('from',$partner->from) }}">
+                                            @error('from')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3" id="toField">
+                                            <label class="form-label">To</label>
+                                            <input type="date" class="form-control" name="to" value="{{ old('to',$partner->to) }}">
+                                            @error('to')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        {{-- <div class="col-xl-8 mb-3">
                                             <label class="form-label">Type<span class="text-danger">*</span></label>
                                             <div class="form-check">
                                                 <input class="form-check-input" id="rent" type="radio" name="type" value="0" @checked(old('type',$partner->type)==0)>
@@ -87,6 +159,60 @@
                                             <div class="text-danger">{{ $message }}</div>
                                              @enderror
                                         </div>
+
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Min</label>
+                                            <input type="number" class="form-control" name="min" value="{{ old('min',$partner->min) }}">
+                                            @error('min')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Max</label>
+                                            <input type="number" class="form-control" name="max" value="{{ old('max',$partner->max) }}">
+                                            @error('max')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Period<span class="text-danger">*</span></label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="monthly" type="radio" name="period" value="0" @checked(old('period',$partner->period)=="0")>
+                                                <label class="form-check-label" for="monthly">
+                                                    Monthly
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="daily" type="radio" name="period" value="1" @checked(old('period',$partner->period)=="1")>
+                                                <label class="form-check-label" for="daily">
+                                                    Daily
+                                                </label>
+                                            </div>
+
+                                            @error('period')
+                                            <div class="text-danger">{{ $message }}</div>
+                                             @enderror
+                                        </div>
+
+
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">From</label>
+                                            <input type="date" class="form-control" name="from" value="{{ old('from',$partner->from) }}">
+                                            @error('from')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">To</label>
+                                            <input type="date" class="form-control" name="to" value="{{ old('to',$partner->to) }}">
+                                            @error('to')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div> --}}
+
 
                                         <div class="col-xl-8 mb-3">
                                             <label class="form-label">Show<span class="text-danger">*</span></label>
@@ -182,20 +308,7 @@
                                             <div class="text-danger">{{ $message }}</div>
                                              @enderror
                                         </div>
-                                        <div class="col-xl-8 mb-3">
-                                            <label class="form-label">Lat</label>
-                                            <input type="text" class="form-control" name="lat" value="{{ old('lat',$partner->lat) }}">
-                                            @error('lat')
-                                                <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                        <div class="col-xl-8 mb-3">
-                                            <label class="form-label">Long</label>
-                                            <input type="text" class="form-control" name="long" value="{{ old('long',$partner->long) }}">
-                                            @error('long')
-                                                <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
+
 
                                         <div class="col-xl-8 mb-3">
                                             <label class="form-label">Elevator<span class="text-danger">*</span></label>
@@ -214,6 +327,21 @@
                                             @error('elevator')
                                             <div class="text-danger">{{ $message }}</div>
                                              @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Lat</label>
+                                            <input type="text" class="form-control" name="lat" value="{{ old('lat',$partner->lat) }}">
+                                            @error('lat')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Long</label>
+                                            <input type="text" class="form-control" name="long" value="{{ old('long',$partner->long) }}">
+                                            @error('long')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
 
                                         <div class="col-xl-8 mb-3">
@@ -283,46 +411,7 @@
                                              @enderror
                                         </div>
 
-                                        <div class="col-xl-8 mb-3">
-                                            <label class="form-label">Min</label>
-                                            <input type="number" class="form-control" name="min" value="{{ old('min',$partner->min) }}">
-                                            @error('min')
-                                                <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
 
-                                        <div class="col-xl-8 mb-3">
-                                            <label class="form-label">Max</label>
-                                            <input type="number" class="form-control" name="max" value="{{ old('max',$partner->max) }}">
-                                            @error('max')
-                                                <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-
-                                        <div class="col-xl-8 mb-3">
-                                            <label class="form-label">Period</label>
-                                            <input type="number" class="form-control" name="period" value="{{ old('period',$partner->period) }}">
-                                            @error('period')
-                                                <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-
-
-                                        <div class="col-xl-8 mb-3">
-                                            <label class="form-label">From</label>
-                                            <input type="date" class="form-control" name="from" value="{{ old('from',$partner->from) }}">
-                                            @error('from')
-                                                <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-
-                                        <div class="col-xl-8 mb-3">
-                                            <label class="form-label">To</label>
-                                            <input type="date" class="form-control" name="to" value="{{ old('to',$partner->to) }}">
-                                            @error('to')
-                                                <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
 
 
                                         <div class="col-xl-8 mb-3">
@@ -359,12 +448,32 @@
                                     </div>
 
                                     <div class="col-xl-8 mb-3">
+                                        <label class="form-label">Purpose<span class="text-danger">*</span></label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="commercial" type="radio" name="purpose" value="commercial" @checked(old('purpose',$partner->purpose)=="commercial")>
+                                            <label class="form-check-label" for="commercial">
+                                                Commercial
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="residential" type="radio" name="purpose" value="residential" @checked(old('purpose',$partner->purpose)=="residential")>
+                                            <label class="form-check-label" for="residential">
+                                                Residential
+                                            </label>
+                                        </div>
+
+                                        @error('purpose')
+                                        <div class="text-danger">{{ $message }}</div>
+                                         @enderror
+                                    </div>
+
+                                    {{-- <div class="col-xl-8 mb-3">
                                         <label class="form-label">Purpose</label>
                                         <input type="text" class="form-control" name="purpose" value="{{ old('purpose',$partner->purpose) }}">
                                         @error('purpose')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
-                                    </div>
+                                    </div> --}}
 
                                     <div class="col-xl-8 mb-3">
                                         <label class="form-label">Price</label>
@@ -429,6 +538,51 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        // Get references to the rent and sale radio buttons
+        const rentRadio = document.getElementById('rent');
+        const saleRadio = document.getElementById('sale');
+
+        // Get references to the fields
+        const minField = document.getElementById('minField');
+        const maxField = document.getElementById('maxField');
+        const periodField = document.getElementById('periodField');
+        const fromField = document.getElementById('fromField');
+        const toField = document.getElementById('toField');
+        const periodRadios = document.getElementsByName('period');
+
+        // Function to show or hide the fields based on the selected radio button
+        function toggleFields() {
+            if (rentRadio.checked) {
+                minField.style.display = 'block';
+                maxField.style.display = 'block';
+                periodField.style.display = 'block';
+                fromField.style.display = 'block';
+                toField.style.display = 'block';
+                for (let i = 0; i < periodRadios.length; i++) {
+                    periodRadios[i].disabled = false;
+                }
+            } else {
+                minField.style.display = 'none';
+                maxField.style.display = 'none';
+                periodField.style.display = 'none';
+                fromField.style.display = 'none';
+                toField.style.display = 'none';
+                for (let i = 0; i < periodRadios.length; i++) {
+                    periodRadios[i].disabled = true;
+                }
+            }
+        }
+
+        // Add event listeners to the radio buttons
+        rentRadio.addEventListener('change', toggleFields);
+        saleRadio.addEventListener('change', toggleFields);
+
+        // Initially hide/show fields based on the selected radio button on page load
+        toggleFields();
+    </script>
 
     <!--**********************************
         Content body end

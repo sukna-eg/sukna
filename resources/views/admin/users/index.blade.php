@@ -48,6 +48,7 @@
                                                     {{-- <th>Email</th> --}}
                                                     <th>Phone</th>
                                                     <th>Type</th>
+                                                    <th>Active</th>
                                                     <th>Image</th>
 
 
@@ -69,6 +70,10 @@
                                                             <span>{{ $user->type==1?'Agent':'User' }}</span>
                                                             {{-- <span>{{ $user->type }}</span> --}}
                                                         </td>
+                                                        <td>
+                                                            <span>{{ $user->active == 1? 'Active' : 'InActive' }}</span>
+                                                        </td>
+
                                                         <td>
                                                             <span><img src="{{ asset($user->image) }}"
                                                                 width="75"

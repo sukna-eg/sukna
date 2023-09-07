@@ -35,7 +35,7 @@
 
                                     <div class="row">
                                         <div class="col-xl-8 mb-3">
-                                            <label class="form-label">First Name<span class="text-danger">*</span></label>
+                                            <label class="form-label">Name<span class="text-danger">*</span></label>
                                             <input type="text" class="form-control" name="name" placeholder="fname" value="{{ old('name',$user->name) }}">
                                             @error('name')
                                                 <div class="text-danger">{{ $message }}</div>
@@ -60,17 +60,7 @@
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror
                                         </div>
-                                        {{-- <div class="col-xl-8 mb-3">
-                                            <label class="form-label">Profile<span class="text-danger">*</span></label>
-                                            <select class="default-select form-control wide mb-3" name="profile_image_id" tabindex="null">
-                                                @foreach ($profiles as $profile)
-                                                    <option value="{{ $profile->id }}" @selected(old('profile_image_id',$user->profile_image_id)==$profile->id)>{{ $profile->id }}</option>
-                                                @endforeach
-                                            </select>
-                                            @error('profile_image_id')
-                                                <div class="text-danger">{{ $message }}</div>
-                                             @enderror
-                                        </div> --}}
+
 
                                         <div class="col-xl-8 mb-3">
                                             <label class="form-label">Type<span class="text-danger">*</span></label>
@@ -90,6 +80,41 @@
                                             <div class="text-danger">{{ $message }}</div>
                                              @enderror
                                         </div>
+
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Lat</label>
+                                            <input type="text" class="form-control" name="lat" value="{{ old('lat',$user->lat) }}">
+                                            @error('lat')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Long</label>
+                                            <input type="text" class="form-control" name="long" value="{{ old('long',$user->long) }}">
+                                            @error('long')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Status<span class="text-danger">*</span></label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="inactive" type="radio" name="active" value="0" @checked(old('active',$user->active)==0)>
+                                                <label class="form-check-label" for="inactive">
+                                                    InActive
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="active" type="radio" name="active" value="1" @checked(old('active',$user->active)==1)>
+                                                <label class="form-check-label" for="active">
+                                                    Active
+                                                </label>
+                                            </div>
+                                            @error('active')
+                                            <div class="text-danger">{{ $message }}</div>
+                                             @enderror
+                                        </div>
+
 
                                         <div class="col-xl-8 mb-3">
                                             <label for="image" class="form-label">Image</label>

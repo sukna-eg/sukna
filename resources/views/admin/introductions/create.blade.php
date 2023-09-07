@@ -31,71 +31,26 @@
                                 @csrf
                                 <div class="row">
                                     <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title One(En)<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_one_en" value="{{ old('title_one_en') }}">
-                                        @error('title_one_en')
+                                        <label for="exampleFormControlInputfirst" class="form-label">Title(En)<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_en" value="{{ old('title_en') }}">
+                                        @error('title_en')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
 
+
+
                                     <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title Two(En)<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_two_en" value="{{ old('title_two_en') }}">
-                                        @error('title_two_en')
+                                        <label for="exampleFormControlInputfirst" class="form-label">Title(Ar)<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_ar" value="{{ old('title_ar') }}">
+                                        @error('title_ar')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
 
-                                    <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title One(Ar)<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_one_ar" value="{{ old('title_one_ar') }}">
-                                        @error('title_one_ar')
-                                            <div class="text-danger">{{ $message }}</div>
-                                        @enderror
-                                    </div>
 
-                                    <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title Two(Ar)<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_two_ar" value="{{ old('title_two_ar') }}">
-                                        @error('title_two_ar')
-                                            <div class="text-danger">{{ $message }}</div>
-                                        @enderror
-                                    </div>
 
-                                    <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title One(Fr)</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_one_fr" value="{{ old('title_one_fr') }}">
 
-                                    </div>
-
-                                    <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title Two(Fr)</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_two_fr" value="{{ old('title_two_fr') }}">
-
-                                    </div>
-
-                                    <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title One(Es)</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_one_es" value="{{ old('title_one_es') }}">
-
-                                    </div>
-
-                                    <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title Two(Es)</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_two_es" value="{{ old('title_two_es') }}">
-
-                                    </div>
-                                       <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title One(Ru)</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_one_ru" value="{{ old('title_one_ru') }}">
-
-                                    </div>
-
-                                    <div class="col-xl-6 mb-3">
-                                        <label for="exampleFormControlInputfirst" class="form-label">Title Two(Ru)</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="title_two_ru" value="{{ old('title_two_ru') }}">
-
-                                    </div>
 
 
                                     <div class="col-xl-8 mb-3">
@@ -115,32 +70,8 @@
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <div class="col-xl-8 mb-3">
-                                        <label for="ckeditor2" class="form-label">Body-Fr</label>
-                                    {{-- <div class="card-body custom-ekeditor"> --}}
-                                        <textarea id="ckeditor2" class="form-txtarea form-control" rows="8" name="body_fr">{{ old('body_fr') }}</textarea>
-                                    {{-- </div> --}}
-                                    </div>
-                                    <div class="col-xl-8 mb-3">
-                                        <label for="ckeditor3" class="form-label">Body-Es</label>
-                                        {{-- <div class="card-body custom-ekeditor"> --}}
-                                        <textarea id="ckeditor3" class="form-txtarea form-control" rows="8" name="body_es">{{ old('body_es') }}</textarea>
-                                        {{-- </div> --}}
-                                    </div>
-                                    <div class="col-xl-8 mb-3">
-                                        <label for="ckeditor4" class="form-label">Body-Ru</label>
-                                        {{-- <div class="card-body custom-ekeditor"> --}}
-                                        <textarea id="ckeditor4" class="form-txtarea form-control" rows="8" name="body_ru">{{ old('body_ru') }}</textarea>
-                                        {{-- </div> --}}
-                                    </div>
 
-                                    <div class="col-xl-8 mb-3">
-                                        <label for="image" class="form-label">Image Number<span class="text-danger">*</span></label>
-                                        <input class="form-control" type="number" name="image_number" value="{{ old('image_number') }}" id="image">
-                                        @error('image_number')
-                                            <div class="text-danger">{{ $message }}</div>
-                                        @enderror
-                                    </div>
+
 
 
 

@@ -22,6 +22,25 @@ class Partner extends Model
         }
     }
 
+    protected static function booted()
+    {
+        static::deleted(function ($partner) {
+
+
+            if ($partner->images){
+                foreach ($partner->images as $image) {
+                    unlink($image->image);
+                }
+                $partner->images()->delete();
+            }
+
+
+            if ($partner->music  && \Illuminate\Support\Facades\File::exists($partner->music)) {
+                unlink($partner->music);
+            }
+        });
+    }
+
     public function subcategory()
 	{
 		return $this->belongsTo(Subcategory::class);

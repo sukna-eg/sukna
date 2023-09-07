@@ -45,9 +45,9 @@
                                                             style="min-width: 845px">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Title One</th>
-                                                                    <th>Title Two</th>
-                                                                    <th>Image Number</th>
+                                                                    <th>Title-En</th>
+                                                                    <th>Title-Ar</th>
+
 
 
                                                                     <th>actions</th>
@@ -57,16 +57,14 @@
                                                                 @forelse ($data as $introduction)
                                                                     <tr>
 
-                                                                        <td><span>{{ $introduction->getTranslation('title_one', 'en') }}</span>
+                                                                        <td><span>{{ $introduction->getTranslation('title', 'en') }}</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span>{{ $introduction->getTranslation('title_two', 'en') }}</span>
+                                                                            <span>{{ $introduction->getTranslation('title', 'ar') }}</span>
                                                                         </td>
 
-                                                                        <td>
-                                                                            <span>{{ $introduction->image_number }}</span>
-                                                                        </td>
-                                                                        <td>
+
+                                            <td>
                                                                             <div class="dropdown">
                                                                                 <button type="button"
                                                                                     class="btn btn-success light sharp"
@@ -106,7 +104,7 @@
                                                                                         data-bs-toggle="modal"
                                                                                         data-bs-target="#deleteModal"
                                                                                         data-id="{{ $introduction->id }}"
-                                                                                        data-name="{{ $introduction->title_one }}">Delete</button>
+                                                                                        data-name="{{ $introduction->title }}">Delete</button>
                                                                                 </div>
                                                                             </div>
                                                                         </td>

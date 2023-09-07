@@ -7,7 +7,7 @@
         <div class="page-titles">
             <ol class="breadcrumb">
                 <li>
-                    <h5 class="bc-title">{{ __('Services') }}</h5>
+                    <h5 class="bc-title">{{ __('Smarts') }}</h5>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
@@ -20,9 +20,9 @@
                         </svg>
                         Home </a>
                 </li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Services') }} </a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Smarts') }} </a></li>
             </ol>
-            <a class="text-primary fs-13" href="{{ route('admin.services.create') }}">+ Add Service</a>
+            <a class="text-primary fs-13" href="{{ route('admin.smarts.create') }}">+ Add Smart</a>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -34,7 +34,7 @@
                                     <x-admin-layouts.alerts />
                                     <div class="table-responsive active-projects manage-client">
                                         <div class="tbl-caption">
-                                            <h4 class="heading mb-0"> {{ __('Services') }}</h4>
+                                            <h4 class="heading mb-0"> {{ __('Smarts') }}</h4>
                                         </div>
                                         <div class="tab-content" id="myTabContent">
                                             <div class="tab-pane fade show active" id="Preview" role="tabpanel"
@@ -45,36 +45,36 @@
                                                             style="min-width: 845px">
                                                             <thead>
                                                                 <tr>
-                                                                    {{-- <th>Name En</th> --}}
+                                                                    <th>Name En</th>
+
                                                                     <th>Name Ar</th>
 
                                                                     <th>Phone</th>
 
-                                                                    <th>Premium</th>
+
+                                                                    <th>Whatsapp</th>
 
 
-                                                                    <th>Category Name</th>
 
 
                                                                     <th>actions</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                @forelse ($data as $service)
+                                                                @forelse ($data as $smart)
                                                                     <tr>
 
-                                                                        <td><span>{{ $service->getTranslation('name', 'ar') }}</span>
+
+                                                                        <td><span>{{ $smart->getTranslation('name', 'en') }}</span>
                                                                         </td>
 
-                                                                        <td><span>{{ $service->phone }}</span>
+                                                                        <td><span>{{ $smart->getTranslation('name', 'ar') }}</span>
                                                                         </td>
 
-                                                                        <td>
-                                                                            <span>{{ $service->premium == 1? 'Yes' : 'No' }}</span>
+                                                                        <td><span>{{ $smart->phone }}</span>
                                                                         </td>
 
-                                                                        <td>
-                                                                            <span><a href="{{ route('admin.categories.show',$service->category->id) }}">{{ $service->category->name }}</a></span>
+                                                                        <td><span>{{ $smart->whatsapp }}</span>
                                                                         </td>
 
                                                                         <td>
@@ -110,14 +110,14 @@
                                                                                 </button>
                                                                                 <div class="dropdown-menu">
                                                                                     <a class="dropdown-item"
-                                                                                        href="{{ route('admin.services.edit', $service->id) }}">Edit</a>
+                                                                                        href="{{ route('admin.smarts.edit', $smart->id) }}">Edit</a>
                                                                                     <a class="dropdown-item"
-                                                                                        href="{{ route('admin.services.show', $service->id) }}">Show</a>
+                                                                                        href="{{ route('admin.smarts.show', $smart->id) }}">Show</a>
                                                                                     <button class="dropdown-item"
                                                                                         data-bs-toggle="modal"
                                                                                         data-bs-target="#deleteModal"
-                                                                                        data-id="{{ $service->id }}"
-                                                                                        data-name="{{ $service->name }}">Delete</button>
+                                                                                        data-id="{{ $smart->id }}"
+                                                                                        data-name="{{ $smart->name }}">Delete</button>
                                                                                 </div>
                                                                             </div>
                                                                         </td>
@@ -157,10 +157,10 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete Service</h5>
+                    <h5 class="modal-title" id="deleteModalLabel">Delete Smart Home</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="{{ route('admin.services.destroy', 'test') }}" method="post">
+                <form action="{{ route('admin.smarts.destroy', 'test') }}" method="post">
                     {{ method_field('delete') }}
                     @csrf
                     <div class="modal-body">

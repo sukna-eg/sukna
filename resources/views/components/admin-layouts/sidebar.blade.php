@@ -5,7 +5,7 @@
         <div class="deznav">
             <div class="deznav-scroll">
 				<ul class="metismenu" id="menu">
-					<li class="menu-title">Shababeek</li>
+					<li class="menu-title" style="font-size: 100%">Shababeek</li>
 					<li><a href="{{ route('admin.dashboard') }}" aria-expanded="false">
 						<div class="menu-icon">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,7 @@
 							<span class="nav-text">Admins</span>
 						</a>
 					</li>
-                    {{-- <li><a href="{{ route('admin.introductions.index') }}" class="" aria-expanded="false">
+                    <li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
 						<div class="menu-icon">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 5.95833C2.75 3.55189 2.77577 2.75 5.95833 2.75C9.1409 2.75 9.16667 3.55189 9.16667 5.95833C9.16667 8.36478 9.17682 9.16667 5.95833 9.16667C2.73985 9.16667 2.75 8.36478 2.75 5.95833Z" stroke="#888888" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -38,7 +38,11 @@
 						</div>
 							<span class="nav-text">Introductions</span>
 						</a>
-					</li> --}}
+                        <ul aria-expanded="false" class="mm-collapse">
+                            <li><a href="{{ route('admin.introductions.index') }}">Info</a></li>
+
+                        </ul>
+					</li>
                     {{-- <li><a href="{{ route('admin.advices.index') }}" class="" aria-expanded="false">
 						<div class="menu-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -162,7 +166,7 @@
                         <ul aria-expanded="false" class="mm-collapse">
 
                             <li><a href="{{ route('admin.smarts.index') }}">Smart Home</a></li>
-
+                            <li><a href="{{ route('admin.works.index') }}">Projects</a></li>
                         </ul>
 
 					</li>

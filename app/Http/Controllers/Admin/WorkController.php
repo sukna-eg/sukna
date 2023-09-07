@@ -2,23 +2,24 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Smart;
+use App\Models\Service;
 use App\Models\Project;
 use App\Models\Work;
+use App\Models\Smart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\Admin\CityRequest;
 
-class SmartController extends Controller
+class WorkController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = Smart::latest()->get();
-        return view('admin.smarts.index',compact('data'));
+        $data = Work::latest()->get();
+        return view('admin.works.index',compact('data'));
     }
 
     /**
@@ -27,8 +28,8 @@ class SmartController extends Controller
     public function create()
     {
 
-
-        return view('admin.smarts.create');
+        $smarts = Smart::all();
+        return view('admin.works.create',compact('smarts'));
     }
 
     /**
@@ -39,19 +40,22 @@ class SmartController extends Controller
 
         $request['name']=['en'=>$request->name_en,'ar'=>$request->name_ar];
         $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
+        $request['duration']=['en'=>$request->duration_en,'ar'=>$request->duration_ar];
 
-        $smart = Smart::create($request->except([
+        $work = Work::create($request->except([
 
             'name_en',
             'name_ar',
             'description_en',
-            'description_ar'
+            'description_ar',
+            'duration_en',
+            'duration_ar'
         ]));
 
 
 
-        return redirect()->route('admin.smarts.index')
-                        ->with('success','Smart has been added successfully');
+        return redirect()->route('admin.works.index')
+                        ->with('success','Work has been added successfully');
     }
 
     /**
@@ -59,8 +63,8 @@ class SmartController extends Controller
      */
     public function show(string $id)
     {
-        $smart = Smart::with('works')->findOrFail($id);
-        return view('admin.smarts.show',compact('smart'));
+        $work = Work::findOrFail($id);
+        return view('admin.works.show',compact('work'));
     }
 
     /**
@@ -68,9 +72,9 @@ class SmartController extends Controller
      */
     public function edit(string $id)
     {
-
-        $smart = Smart::with('works')->findOrFail($id);
-        return view('admin.smarts.edit',compact('smart'));
+        $smarts = Smart::all();
+        $work = Work::findOrFail($id);
+        return view('admin.works.edit',compact('work','smarts'));
     }
 
     /**
@@ -78,24 +82,27 @@ class SmartController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $smart = Smart::findOrFail($id);
+        $work = Work::findOrFail($id);
 
 
         $request['name']=['en'=>$request->name_en,'ar'=>$request->name_ar];
         $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
+        $request['duration']=['en'=>$request->duration_en,'ar'=>$request->duration_ar];
 
-        $smart->update($request->except([
+        $work->update($request->except([
 
             'name_en',
             'name_ar',
             'description_en',
-            'description_ar'
+            'description_ar',
+            'duration_en',
+            'duration_ar'
 
         ]));
 
 
-        return redirect()->route('admin.smarts.index')
-                        ->with('success','Smart has been updated successfully');
+        return redirect()->route('admin.works.index')
+                        ->with('success','Work has been updated successfully');
     }
 
     /**
@@ -103,7 +110,7 @@ class SmartController extends Controller
      */
     public function destroy(Request $request)
     {
-        Smart::findOrFail($request->id)->delete();
-        return redirect()->route('admin.smarts.index')->with('success','Smart has been removed successfully');
+        Work::findOrFail($request->id)->delete();
+        return redirect()->route('admin.works.index')->with('success','Work has been removed successfully');
     }
 }

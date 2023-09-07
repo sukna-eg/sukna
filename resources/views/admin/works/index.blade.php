@@ -7,7 +7,7 @@
         <div class="page-titles">
             <ol class="breadcrumb">
                 <li>
-                    <h5 class="bc-title">{{ __('Admins') }}</h5>
+                    <h5 class="bc-title">{{ __('Works') }}</h5>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
@@ -20,9 +20,9 @@
                         </svg>
                         Home </a>
                 </li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Admins') }} </a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Works') }} </a></li>
             </ol>
-            {{-- <a class="text-primary fs-13" href="{{ route('admin.admins.create') }}">+ Add Admin</a> --}}
+            <a class="text-primary fs-13" href="{{ route('admin.works.create') }}">+ Add Work</a>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -34,7 +34,7 @@
                                     <x-admin-layouts.alerts />
                                     <div class="table-responsive active-projects manage-client">
                                         <div class="tbl-caption">
-                                            <h4 class="heading mb-0"> {{ __('Admins') }}</h4>
+                                            <h4 class="heading mb-0"> {{ __('Works') }}</h4>
                                         </div>
                                         <div class="tab-content" id="myTabContent">
                                             <div class="tab-pane fade show active" id="Preview" role="tabpanel"
@@ -45,25 +45,40 @@
                                                             style="min-width: 845px">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>name</th>
-                                                                    <th>Email</th>
+                                                                    <th>Name-En</th>
+                                                                    <th>Name-Ar</th>
+                                                                    <th>Duration-Ar</th>
+                                                                    <th>Cost</th>
+                                                                    <th>Smart Name</th>
+                                                                    <th>actions</th>
 
 
-                                                                    {{-- <th>actions</th> --}}
+
+
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                @forelse ($data as $admin)
+                                                                @forelse ($data as $work)
                                                                     <tr>
 
-                                                                        <td><span>{{ $admin->name }}</span></td>
+                                                                        <td><span>{{ $work->getTranslation('name', 'en') }}</span>
+                                                                        </td>
                                                                         <td>
-                                                                            <span>{{ $admin->email }}</span>
+                                                                            <span>{{ $work->getTranslation('name', 'ar') }}</span>
                                                                         </td>
 
+                                                                        <td>
+                                                                            <span>{{ $work->getTranslation('duration', 'ar') }}</span>
+                                                                        </td>
 
+                                                                        <td>
+                                                                            <span>{{ $work->cost }}</span>
+                                                                        </td>
 
-                                                                        {{-- <td>
+                                                                        <td>
+                                                                            <span><a href="{{ route('admin.smarts.show',$work->smart->id) }}">{{ $work->smart->name }}</a></span>
+                                                                        </td>
+                                                                        <td>
                                                                             <div class="dropdown">
                                                                                 <button type="button"
                                                                                     class="btn btn-success light sharp"
@@ -96,16 +111,17 @@
                                                                                 </button>
                                                                                 <div class="dropdown-menu">
                                                                                     <a class="dropdown-item"
-                                                                                        href="{{ route('admin.admins.edit', $admin->id) }}">Edit</a>
-
+                                                                                        href="{{ route('admin.works.edit', $work->id) }}">Edit</a>
+                                                                                    <a class="dropdown-item"
+                                                                                        href="{{ route('admin.works.show', $work->id) }}">Show</a>
                                                                                     <button class="dropdown-item"
                                                                                         data-bs-toggle="modal"
                                                                                         data-bs-target="#deleteModal"
-                                                                                        data-id="{{ $admin->id }}"
-                                                                                        data-name="{{ $admin->name }}">Delete</button>
+                                                                                        data-id="{{ $work->id }}"
+                                                                                        data-name="{{ $work->name }}">Delete</button>
                                                                                 </div>
                                                                             </div>
-                                                                        </td> --}}
+                                                                        </td>
                                                                     </tr>
 
                                                                 @empty
@@ -120,7 +136,6 @@
                                                             </tbody>
 
                                                         </table>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -143,10 +158,10 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete Admin</h5>
+                    <h5 class="modal-title" id="deleteModalLabel">Delete Work</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="{{ route('admin.admins.destroy', 'test') }}" method="post">
+                <form action="{{ route('admin.works.destroy', 'test') }}" method="post">
                     {{ method_field('delete') }}
                     @csrf
                     <div class="modal-body">

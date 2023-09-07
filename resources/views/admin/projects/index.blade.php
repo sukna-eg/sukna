@@ -20,7 +20,7 @@
                         </svg>
                         Home </a>
                 </li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Services') }} </a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Projects') }} </a></li>
             </ol>
             <a class="text-primary fs-13" href="{{ route('admin.projects.create') }}">+ Add Project</a>
         </div>

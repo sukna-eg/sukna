@@ -30,27 +30,17 @@ class IntroductionController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(IntroductionRequest $request)
+    public function store(Request $request)
     {
-        $request['title_one']=['en'=>$request->title_one_en,'ar'=>$request->title_one_ar,'fr'=>$request->title_one_fr,'es'=>$request->title_one_es,'ru'=>$request->title_one_ru];
-        $request['title_two']=['en'=>$request->title_two_en,'ar'=>$request->title_two_ar,'fr'=>$request->title_two_fr,'es'=>$request->title_two_es,'ru'=>$request->title_two_ru];
-        $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar,'fr'=>$request->body_fr,'es'=>$request->body_es,'ru'=>$request->body_ru];
+        $request['title']=['en'=>$request->title_en,'ar'=>$request->title_ar];
+
+        $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar];
         Introduction::create($request->except([
-            'title_one_en',
-            'title_one_ar',
-            'title_one_fr',
-            'title_one_es',
-            'title_one_ru',
-            'title_two_en',
-            'title_two_ar',
-            'title_two_fr',
-            'title_two_es',
-            'title_two_ru',
+            'title_en',
+            'title_ar',
             'body_en',
             'body_ar',
-            'body_fr',
-            'body_es',
-            'body_ru',
+
         ]));
 
 
@@ -79,29 +69,21 @@ class IntroductionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(IntroductionRequest $request, string $id)
+    public function update(Request $request, string $id)
     {
         $introduction = Introduction::findOrFail($id);
 
-        $request['title_one']=['en'=>$request->title_one_en,'ar'=>$request->title_one_ar,'fr'=>$request->title_one_fr,'es'=>$request->title_one_es,'ru'=>$request->title_one_ru];
-        $request['title_two']=['en'=>$request->title_two_en,'ar'=>$request->title_two_ar,'fr'=>$request->title_two_fr,'es'=>$request->title_two_es,'ru'=>$request->title_two_ru];
-        $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar,'fr'=>$request->body_fr,'es'=>$request->body_es,'ru'=>$request->body_ru];
+        $request['title']=['en'=>$request->title_en,'ar'=>$request->title_ar];
+
+        $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar];
+
         $introduction->update($request->except([
-            'title_one_en',
-            'title_one_ar',
-            'title_one_fr',
-            'title_one_es',
-            'title_one_ru',
-            'title_two_en',
-            'title_two_ar',
-            'title_two_fr',
-            'title_two_es',
-            'title_two_ru',
+            'title_en',
+            'title_ar',
+
             'body_en',
             'body_ar',
-            'body_fr',
-            'body_es',
-            'body_ru',
+
         ]));
 
 
