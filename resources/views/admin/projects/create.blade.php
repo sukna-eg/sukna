@@ -117,7 +117,7 @@
                                         <select class="default-select form-control wide mb-3" name="service_id" tabindex="null">
 											<option selected disabled>Select Service</option>
                                             @foreach ($services as $service)
-                                                <option value="{{ $service->id }}" @selected(old('service_id')==$service->id)>{{ $service->name }}</option>
+                                                <option value="{{ $service->id }}" @selected(old('service_id')==$service->id)>{!! $service->getTranslation('name', 'ar') !!}</option>
                                             @endforeach
 										</select>
                                         @error('service_id')

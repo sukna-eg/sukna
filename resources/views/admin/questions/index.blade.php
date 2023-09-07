@@ -45,11 +45,11 @@
                                                             style="min-width: 845px">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Question En</th>
+                                                                    {{-- <th>Question En</th> --}}
                                                                     <th>Question Ar</th>
 
                                                                     <th>Status</th>
-                                                                    <th>User Id</th>
+                                                                    {{-- <th>User Id</th> --}}
                                                                     <th>User Name</th>
 
                                                                     <th>actions</th>
@@ -58,18 +58,21 @@
                                                             <tbody>
                                                                 @forelse ($data as $question)
                                                                     <tr>
-                                                                        <td><span>{{ $question->getTranslation('question', 'en') }}</span>
-                                                                        </td>
+                                                                        {{-- <td><span>{{ $question->getTranslation('question', 'en') }}</span>
+                                                                        </td> --}}
                                                                         <td><span>{{ $question->getTranslation('question', 'ar') }}</span>
                                                                         </td>
                                                                         <td>
                                                                             <span>{{ $question->status == 1? 'Active' : 'InActive' }}</span>
                                                                         </td>
 
-                                                                        <td><span>{{ $question->user->id }}</span>
+                                                                        {{-- <td><span>{{ $question->user->id }}</span>
+                                                                        </td> --}}
+
+                                                                        <td>
+                                                                            <span><a href="{{ route('admin.users.show',$question->user->id) }}">{{ $question->user->name }}</a></span>
                                                                         </td>
-                                                                        <td><span>{{ $question->user->name }}</span>
-                                                                        </td>
+
 
                                                                         <td>
                                                                             <div class="dropdown">

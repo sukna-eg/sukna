@@ -67,7 +67,7 @@
                                         <label class="form-label">Question<span class="text-danger">*</span></label>
                                         <select class="default-select form-control wide mb-3" name="question_id" tabindex="null">
                                             @foreach ($questions as $question)
-                                                <option value="{{ $question->id }}" @selected(old('question_id',$answer->question->id)==$question->id)>{{ $question->question }}</option>
+                                                <option value="{{ $question->id }}" @selected(old('question_id',$answer->question->id)==$question->id)>{!! $question->getTranslation('question', 'ar') !!}</option>
                                             @endforeach
                                         </select>
                                         @error('question_id')

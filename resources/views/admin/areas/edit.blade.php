@@ -54,7 +54,7 @@
                                             <label class="form-label">City<span class="text-danger">*</span></label>
                                             <select class="default-select form-control wide mb-3" name="city_id" tabindex="null">
                                                 @foreach ($cities as $city)
-                                                    <option value="{{ $city->id }}" @selected(old('city_id',$area->city->id)==$city->id)>{{ $city->name }}</option>
+                                                    <option value="{{ $city->id }}" @selected(old('city_id',$area->city->id)==$city->id)>{!! $city->getTranslation('name', 'ar') !!}</option>
                                                 @endforeach
                                             </select>
                                             @error('city_id')

@@ -78,12 +78,16 @@
                                                                         <td>
                                                                             <span>{{ $partner->premium == 1? 'Yes' : 'No' }}</span>
                                                                         </td>
+
                                                                         <td>
-                                                                            <span>{{ $partner->subcategory->name }}</span>
+                                                                            <span><a href="{{ route('admin.subcategories.show',$partner->subcategory->id) }}">{{ $partner->subcategory->name }}</a></span>
                                                                         </td>
+
                                                                         <td>
-                                                                            <span>{{ $partner->user->id }}</span>
+                                                                            <span><a href="{{ route('admin.users.show',$partner->user->id) }}">{{ $partner->user->name }}</a></span>
                                                                         </td>
+
+
 
 
 

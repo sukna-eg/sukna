@@ -511,7 +511,7 @@
                                         <label class="form-label">Subcategory<span class="text-danger">*</span></label>
                                         <select class="default-select form-control wide mb-3" name="subcategory_id" tabindex="null">
                                             @foreach ($subcategories as $subcategory)
-                                                <option value="{{ $subcategory->id }}" @selected(old('_id',$partner->subcategory->id)==$subcategory->id)>{{ $subcategory->name }}</option>
+                                                <option value="{{ $subcategory->id }}" @selected(old('_id',$partner->subcategory->id)==$subcategory->id)>{!! $subcategory->getTranslation('name', 'ar') !!}</option>
                                             @endforeach
                                         </select>
                                         @error('subcategory_id')
