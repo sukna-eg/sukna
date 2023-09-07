@@ -77,7 +77,7 @@
 
 
                                                                         <td>
-                                                                            <span><a href="{{ route('admin.services.show',$project->service->id) }}">{{ $project->service->name }}</a></span>
+                                                                            <span><a href="{{ route('admin.services.show',$project->service->id) }}">{!! $project->service->getTranslation('name', 'ar') !!}</a></span>
                                                                         </td>
 
                                                                         <td>

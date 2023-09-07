@@ -65,7 +65,7 @@
                                                                             <span>{{ $area->getTranslation('name', 'ar') }}</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span><a href="{{ route('admin.cities.show',$area->city->id) }}">{{ $area->city->name }}</a></span>
+                                                                            <span><a href="{{ route('admin.cities.show',$area->city->id) }}">{!! $area->city->getTranslation('name', 'ar') !!}</a></span>
                                                                         </td>
                                                                         {{-- <td class="align-center">
                                                                             @if ($data->count()>1)

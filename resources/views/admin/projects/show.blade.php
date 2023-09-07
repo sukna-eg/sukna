@@ -38,7 +38,7 @@
                                     <p class="mb-3"><strong>Duration-Ar : </strong> {{ $project->getTranslation('duration', 'ar') }}</p>
 
 
-                                    <p class="mb-3"><strong>Service : </strong> <a href="{{ route('admin.services.show',$project->service->id) }}">{{ $project->service->name }}</a></p>
+                                    <p class="mb-3"><strong>Service : </strong> <a href="{{ route('admin.services.show',$project->service->id) }}">{!! $project->service->getTranslation('name', 'ar') !!}</a></p>
 
                                 </div>
 
