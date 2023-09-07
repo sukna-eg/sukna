@@ -152,7 +152,7 @@
                                         <label class="form-label">Category<span class="text-danger">*</span></label>
                                         <select class="default-select form-control wide mb-3" name="category_id" tabindex="null">
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}" @selected(old('category_id',$service->category->id)==$category->id)>{{ $category->name }}</option>
+                                                <option value="{{ $category->id }}" @selected(old('category_id',$service->category->id)==$category->id)>{!! $category->getTranslation('name', 'ar') !!}</option>
                                             @endforeach
                                         </select>
                                         @error('category_id')

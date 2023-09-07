@@ -37,7 +37,7 @@
                                     <p class="mb-3"><strong>Duration-En : </strong> {{ $work->getTranslation('duration', 'en') }}</p>
                                     <p class="mb-3"><strong>Duration-Ar : </strong> {{ $work->getTranslation('duration', 'ar') }}</p>
 
-                                    <p class="mb-3"><strong>Smart : </strong> <a href="{{ route('admin.smarts.show',$work->smart->id) }}">{{ $work->smart->name }}</a></p>
+                                    <p class="mb-3"><strong>Smart : </strong> <a href="{{ route('admin.smarts.show',$work->smart->id) }}">{!! $work->smart->getTranslation('name', 'ar') !!}</a></p>
 
                                 </div>
 

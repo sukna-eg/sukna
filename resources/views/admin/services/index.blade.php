@@ -74,7 +74,7 @@
                                                                         </td>
 
                                                                         <td>
-                                                                            <span><a href="{{ route('admin.categories.show',$service->category->id) }}">{{ $service->category->name }}</a></span>
+                                                                            <span><a href="{{ route('admin.categories.show',$service->category->id) }}">{!! $service->category->getTranslation('name', 'ar') !!}</a></span>
                                                                         </td>
 
                                                                         <td>

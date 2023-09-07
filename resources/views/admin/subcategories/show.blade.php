@@ -30,7 +30,7 @@
                                     <p class="mb-3"><strong>Name-En : </strong> {!! $subcategory->getTranslation('name', 'en') !!}</p>
                                     <p class="mb-3"><strong>Name-Ar : </strong> {!! $subcategory->getTranslation('name', 'ar') !!}</p>
 
-                                    <p class="mb-3"><strong>Category : </strong> <a href="{{ route('admin.categories.show', $subcategory->category->id) }}">{{ $subcategory->category->name }}</a></p>
+                                    <p class="mb-3"><strong>Category : </strong> <a href="{{ route('admin.categories.show', $subcategory->category->id) }}">{!! $subcategory->category->getTranslation('name', 'ar') !!}</a></p>
 
                                 </div>
 

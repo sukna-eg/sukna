@@ -487,7 +487,7 @@
                                         <label class="form-label">Area<span class="text-danger">*</span></label>
                                         <select class="default-select form-control wide mb-3" name="area_id" tabindex="null">
                                             @foreach ($areas as $area)
-                                                <option value="{{ $area->id }}" @selected(old('area_id',$partner->area->id)==$area->id)>{{ $area->name }}</option>
+                                                <option value="{{ $area->id }}" @selected(old('area_id',$partner->area->id)==$area->id)>{!! $area->getTranslation('name', 'ar') !!}</option>
                                             @endforeach
                                         </select>
                                         @error('area_id')

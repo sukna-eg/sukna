@@ -63,7 +63,7 @@
                                                                             <span>{{ $subcategory->getTranslation('name', 'ar') }}</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span><a href="{{ route('admin.categories.show', $subcategory->category->id) }}">{{ $subcategory->category->name }}</a></span>
+                                                                            <span><a href="{{ route('admin.categories.show', $subcategory->category->id) }}">{!! $subcategory->category->getTranslation('name', 'ar') !!}</a></span>
                                                                         </td>
 
 

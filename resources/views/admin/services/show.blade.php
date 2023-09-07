@@ -38,7 +38,7 @@
                                     <p class="mb-3"><strong>Whatsapp :</strong> {{ $service->whatsapp }}</p>
                                     <p class="mb-3"><strong>Facebook :</strong> {{ $service->facebook }}</p>
                                     <p class="mb-3"><strong>Premium :</strong> {{ $service->premium == 1? 'Yes' : 'No' }}</p>
-                                    <p class="mb-3"><strong>Category : </strong> <a href="{{ route('admin.categories.show',$service->category->id) }}">{{ $service->category->name }}</a></p>
+                                    <p class="mb-3"><strong>Category : </strong> <a href="{{ route('admin.categories.show',$service->category->id) }}">{!! $service->category->getTranslation('name', 'ar') !!}</a></p>
 
                                 </div>
 

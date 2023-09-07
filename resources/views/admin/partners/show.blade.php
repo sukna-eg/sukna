@@ -82,9 +82,9 @@
 
                                     <p class="mb-3"><strong>Purpose :</strong> {{ $partner?->purpose }}</p>
                                     <p class="mb-3"><strong>Price :</strong> {{ $partner?->price }}</p>
-                                    <p class="mb-3"><strong>Area :</strong> {{ $partner?->area?->name }}</p>
+                                    <p class="mb-3"><strong>Area :</strong> {!! $partner->area->getTranslation('name', 'ar') !!}</p>
                                     <p class="mb-3"><strong>Agent :</strong> {{ $partner?->user?->name }}</p>
-                                    <p class="mb-3"><strong>Subcategory :</strong> {{ $partner?->subcategory?->name }}</p>
+                                    <p class="mb-3"><strong>Subcategory :</strong> {!! $partner->subcategory->getTranslation('name', 'ar') !!}</p>
                                     @if ($partner->file)
                                     <p class="mb-3"><strong>File :</strong> <a href="{{ route('admin.partners.file',$partner->id) }}">{{ $partner->name }}</a></p>
                                     @endif

@@ -80,7 +80,7 @@
                                                                         </td>
 
                                                                         <td>
-                                                                            <span><a href="{{ route('admin.subcategories.show',$partner->subcategory->id) }}">{{ $partner->subcategory->name }}</a></span>
+                                                                            <span><a href="{{ route('admin.subcategories.show',$partner->subcategory->id) }}">{!! $partner->subcategory->getTranslation('name', 'ar') !!}</a></span>
                                                                         </td>
 
                                                                         <td>

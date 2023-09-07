@@ -30,7 +30,7 @@
                                     <p class="mb-3"><strong>Name-En : </strong> {!! $area->getTranslation('name', 'en') !!}</p>
                                     <p class="mb-3"><strong>Name-Ar : </strong> {!! $area->getTranslation('name', 'ar') !!}</p>
 
-                                    <p class="mb-3"><strong>City : </strong> <a href="{{ route('admin.cities.show',$area->city->id) }}">{{ $area->city->name }}</a></p>
+                                    <p class="mb-3"><strong>City : </strong> <a href="{{ route('admin.cities.show',$area->city->id) }}">{!! $area->city->getTranslation('name', 'ar') !!}</a></p>
 
                                 </div>
 

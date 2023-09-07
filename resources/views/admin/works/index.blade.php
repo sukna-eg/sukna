@@ -76,7 +76,7 @@
                                                                         </td>
 
                                                                         <td>
-                                                                            <span><a href="{{ route('admin.smarts.show',$work->smart->id) }}">{{ $work->smart->name }}</a></span>
+                                                                            <span><a href="{{ route('admin.smarts.show',$work->smart->id) }}">{!! $work->smart->getTranslation('name', 'ar') !!}</a></span>
                                                                         </td>
                                                                         <td>
                                                                             <div class="dropdown">

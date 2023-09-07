@@ -155,7 +155,7 @@
                                         <select class="default-select form-control wide mb-3" name="category_id" tabindex="null">
 											<option selected disabled>Select Category</option>
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}" @selected(old('category_id')==$category->id)>{{ $category->name }}</option>
+                                                <option value="{{ $category->id }}" @selected(old('category_id')==$category->id)>{!! $category->getTranslation('name', 'ar') !!}</option>
                                             @endforeach
 										</select>
                                         @error('category_id')
