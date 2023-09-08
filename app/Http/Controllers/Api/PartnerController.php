@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Area;
 use App\Models\Category;
 use App\Models\Subcategory;
+use App\Models\Pimage;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
 use App\Http\Requests\PartnerRequest;
@@ -29,7 +30,23 @@ class PartnerController extends ApiController
     }
 
     public function save( Request $request ){
-        return $this->store( $request->all() );
+
+
+
+            $partner = $this->repositry->save($request->except('images'));
+
+            if (isset($request->images)) {
+                foreach ($request->images as $image) {
+
+                    $im = new Pimage();
+                    $im->image = $image;
+                    $im->partner_id = $partner->id;
+
+                    $im->save();
+                }
+            }
+
+            return $this->returnData('data', new PartnerResource($partner), __('Succesfully'));
     }
 
     public function edit($id,Request $request){

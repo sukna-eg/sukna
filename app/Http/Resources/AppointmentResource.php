@@ -22,6 +22,8 @@ class AppointmentResource extends JsonResource
             'partner_id'=> $this->partner?->id,
             // 'question'=> $this->question?->question,
             'user_id'=> $this->user?->id,
+            'user_phone'=> $this->user?->phone,
+            'created_at'=> $this->created_at,
             // 'question'=> $this->question?->question,
 
         ];

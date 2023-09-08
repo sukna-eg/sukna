@@ -19,7 +19,7 @@ class PimageResource extends JsonResource
             'id' => $this->id,
             'image' => $this->image,
             'partner_id' => $this?->partner?->id,
-            'partner_name' => $this?->partner?->name,
+            // 'partner_name' => $this?->partner?->name,
 
         ];
     }
