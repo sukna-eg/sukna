@@ -70,7 +70,10 @@ public function myOrders()
         }
     }
 
-    $paginatedAppointments = $appointments->paginate(10);
+
+    $paginatedAppointments = Appointment::whereHas('user.partners', function ($query) use ($ownerId) {
+    $query->where('user_id', $ownerId);
+})->paginate(10);
 
     return $this->returnData('data', AppointmentResource::collection($paginatedAppointments), __('Get successfully'));
 }
