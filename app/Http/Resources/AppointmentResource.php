@@ -21,10 +21,10 @@ class AppointmentResource extends JsonResource
             'to'=> $this->to,
             'partner_id'=> $this->partner?->id,
             // 'question'=> $this->question?->question,
-            'user_id'=> $this->user?->id,
-            'user_phone'=> $this->user?->phone,
+            // 'user_id'=> $this->user?->id,
+            // 'user_phone'=> $this->user?->phone,
             'created_at'=> $this->created_at,
-            // 'question'=> $this->question?->question,
+            'user'=> new UserResource($this?->user),
 
         ];
     }
