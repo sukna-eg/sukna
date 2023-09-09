@@ -20,6 +20,8 @@ use App\Http\Controllers\Api\PrimageController;
 use App\Http\Controllers\Api\SmartController;
 use App\Http\Controllers\Api\WorkController;
 use App\Http\Controllers\Api\IntroductionController;
+use App\Http\Controllers\Api\BlackDayController;
+
 
 
 /*
@@ -248,6 +250,13 @@ Route::post('introduction-create', [IntroductionController::class, 'save']);
 Route::get('introduction/{id}', [IntroductionController::class, 'view']);
 Route::get('introduction/delete/{id}', [IntroductionController::class, 'delete']);
 Route::post('introduction/edit/{id}', [IntroductionController::class, 'edit']);
+
+//BlackDay
+Route::get('blacks', [BlackDayController::class, 'list']);
+Route::post('blackday-create', [BlackDayController::class, 'save']);
+Route::get('blackday/{id}', [BlackDayController::class, 'view']);
+Route::get('blackday/delete/{id}', [BlackDayController::class, 'delete']);
+Route::post('blackday/edit/{id}', [BlackDayController::class, 'edit']);
 
 
     });

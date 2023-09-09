@@ -69,7 +69,7 @@ class PartnerResource extends JsonResource
 
             'rating'=>(double)$this?->reviews?->avg('points'),
             'rating_count'=>(double)$this?->reviews?->count(),
-
+            'black_days' => BlackDayResource::collection($this?->blacks),
             'images' => PimageResource::collection($this?->images),
         ];
     }

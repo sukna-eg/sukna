@@ -70,4 +70,9 @@ class Partner extends Model
     {
         return $this->hasMany(Appointment::class);
     }
+
+    public function blacks()
+    {
+        return $this->hasMany(BlackDay::class);
+    }
 }
