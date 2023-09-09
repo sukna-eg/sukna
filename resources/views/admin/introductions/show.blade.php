@@ -31,7 +31,7 @@
                                     <p class="mb-3"><strong>Title(Ar) : </strong> {{ $introduction->getTranslation('title','ar') }}</p>
 
                                     <p class="mb-3"><strong>Body-Ar : </strong> {{ $introduction->getTranslation('body', 'ar') }}</p>
-                                    <p class="mb-3"><strong>Body-Fr : </strong> {{ $introduction->getTranslation('body', 'fr') }}</p>
+                                    <p class="mb-3"><strong>Body-En : </strong> {{ $introduction->getTranslation('body', 'en') }}</p>
 
 
                                 </div>

@@ -19,6 +19,7 @@ use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\PartnerDistanceResource;
 
 class PartnerController extends ApiController
 {
@@ -468,6 +469,50 @@ public function myPartners()
     $partners = Auth::user()->partners()->paginate(10);
     return $this->returnData('data',  PartnerResource::collection( $partners ), __('Get  succesfully'));
 
+}
+
+
+function distance($lat1, $lon1, $lat2, $lon2)
+{
+    $theta = $lon1 - $lon2;
+    $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+    $dist = acos($dist);
+    $dist = rad2deg($dist);
+    $miles = $dist * 60 * 1.1515;
+
+    return $miles * 1.609344;
+}
+
+
+
+
+
+public function nearest(Request $request)
+{
+
+
+$partners = Partner::where('show',1)->get();
+
+$resources = [];
+
+foreach ($partners as $partner) {
+    // if ($branch->partner->status == 1) {
+    $distance = $this->distance($request->lat_user, $request->long_user, $partner->lat, $partner->long);
+
+    if ($distance <= 5) { // Check if the distance is within 5 kilometers
+        $resource = new PartnerDistanceResource($branch, $distance);
+
+        $resources[] = $resource;
+    }
+// }
+}
+
+// Sort the resources by their distance from the user's location
+usort($resources, function($a, $b) {
+    return $a->distance <=> $b->distance;
+});
+
+return $this->returnData('data', $resources, __('Get nearby branches successfully'));
 }
 
 }

@@ -259,6 +259,9 @@ Route::get('blackday/delete/{id}', [BlackDayController::class, 'delete']);
 Route::post('blackday/edit/{id}', [BlackDayController::class, 'edit']);
 
 
+////nearbyPartberIn5 kilometers
+Route::post('nearest-partners', [PartnerController::class, 'nearest']);
+
     });
 
     Route::middleware(['auth:api','changeLang'])->group(function () {
