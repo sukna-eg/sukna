@@ -76,9 +76,9 @@ public function myOrders()
     $paginatedAppointments = $appointments->slice(($page - 1) * $perPage, $perPage)->values();
 
     return $this->returnData('data', AppointmentResource::collection($paginatedAppointments), __('Get successfully'));
-  
 
-    
+
+
 }
 
 }
