@@ -70,12 +70,15 @@ public function myOrders()
         }
     }
 
+    $page = request()->get('page', 1); // Get the current page from the request, default to 1
+    $perPage = 10; // Number of items per page
 
-    $paginatedAppointments = Appointment::whereHas('user.partners', function ($query) use ($ownerId) {
-    $query->where('user_id', $ownerId);
-})->paginate(10);
+    $paginatedAppointments = $appointments->slice(($page - 1) * $perPage, $perPage)->values();
 
     return $this->returnData('data', AppointmentResource::collection($paginatedAppointments), __('Get successfully'));
+  
+
+    
 }
 
 }

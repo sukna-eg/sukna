@@ -19,6 +19,7 @@ use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\PrimageController;
 use App\Http\Controllers\Api\SmartController;
 use App\Http\Controllers\Api\WorkController;
+use App\Http\Controllers\Api\IntroductionController;
 
 
 /*
@@ -240,6 +241,13 @@ Route::get('work/{id}', [WorkController::class, 'view']);
 Route::get('work/delete/{id}', [WorkController::class, 'delete']);
 Route::post('work/edit/{id}', [WorkController::class, 'edit']);
 
+
+//Introduction
+Route::get('introductions', [IntroductionController::class, 'list']);
+Route::post('introduction-create', [IntroductionController::class, 'save']);
+Route::get('introduction/{id}', [IntroductionController::class, 'view']);
+Route::get('introduction/delete/{id}', [IntroductionController::class, 'delete']);
+Route::post('introduction/edit/{id}', [IntroductionController::class, 'edit']);
 
 
     });

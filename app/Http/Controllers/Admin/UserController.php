@@ -66,7 +66,7 @@ class UserController extends Controller
         }elseif($request->password == null){
             unset($request['password']);
         }
-        if ($request->has('image')&&$user->image  && File::exists($user->image)) {
+        if ($request->has('image')&&$user->image) {
             unlink($user->image);
         }
         $user->update($request->all());
