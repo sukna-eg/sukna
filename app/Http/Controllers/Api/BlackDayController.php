@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\BlackDay;
 use App\Models\User;
+use App\Models\Appointment;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
 use App\Http\Requests\AreaRequest;
