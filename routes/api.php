@@ -257,8 +257,11 @@ Route::post('introduction/edit/{id}', [IntroductionController::class, 'edit']);
 Route::get('blacks', [BlackDayController::class, 'list']);
 Route::post('blackday-create', [BlackDayController::class, 'save']);
 Route::get('blackday/{id}', [BlackDayController::class, 'view']);
-Route::get('blackday/delete/{id}', [BlackDayController::class, 'delete']);
+Route::post('blackday/delete', [BlackDayController::class, 'delete']);
 Route::post('blackday/edit/{id}', [BlackDayController::class, 'edit']);
+
+//getBlacksByPartner
+Route::get('blackdays-by-partner/{id}', [BlackDayController::class, 'getBlacksByPartner']);
 
 
 ////nearbyPartberIn5 kilometers

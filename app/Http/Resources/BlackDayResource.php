@@ -21,7 +21,7 @@ class BlackDayResource extends JsonResource
             'to'=> $this->to,
             'partner_id'=> $this->partner?->id,
             'user'=> new UserResource($this?->user),
-
+            'appointment_id'=> $this->appointment?->id,
 
 
 

@@ -22,4 +22,9 @@ class BlackDay extends Model
 	{
 		return $this->belongsTo(User::class);
 	}
+
+    public function appointment()
+	{
+		return $this->belongsTo(Appointment::class);
+	}
 }

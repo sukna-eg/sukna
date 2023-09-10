@@ -75,4 +75,9 @@ class Partner extends Model
     {
         return $this->hasMany(BlackDay::class);
     }
+
+    public function paginatedblacks()
+    {
+        return $this->hasMany(BlackDay::class)->paginate(10);
+    }
 }
