@@ -17,4 +17,9 @@ class BlackDay extends Model
 	{
 		return $this->belongsTo(Partner::class);
 	}
+
+    public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
 }
