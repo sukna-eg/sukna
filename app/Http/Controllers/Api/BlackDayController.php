@@ -22,8 +22,24 @@ class BlackDayController extends ApiController
 
 
 
-    public function save( Request $request ){
-        return $this->store( $request->all() );
+    public function save(Request $request)
+    {
+
+        $app=Appointment::find($request->appointment_id);
+        $app->status = 1 ;
+        $app->save();
+
+        $black=new BlackDay();
+        $black->from=$request->from;
+        $black->to=$request->to;
+        $black->partner_id=$request->partner_id;
+        $black->user_id=$request->user_id;
+        $black->save();
+
+
+
+
+        return $this->returnData('data', new BlackDayResource($black), __('Successfully'));
     }
 
     public function edit($id,Request $request){
