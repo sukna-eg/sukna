@@ -70,7 +70,7 @@ class BlackDayController extends ApiController
     }
 
 
-    public function delete(Request $request)
+    public function deleteBlack(Request $request)
     {
         $model = $this->repositry->getByID($request->black_day_id);
 

@@ -257,7 +257,7 @@ Route::post('introduction/edit/{id}', [IntroductionController::class, 'edit']);
 Route::get('blacks', [BlackDayController::class, 'list']);
 Route::post('blackday-create', [BlackDayController::class, 'save']);
 Route::get('blackday/{id}', [BlackDayController::class, 'view']);
-Route::post('blackday/delete', [BlackDayController::class, 'delete']);
+Route::post('blackday/delete', [BlackDayController::class, 'deleteBlack']);
 Route::post('blackday/edit/{id}', [BlackDayController::class, 'edit']);
 
 //getBlacksByPartner
