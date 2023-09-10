@@ -49,4 +49,23 @@ class BlackDayController extends ApiController
         return $this->update($id,$request->all());
 
     }
+
+
+    public function delete(Request $request)
+    {
+        $model = $this->repositry->getByID($request->black_day_id);
+
+        if (!$model) {
+            return $this->returnError(__('Sorry! Failed to get !'));
+        }
+        $app=Appointment::find($model->appointment_id);
+        $app->status = 0 ;
+        $app->save();
+
+        $this->repositry->deleteByID($id);
+
+
+
+        return $this->returnSuccessMessage(__('Delete succesfully!'));
+    }
 }
