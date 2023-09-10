@@ -465,10 +465,8 @@ public function getMinAndMaxOfSpace(Request $request)
 
 public function myPartners()
 {
-
-    $partners = Auth::user()->partners()->paginate(10);
-    return $this->returnData('data',  PartnerResource::collection( $partners ), __('Get  succesfully'));
-
+    $partners = Auth::user()->partners()->orderBy('id', 'desc')->paginate(10);
+    return $this->returnData('data', PartnerResource::collection($partners), __('Get successfully'));
 }
 
 

@@ -21,6 +21,8 @@ use App\Http\Controllers\Api\SmartController;
 use App\Http\Controllers\Api\WorkController;
 use App\Http\Controllers\Api\IntroductionController;
 use App\Http\Controllers\Api\BlackDayController;
+use App\Http\Controllers\Api\PageController;
+use App\Http\Controllers\Api\VersionController;
 
 
 
@@ -261,6 +263,24 @@ Route::post('blackday/edit/{id}', [BlackDayController::class, 'edit']);
 
 ////nearbyPartberIn5 kilometers
 Route::post('nearest-partners', [PartnerController::class, 'nearest']);
+
+
+//pages
+
+Route::get('pages', [PageController::class, 'list']);
+Route::post('page-create', [PageController::class, 'save']);
+Route::get('page/{id}', [PageController::class, 'view']);
+Route::get('page/delete/{id}', [PageController::class, 'delete']);
+Route::post('page/edit/{id}', [PageController::class, 'edit']);
+
+//Version
+
+Route::get('versions', [VersionController::class, 'list']);
+Route::post('version-create', [VersionController::class, 'save']);
+Route::get('version/{id}', [VersionController::class, 'view']);
+Route::get('version/delete/{id}', [VersionController::class, 'delete']);
+Route::post('version/edit/{id}', [VersionController::class, 'edit']);
+
 
     });
 

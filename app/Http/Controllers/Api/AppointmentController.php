@@ -24,8 +24,34 @@ class AppointmentController extends ApiController
 
 
 
-    public function save( Request $request ){
-        return $this->store( $request->all() );
+    public function save(Request $request)
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $userId = $request->user_id;
+        $partnerId = $request->partner_id;
+
+        // Get the current server date
+        $serverDate = date('Y-m-d');
+
+        // Check if an appointment already exists for the same user and partner on the same day as the server date
+        $existingAppointment = Appointment::where('user_id', $userId)
+            ->where('partner_id', $partnerId)
+            ->whereDate('created_at', '=', $serverDate)
+            ->first();
+
+        if ($existingAppointment) {
+            return $this->returnError('Sorry, you have already submitted a request to reserve this property!');
+        }
+
+        $appointment = new Appointment();
+        $appointment->from = $from;
+        $appointment->to = $to;
+        $appointment->user_id = $userId;
+        $appointment->partner_id = $partnerId;
+        $appointment->save();
+
+        return $this->returnData('data', new AppointmentResource($appointment), __('Successfully'));
     }
 
     public function edit($id,Request $request){
@@ -70,10 +96,13 @@ public function myOrders()
         }
     }
 
-    $page = request()->get('page', 1); // Get the current page from the request, default to 1
-    $perPage = 10; // Number of items per page
+      // Sort appointments by ID in descending order
+      $sortedAppointments = $appointments->sortByDesc('id');
 
-    $paginatedAppointments = $appointments->slice(($page - 1) * $perPage, $perPage)->values();
+      $page = request()->get('page', 1); // Get the current page from the request, default to 1
+      $perPage = 10; // Number of items per page
+
+      $paginatedAppointments = $sortedAppointments->slice(($page - 1) * $perPage, $perPage)->values();
 
     return $this->returnData('data', AppointmentResource::collection($paginatedAppointments), __('Get successfully'));
 
