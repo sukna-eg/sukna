@@ -94,7 +94,7 @@ class BlackDayController extends ApiController
         $partner = Partner::find( $partner_id );
         if( $partner ){
 
-            return $this->returnData('data',  BlackDayResource::collection( $partner->paginatedblacks ), __('Get  succesfully'));
+            return $this->returnData('data',  BlackDayResource::collection( $partner->paginatedblacks() ), __('Get  succesfully'));
         }
 
         return $this->returnError(__('Sorry! Failed to get !'));

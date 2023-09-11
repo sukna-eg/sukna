@@ -461,6 +461,18 @@
                                                 Residential
                                             </label>
                                         </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="medical" type="radio" name="purpose" value="medical" @checked(old('purpose',$partner->purpose)=="medical")>
+                                            <label class="form-check-label" for="medical">
+                                                Medical
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="managerial" type="radio" name="purpose" value="managerial" @checked(old('purpose',$partner->purpose)=="managerial")>
+                                            <label class="form-check-label" for="managerial">
+                                                Managerial
+                                            </label>
+                                        </div>
 
                                         @error('purpose')
                                         <div class="text-danger">{{ $message }}</div>

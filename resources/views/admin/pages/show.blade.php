@@ -28,15 +28,15 @@
                                 <h4 class="heading mb-5"> {{ $page->title }}</h4>
                                 <p class="mb-3"><strong>Title(En) : </strong> {{ $page->getTranslation('title','en') }}</p>
                                 <p class="mb-3"><strong>Title(Ar) : </strong> {{ $page->getTranslation('title','ar') }}</p>
-                                <p class="mb-3"><strong>Title(Fr) : </strong> {{ $page->getTranslation('title','fr') }}</p>
+                                {{-- <p class="mb-3"><strong>Title(Fr) : </strong> {{ $page->getTranslation('title','fr') }}</p>
                                 <p class="mb-3"><strong>Title(Es) : </strong> {{ $page->getTranslation('title','es') }}</p>
-                                <p class="mb-3"><strong>Title(Ru) : </strong> {{ $page->getTranslation('title','ru') }}</p>
+                                <p class="mb-3"><strong>Title(Ru) : </strong> {{ $page->getTranslation('title','ru') }}</p> --}}
                                 <p class="mb-3"><strong>Body-En : </strong> {{ $page->getTranslation('body', 'en') }}</p>
                                 <p class="mb-3"><strong>Body-Ar : </strong> {{ $page->getTranslation('body', 'ar') }}</p>
-                                <p class="mb-3"><strong>Body-Fr : </strong> {{ $page->getTranslation('body', 'fr') }}</p>
+                                {{-- <p class="mb-3"><strong>Body-Fr : </strong> {{ $page->getTranslation('body', 'fr') }}</p>
                                 <p class="mb-3"><strong>Body-Es : </strong> {{ $page->getTranslation('body', 'es') }}</p>
-                                <p class="mb-3"><strong>Body-Ru : </strong> {{ $page->getTranslation('body', 'ru') }}</p>
-                                <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px" src="{{ asset( $page->image ) }}" alt="{{ $page->title }}">
+                                <p class="mb-3"><strong>Body-Ru : </strong> {{ $page->getTranslation('body', 'ru') }}</p> --}}
+                                {{-- <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px" src="{{ asset( $page->image ) }}" alt="{{ $page->title }}"> --}}
 
                         </div>
                         </div>

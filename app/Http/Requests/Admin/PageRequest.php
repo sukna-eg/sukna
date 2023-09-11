@@ -26,7 +26,7 @@ class PageRequest extends FormRequest
             'title_ar' => 'required|min:4|max:255',
             'body_en' => 'required|min:4|max:10000',
             'body_ar' => 'required|min:4|max:10000',
-            'image'=>'nullable|mimes:jpg,jpeg,gif,png|max:1000',
+            // 'image'=>'nullable|mimes:jpg,jpeg,gif,png|max:1000',
 
         ];
     }

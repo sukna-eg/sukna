@@ -32,19 +32,15 @@ class PageController extends Controller
      */
     public function store(PageRequest $request)
     {
-        $request['title']=['en'=>$request->title_en,'ar'=>$request->title_ar,'fr'=>$request->title_fr,'es'=>$request->title_es,'ru'=>$request->title_ru];
-        $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar,'fr'=>$request->body_fr,'es'=>$request->body_es,'ru'=>$request->body_ru];
+        $request['title']=['en'=>$request->title_en,'ar'=>$request->title_ar];
+        $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar];
         Page::create($request->except([
             'title_en',
             'title_ar',
-            'title_fr',
-            'title_es',
-            'title_ru',
+
             'body_en',
             'body_ar',
-            'body_fr',
-            'body_es',
-            'body_ru',
+
         ]));
 
 
@@ -76,22 +72,18 @@ class PageController extends Controller
     public function update(PageRequest $request, string $id)
     {
         $page = Page::findOrFail($id);
-        if ($request->has('image')&&$page->image  && File::exists($page->image)) {
-            unlink($page->image);
-        }
-        $request['title']=['en'=>$request->title_en,'ar'=>$request->title_ar,'fr'=>$request->title_fr,'es'=>$request->title_es,''=>$request->title_ru];
-        $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar,'fr'=>$request->body_fr,'es'=>$request->body_es,''=>$request->body_ru];
+        // if ($request->has('image')&&$page->image  && File::exists($page->image)) {
+        //     unlink($page->image);
+        // }
+        $request['title']=['en'=>$request->title_en,'ar'=>$request->title_ar];
+        $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar];
         $page->update($request->except([
             'title_en',
             'title_ar',
-            'title_fr',
-            'title_es',
-            'title_ru',
+
             'body_en',
             'body_ar',
-            'body_fr',
-            'body_es',
-            'body_ru',
+
         ]));
 
 
