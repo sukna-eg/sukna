@@ -28,7 +28,7 @@ class PartnerDistanceResource extends JsonResource
 
             'id' => $this->id,
             'distance' => $this->when(isset($this->distance), $this->distance),
-            'is_favorite'=>$fav,
+            // 'is_favorite'=>$fav,
             'address' => $this->address,
             'description' => $this->description,
             'type' => $this->type,
