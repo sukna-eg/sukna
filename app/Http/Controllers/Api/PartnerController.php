@@ -128,12 +128,12 @@ class PartnerController extends ApiController
            $partners = Partner::where('show', 1)->get();
 
            if ($request->is_category == 0) {
-               $subcategoryId = $request->subcategory_id;
+               $subcategoryId = $request->id;
                $partners = $partners->filter(function ($partner) use ($subcategoryId) {
                    return $partner->subcategory->id == $subcategoryId;
                });
            } else {
-               $categoryId = $request->category_id;
+               $categoryId = $request->id;
                $partners = $partners->filter(function ($partner) use ($categoryId) {
                    return $partner->subcategory->category_id == $categoryId;
                });
