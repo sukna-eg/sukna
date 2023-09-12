@@ -93,32 +93,32 @@ class PartnerController extends ApiController
 
        public function bedrooms()
        {
-           $bed = Partner::where('show', 1)->distinct()->pluck('bedrooms_count')->sort();
+           $bed = Partner::where('show', 1)->distinct()->orderBy('bedrooms_count', 'asc')->pluck('bedrooms_count');
            return $this->returnData('data', $bed, __('Get successfully'));
        }
 
        public function bathrooms()
        {
-           $bath = Partner::where('show', 1)->distinct()->pluck('bathrooms_count')->sort();
+           $bath = Partner::where('show', 1)->distinct()->orderBy('bathrooms_count', 'asc')->pluck('bathrooms_count');
            return $this->returnData('data', $bath, __('Get successfully'));
        }
 
        public function prices()
        {
-           $prices = Partner::where('show', 1)->distinct()->pluck('price')->sort();
+           $prices = Partner::where('show', 1)->distinct()->orderBy('price', 'asc')->pluck('price');
            return $this->returnData('data', $prices, __('Get successfully'));
        }
 
 
        public function spaces()
        {
-           $prices = Partner::where('show', 1)->distinct()->pluck('space')->sort();
+           $prices = Partner::where('show', 1)->distinct()->orderBy('space', 'asc')->pluck('space');
            return $this->returnData('data', $prices, __('Get successfully'));
        }
 
        public function floors()
        {
-           $floors = Partner::where('show', 1)->distinct()->pluck('floor')->sort();
+           $floors = Partner::where('show', 1)->distinct()->orderBy('floor', 'asc')->pluck('floor');
            return $this->returnData('data', $floors, __('Get successfully'));
        }
 
