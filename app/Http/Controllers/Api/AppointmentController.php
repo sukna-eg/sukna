@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Appointment;
+use App\Models\Partner;
 use App\Models\Notification;
 use App\Models\User;
 use Illuminate\Http\Request;
