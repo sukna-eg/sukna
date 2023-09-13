@@ -12,9 +12,14 @@ use App\Http\Requests\AreaRequest;
 use App\Http\Resources\BlackDayResource;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ApiController;
+use App\Traits\NotificationTrait;
+
 
 class BlackDayController extends ApiController
 {
+
+    use NotificationTrait;
+
     public function __construct()
     {
         $this->resource = BlackDayResource::class;
@@ -45,13 +50,13 @@ class BlackDayController extends ApiController
 
         $token = $user->device_token;
 
-            // $this->sendAdminNoti('مرحبا',تم  'على العقار'.$appointment->partner_id,"order",$token);
+            $this->sendUserNoti('مرحبا', 'تم تأكيد حجزك للعقار'.$black->partner_id,"partner",$token);
 
             $note= new Notification();
-            $note->content = 'لديك طلب حجز من اليوزر '.$user->name. 'على العقار'.$appointment->partner_id;
-            $note->user_id = $appointment->user_id;
-            $note->type = 'order';
-            $note->route_id = $appointment->id;
+            $note->content = 'تم تأكيد حجزك للعقار'.$black->partner_id;
+            $note->user_id = $black->user_id;
+            $note->type = 'partner';
+            $note->route_id = $black->partner_id;
             $note->save();
 
         return $this->returnData('data', new BlackDayResource($black), __('Successfully'));
