@@ -23,6 +23,8 @@ use App\Http\Controllers\Api\IntroductionController;
 use App\Http\Controllers\Api\BlackDayController;
 use App\Http\Controllers\Api\PageController;
 use App\Http\Controllers\Api\VersionController;
+use App\Http\Controllers\Api\NotificationController;
+
 
 
 
@@ -62,6 +64,9 @@ Route::post('check-user', [AuthController::class, 'checkUser']);
 Route::post('update-password', [AuthController::class, 'changePassword']);
 
 Route::get('delete-user/{id}', [AuthController::class, 'delete']);
+
+
+
 
 
 Route::middleware('changeLang')->group(function () {
@@ -285,9 +290,34 @@ Route::get('version/delete/{id}', [VersionController::class, 'delete']);
 Route::post('version/edit/{id}', [VersionController::class, 'edit']);
 
 
+//Notification
+
+Route::get('notifications', [NotificationController::class, 'list']);
+Route::post('notification-create', [NotificationController::class, 'save']);
+Route::get('notification/{id}', [NotificationController::class, 'view']);
+Route::get('notification/delete/{id}', [NotificationController::class, 'delete']);
+Route::post('notification/edit/{id}', [NotificationController::class, 'edit']);
+
+
+//send noti to user
+Route::post('send-noti', [NotificationController::class, 'sendNotiToUser']);
+
+//send noti to all users
+
+Route::post('send-to-all', [NotificationController::class, 'sendNotiToAll']);
+
+
+//send noti to all users when add new Partner
+Route::post('send-new-partner', [NotificationController::class, 'sendPartner']);
+
+
     });
 
     Route::middleware(['auth:api','changeLang'])->group(function () {
+
+ Route::get('my-notifications', [NotificationController::class, 'myNotifications']);
+
+ Route::post('user/token', [AuthController::class, 'updateDeviceToken']);
 
         //myFavorites
 Route::get('my-favorites', [FavoriteController::class, 'myFavorites']);

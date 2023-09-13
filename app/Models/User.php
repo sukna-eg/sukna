@@ -87,4 +87,8 @@ class User extends Authenticatable
     public function partners(){
         return $this->HasMany(Partner::class);
     }
+
+    public function notifications(){
+        return $this->hasMany(Notification::class);
+    }
 }
