@@ -262,19 +262,19 @@
                                     <div class="col-xl-8 mb-3">
                                         <label class="form-label">Cladding<span class="text-danger">*</span></label>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="normal" type="radio" name="cladding" value="normal" @checked(old('cladding')=="normal")>
+                                            <input class="form-check-input" id="normal" type="radio" name="cladding" value="متوسط" @checked(old('cladding')=="متوسط")>
                                             <label class="form-check-label" for="normal">
                                                 Normal
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="good" type="radio" name="cladding" value="good" @checked(old('cladding')=="good")>
+                                            <input class="form-check-input" id="good" type="radio" name="cladding" value="جيد" @checked(old('cladding')=="جيد")>
                                             <label class="form-check-label" for="suggested">
                                                 Good
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="delux" type="radio" name="cladding" value="delux" @checked(old('cladding')=="delux")>
+                                            <input class="form-check-input" id="delux" type="radio" name="cladding" value="ممتاز" @checked(old('cladding')=="ممتاز")>
                                             <label class="form-check-label" for="delux">
                                                 Delux
                                             </label>
@@ -439,12 +439,26 @@
     @enderror
 </div>
 
+
                                     <div class="col-xl-8 mb-3">
-                                        <label class="form-label">Direction</label>
-                                        <input type="text" class="form-control" name="direction" value="{{ old('direction') }}">
+                                        <label class="form-label">Direction<span class="text-danger">*</span></label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="بحري" type="radio" name="direction" value="بحري" @checked(old('direction')=="بحري")>
+                                            <label class="form-check-label" for="بحري">
+                                                بحري
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="قبلي" type="radio" name="direction" value="قبلي" @checked(old('direction')=="قبلي")>
+                                            <label class="form-check-label" for="قبلي">
+                                                قبلي
+                                            </label>
+                                        </div>
+
+
                                         @error('direction')
-                                            <div class="text-danger">{{ $message }}</div>
-                                        @enderror
+                                        <div class="text-danger">{{ $message }}</div>
+                                         @enderror
                                     </div>
 
                                     <div class="col-xl-8 mb-3">
@@ -459,25 +473,25 @@
                                     <div class="col-xl-8 mb-3">
                                         <label class="form-label">Purpose<span class="text-danger">*</span></label>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="commercial" type="radio" name="purpose" value="commercial" @checked(old('purpose')=="commercial")>
+                                            <input class="form-check-input" id="commercial" type="radio" name="purpose" value="تجاري" @checked(old('purpose')=="تجاري")>
                                             <label class="form-check-label" for="commercial">
                                                 Commercial
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="residential" type="radio" name="purpose" value="residential" @checked(old('purpose')=="residential")>
+                                            <input class="form-check-input" id="residential" type="radio" name="purpose" value="سكني" @checked(old('purpose')=="سكني")>
                                             <label class="form-check-label" for="residential">
                                                 Residential
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="medical" type="radio" name="purpose" value="medical" @checked(old('purpose')=="medical")>
+                                            <input class="form-check-input" id="medical" type="radio" name="purpose" value="طبي" @checked(old('purpose')=="طبي")>
                                             <label class="form-check-label" for="medical">
                                                 Medical
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="managerial" type="radio" name="purpose" value="managerial" @checked(old('purpose')=="managerial")>
+                                            <input class="form-check-input" id="managerial" type="radio" name="purpose" value="إداري" @checked(old('purpose')=="إداري")>
                                             <label class="form-check-label" for="managerial">
                                                 Managerial
                                             </label>

@@ -38,7 +38,7 @@ class SubcategoryController extends ApiController
 
         $partners = Partner::where('show', 1)->whereHas('subcategory', function ($query) use ($id) {
             $query->where('id', $id);
-        })->paginate(10);
+        })->get();
 
         return $this->returnData('data', PartnerResource::collection($partners), __('Get successfully'));
     }

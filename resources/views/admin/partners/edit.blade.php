@@ -431,12 +431,33 @@
                                         </div>
 
 
-                                    <div class="col-xl-8 mb-3">
+                                    {{-- <div class="col-xl-8 mb-3">
                                         <label class="form-label">Direction</label>
                                         <input type="text" class="form-control" name="direction" value="{{ old('direction',$partner->direction) }}">
                                         @error('direction')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
+                                    </div> --}}
+
+                                    <div class="col-xl-8 mb-3">
+                                        <label class="form-label">Direction<span class="text-danger">*</span></label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="بحري" type="radio" name="direction" value="بحري" @checked(old('direction',$partner->direction)=="بحري")>
+                                            <label class="form-check-label" for="بحري">
+                                                بحري
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="قبلي" type="radio" name="direction" value="قبلي" @checked(old('direction',$partner->direction)=="قبلي")>
+                                            <label class="form-check-label" for="قبلي">
+                                                قبلي
+                                            </label>
+                                        </div>
+
+
+                                        @error('direction')
+                                        <div class="text-danger">{{ $message }}</div>
+                                         @enderror
                                     </div>
 
                                     <div class="col-xl-8 mb-3">
@@ -450,25 +471,25 @@
                                     <div class="col-xl-8 mb-3">
                                         <label class="form-label">Purpose<span class="text-danger">*</span></label>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="commercial" type="radio" name="purpose" value="commercial" @checked(old('purpose',$partner->purpose)=="commercial")>
+                                            <input class="form-check-input" id="commercial" type="radio" name="purpose" value="تجاري" @checked(old('purpose',$partner->purpose)=="تجاري")>
                                             <label class="form-check-label" for="commercial">
                                                 Commercial
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="residential" type="radio" name="purpose" value="residential" @checked(old('purpose',$partner->purpose)=="residential")>
+                                            <input class="form-check-input" id="residential" type="radio" name="purpose" value="سكني" @checked(old('purpose',$partner->purpose)=="سكني")>
                                             <label class="form-check-label" for="residential">
                                                 Residential
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="medical" type="radio" name="purpose" value="medical" @checked(old('purpose',$partner->purpose)=="medical")>
+                                            <input class="form-check-input" id="medical" type="radio" name="purpose" value="طبي" @checked(old('purpose',$partner->purpose)=="طبي")>
                                             <label class="form-check-label" for="medical">
                                                 Medical
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="managerial" type="radio" name="purpose" value="managerial" @checked(old('purpose',$partner->purpose)=="managerial")>
+                                            <input class="form-check-input" id="managerial" type="radio" name="purpose" value="إداري" @checked(old('purpose',$partner->purpose)=="إداري")>
                                             <label class="form-check-label" for="managerial">
                                                 Managerial
                                             </label>

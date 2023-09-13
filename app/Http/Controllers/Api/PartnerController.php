@@ -237,25 +237,25 @@ class PartnerController extends ApiController
 
            $resources = array_values($resources);
 
-           $perPage = $request->input('per_page', 10);
+//            $perPage = $request->input('per_page', 10);
 
-           $currentPage = $request->input('page', 1);
-$offset = ($currentPage - 1) * $perPage;
-$paginatedPartners = new LengthAwarePaginator(
-    $partners->slice($offset, $perPage),
-    $partners->count(),
-    $perPage,
-    $currentPage,
-    ['path' => $request->url(), 'query' => $request->query()]
-);
+//            $currentPage = $request->input('page', 1);
+// $offset = ($currentPage - 1) * $perPage;
+// $paginatedPartners = new LengthAwarePaginator(
+//     $partners->slice($offset, $perPage),
+//     $partners->count(),
+//     $perPage,
+//     $currentPage,
+//     ['path' => $request->url(), 'query' => $request->query()]
+// );
 
-$resources = [];
+// $resources = [];
 
-foreach ($paginatedPartners as $partner) {
-    // Your logic for each partner
-    $resource = new PartnerResource($partner);
-    $resources[] = $resource;
-}
+// foreach ($paginatedPartners as $partner) {
+//     // Your logic for each partner
+//     $resource = new PartnerResource($partner);
+//     $resources[] = $resource;
+// }
 
            return $this->returnData('data', $resources, __('Get partners successfully'));
        }
@@ -266,12 +266,12 @@ foreach ($paginatedPartners as $partner) {
            $partners = Partner::where('show', 1)->get();
 
            if ($request->is_category == 0) {
-               $subcategoryId = $request->subcategory_id;
+               $subcategoryId = $request->id;
                $partners = $partners->filter(function ($partner) use ($subcategoryId) {
                    return $partner->subcategory->id == $subcategoryId;
                });
            } else {
-               $categoryId = $request->category_id;
+               $categoryId = $request->id;
                $partners = $partners->filter(function ($partner) use ($categoryId) {
                    return $partner->subcategory->category_id == $categoryId;
                });
@@ -383,25 +383,25 @@ foreach ($paginatedPartners as $partner) {
 
            $resources = array_values($resources);
 
-           $perPage = $request->input('per_page', 10);
+//            $perPage = $request->input('per_page', 10);
 
-           $currentPage = $request->input('page', 1);
-$offset = ($currentPage - 1) * $perPage;
-$paginatedPartners = new LengthAwarePaginator(
-    $partners->slice($offset, $perPage),
-    $partners->count(),
-    $perPage,
-    $currentPage,
-    ['path' => $request->url(), 'query' => $request->query()]
-);
+//            $currentPage = $request->input('page', 1);
+// $offset = ($currentPage - 1) * $perPage;
+// $paginatedPartners = new LengthAwarePaginator(
+//     $partners->slice($offset, $perPage),
+//     $partners->count(),
+//     $perPage,
+//     $currentPage,
+//     ['path' => $request->url(), 'query' => $request->query()]
+// );
 
-$resources = [];
+// $resources = [];
 
-foreach ($paginatedPartners as $partner) {
-    // Your logic for each partner
-    $resource = new PartnerResource($partner);
-    $resources[] = $resource;
-}
+// foreach ($paginatedPartners as $partner) {
+//     // Your logic for each partner
+//     $resource = new PartnerResource($partner);
+//     $resources[] = $resource;
+// }
 
            return $this->returnData('data', $resources, __('Get partners successfully'));
        }
@@ -446,18 +446,21 @@ foreach ($paginatedPartners as $partner) {
 
            }
 
-           $perPage = 10;
-           $currentPage = $request->input('page', 1);
-           $offset = ($currentPage - 1) * $perPage;
-           $paginatedPartners = new LengthAwarePaginator(
-               $partners->slice($offset, $perPage),
-               $partners->count(),
-               $perPage,
-               $currentPage,
-               ['path' => $request->url(), 'query' => $request->query()]
-           );
+        //    $perPage = 10;
+        //    $currentPage = $request->input('page', 1);
+        //    $offset = ($currentPage - 1) * $perPage;
+        //    $paginatedPartners = new LengthAwarePaginator(
+        //        $partners->slice($offset, $perPage),
+        //        $partners->count(),
+        //        $perPage,
+        //        $currentPage,
+        //        ['path' => $request->url(), 'query' => $request->query()]
+        //    );
 
-           return $this->returnData('data', PartnerResource::collection($paginatedPartners), __('Get successfully'));
+        //    return $this->returnData('data', PartnerResource::collection($paginatedPartners), __('Get successfully'));
+
+        return $this->returnData('data', PartnerResource::collection($partners), __('Get successfully'));
+
        }
 
 
