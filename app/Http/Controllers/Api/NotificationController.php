@@ -64,7 +64,7 @@ class NotificationController extends ApiController
     {
 
         $FcmToken = User::whereNotNull('device_token')->pluck('device_token')->all();
-        $this->sendPartnerNoti('مرحبا','لقد تم إضافة عقار جديد يمكنك رؤيته من هنا',$request->partner_id,$FcmToken);
+        $this->sendPartnerNoti('مرحبا','لقد تم إضافة عقار جديد يمكنك رؤيته من هنا','partner',$request->partner_id,$FcmToken);
 
         $users=User::whereNotNull('device_token')->get();
 
@@ -72,6 +72,7 @@ class NotificationController extends ApiController
 
 
         $note = new Notification();
+        // $note->content = 'لقد تم إضافة عقار جديد يمكنك رؤيته من هنا';
         $note->content = 'لقد تم إضافة عقار جديد يمكنك رؤيته من هنا';
         $note->user_id = $user->id;
         $note->type = 'partner';

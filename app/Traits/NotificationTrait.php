@@ -52,12 +52,13 @@ trait NotificationTrait
     }
 
 
-    public function sendPartnerNoti($title,$content,$id,$token)
+    public function sendPartnerNoti($title,$content,$type,$id,$token)
     {
         $msg['title']=$title;
         $msg['body']=$content;
         $data = [
             'partner_id' => $id,
+            'type' => $type,
 
 
         ];
