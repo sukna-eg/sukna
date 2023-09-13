@@ -41,6 +41,18 @@ class BlackDayController extends ApiController
 
 
 
+        $user = User::find($black->user_id);
+
+        $token = $user->device_token;
+
+            // $this->sendAdminNoti('مرحبا',تم  'على العقار'.$appointment->partner_id,"order",$token);
+
+            $note= new Notification();
+            $note->content = 'لديك طلب حجز من اليوزر '.$user->name. 'على العقار'.$appointment->partner_id;
+            $note->user_id = $appointment->user_id;
+            $note->type = 'order';
+            $note->route_id = $appointment->id;
+            $note->save();
 
         return $this->returnData('data', new BlackDayResource($black), __('Successfully'));
     }
