@@ -55,8 +55,9 @@ class AppointmentController extends ApiController
         $appointment->partner_id = $partnerId;
         $appointment->save();
 
-
-        $user = User::find($appointment->user_id);
+       //admin
+        $partner=Partner::find($appointment->partner_id);
+        $user = $partner->user;
 
         $token = $user->device_token;
 
