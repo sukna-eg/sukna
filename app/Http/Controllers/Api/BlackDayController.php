@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\BlackDay;
 use App\Models\User;
+use App\Models\Notification;
 use App\Models\Partner;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
