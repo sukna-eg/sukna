@@ -56,17 +56,22 @@ class AppointmentController extends ApiController
         $appointment->partner_id = $partnerId;
         $appointment->save();
 
+
+        //user
+        $client= User::find($appointment->user_id);
+
+
        //admin
         $partner=Partner::find($appointment->partner_id);
         $user = $partner->user;
 
         $token = $user->device_token;
 
-            $this->sendAdminNoti('مرحبا','لديك طلب حجز من اليوزر '.$user->name. 'على العقار'.$appointment->partner_id,"order",$token);
+            $this->sendAdminNoti('مرحبا','لديك طلب حجز من اليوزر '.$client->name. 'على العقار'.$appointment->partner_id,"order",$token);
 
             $note= new Notification();
-            $note->content = 'لديك طلب حجز من اليوزر '.$user->name. 'على العقار'.$appointment->partner_id;
-            $note->user_id = $appointment->user_id;
+            $note->content = 'لديك طلب حجز من اليوزر '.$client->name. 'على العقار'.$appointment->partner_id;
+            $note->user_id = $client->user_id;
             $note->type = 'order';
             $note->route_id = $appointment->id;
             $note->save();
