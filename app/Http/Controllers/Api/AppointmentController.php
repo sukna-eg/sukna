@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Appointment;
+use App\Models\Notification;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
@@ -11,10 +12,13 @@ use App\Http\Resources\AppointmentResource;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Auth;
+use App\Traits\NotificationTrait;
 
 
 class AppointmentController extends ApiController
 {
+    use NotificationTrait;
+
     public function __construct()
     {
         $this->resource = AppointmentResource::class;
@@ -50,6 +54,20 @@ class AppointmentController extends ApiController
         $appointment->user_id = $userId;
         $appointment->partner_id = $partnerId;
         $appointment->save();
+
+
+        $user = User::find($appointment->user_id);
+
+        $token = $user->device_token;
+
+            $this->sendAdminNoti('مرحبا','لديك طلب حجز من اليوزر '.$user->name. 'على العقار'.$appointment->partner_id,"order",$token);
+
+            $note= new Notification();
+            $note->content = 'لديك طلب حجز من اليوزر '.$user->name. 'على العقار'.$appointment->partner_id;
+            $note->user_id = $appointment->user_id;
+            $note->type = 'order';
+            $note->route_id = $appointment->id;
+            $note->save();
 
         return $this->returnData('data', new AppointmentResource($appointment), __('Successfully'));
     }
