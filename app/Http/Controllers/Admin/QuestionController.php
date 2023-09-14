@@ -9,9 +9,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\Admin\CityRequest;
+use App\Models\Notification;
+use App\Traits\NotificationTrait;
 
 class QuestionController extends Controller
 {
+    use NotificationTrait;
+
     /**
      * Display a listing of the resource.
      */
