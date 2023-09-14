@@ -342,6 +342,24 @@ class PartnerController extends ApiController
             });
         }
 
+        if (!is_null($request->bedrooms)) {
+            $partners = $partners->filter(function ($partner) use ($request) {
+                return is_null($partner->bedrooms_count) || $partner->bedrooms_count == $request->bedrooms;
+            });
+        }
+
+        if (!is_null($request->bathrooms)) {
+            $partners = $partners->filter(function ($partner) use ($request) {
+                return is_null($partner->bathrooms_count) || $partner->bathrooms_count == $request->bathrooms;
+            });
+        }
+
+         if (!is_null($request->cladding)) {
+            $partners = $partners->filter(function ($partner) use ($request) {
+                return is_null($partner->cladding) || $partner->cladding == $request->cladding;
+            });
+        }
+
            if (!is_null($request->the_oldest)) {
 
             $partners = $partners->sortBy('id');
