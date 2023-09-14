@@ -143,7 +143,7 @@ class PartnerController extends Controller
 
         $note = new Notification();
         $note->content = 'لقد تمت الموافقة على سؤالك';
-        $note->user_id = $partner->user->id;
+        $note->user_id = $admin->id;
         $note->type = 'my_partner';
         $note->route_id = $partner->id;
         $note->save();
