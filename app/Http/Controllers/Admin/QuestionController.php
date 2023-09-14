@@ -77,48 +77,57 @@ class QuestionController extends Controller
     /**
      * Update the specified resource in storage.
      */
+    // public function update(Request $request, string $id)
+    // {
+    //     $question = Question::findOrFail($id);
+
+
+    //     $request['question']=['en'=>$request->question_en,'ar'=>$request->question_ar];
+
+    //     $question->update($request->except([
+
+    //         'question_en',
+    //         'question_ar',
+
+    //     ]));
+
+
+
+
+
+    //     return redirect()->route('admin.questions.index')
+    //                     ->with('success','Question has been updated successfully');
+    // }
+
+
     public function update(Request $request, string $id)
-    {
-        $question = Question::findOrFail($id);
+{
+    $question = Question::findOrFail($id);
 
+    $request['question'] = ['en' => $request->question_en, 'ar' => $request->question_ar];
 
-        $request['question']=['en'=>$request->question_en,'ar'=>$request->question_ar];
+    $updateData = $request->except(['question_en', 'question_ar']);
 
-        $updateData=$question->update($request->except([
+    // Check if the 'status' field is updated to 1
+    if ($question->status == 0 && isset($updateData['status']) && $updateData['status'] == 1) {
+        $user = User::find($question->user_id);
+        $token = $user->device_token;
+        $this->confirmQuestion('مرحبا', 'لقد تمت الموافقة على سؤالك', "expert", $token);
 
-            'question_en',
-            'question_ar',
-
-        ]));
-
-  // Check if the 'show' field is updated to 1
-  if ($question->status == 0 && isset($updateData['status']) && $updateData['status'] == 1) {
-
-
-    $user = User::find($question->user_id);
-
-    $token = $user->device_token;
-
-        $this->confirmQuestion('مرحبا','لقد تمت الموافقة على سؤالك',"expert",$token);
-
-        $note= new Notification();
-        $note->content ='لقد تمت الموافقة على سؤالك';
+        $note = new Notification();
+        $note->content = 'لقد تمت الموافقة على سؤالك';
         $note->user_id = $user->id;
         $note->type = 'question';
         $note->route_id = $question->id;
         $note->save();
-
-
-
-}
-
-      // Update the partner
-     $question->update($updateData);
-
-
-        return redirect()->route('admin.questions.index')
-                        ->with('success','Question has been updated successfully');
     }
+
+    // Update the question
+    $question->update($updateData);
+
+    return redirect()->route('admin.questions.index')
+                    ->with('success', 'Question has been updated successfully');
+}
 
     /**
      * Remove the specified resource from storage.
