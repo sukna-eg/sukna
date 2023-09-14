@@ -7,6 +7,8 @@ use App\Models\Area;
 use App\Models\City;
 use App\Models\Branch;
 use App\Models\Partner;
+use App\Models\Notification;
+use App\Traits\NotificationTrait;
 use App\Models\User;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
@@ -18,6 +20,7 @@ use App\Http\Requests\Admin\PartnerRequest;
 
 class PartnerController extends Controller
 {
+    use NotificationTrait;
      /**
      * Display a listing of the resource.
      */
@@ -95,25 +98,64 @@ class PartnerController extends Controller
     /**
      * Update the specified resource in storage.
      */
+    // public function update(Request $request, string $id)
+    // {
+    //     $partner = Partner::findOrFail($id);
+
+    //     $request['address']=['en'=>$request->address_en,'ar'=>$request->address_ar];
+    //     $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
+    //     $partner->update($request->except([
+    //         'address_en',
+    //         'address_ar',
+
+    //         'description_en',
+    //         'description_ar',
+
+    //     ]));
+
+
+    //     return redirect()->route('admin.partners.index')
+    //                     ->with('success','Partner has been updated successfully');
+    // }
+
     public function update(Request $request, string $id)
-    {
-        $partner = Partner::findOrFail($id);
+{
+    $partner = Partner::findOrFail($id);
 
-        $request['address']=['en'=>$request->address_en,'ar'=>$request->address_ar];
-        $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
-        $partner->update($request->except([
-            'address_en',
-            'address_ar',
+    $request['address']=['en'=>$request->address_en,'ar'=>$request->address_ar];
+    $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
 
-            'description_en',
-            'description_ar',
+    $updateData = $request->except([
+        'address_en',
+        'address_ar',
+        'description_en',
+        'description_ar',
+    ]);
 
-        ]));
+    // Check if the 'show' field is updated to 1
+    if ($partner->show == 0 && isset($updateData['show']) && $updateData['show'] == 1) {
+        // Send notification to users
+        $FcmToken = User::whereNotNull('device_token')->pluck('device_token')->all();
+        $this->sendPartnerNoti('مرحبا','لقد تم إضافة عقار جديد يمكنك رؤيته من هنا','partner',$partner->id,$FcmToken);
 
+        $users = User::whereNotNull('device_token')->get();
 
-        return redirect()->route('admin.partners.index')
-                        ->with('success','Partner has been updated successfully');
+        foreach ($users as $user) {
+            $note = new Notification();
+            $note->content = 'لقد تم إضافة عقار جديد يمكنك رؤيته من هنا';
+            $note->user_id = $user->id;
+            $note->type = 'partner';
+            $note->route_id = $partner->id;
+            $note->save();
+        }
     }
+
+    // Update the partner
+    $partner->update($updateData);
+
+    return redirect()->route('admin.partners.index')
+                    ->with('success','Partner has been updated successfully');
+}
 
     /**
      * Remove the specified resource from storage.
