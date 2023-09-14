@@ -99,7 +99,7 @@ class QuestionController extends Controller
 
     $token = $user->device_token;
 
-        $this->sendReplay('مرحبا','لقد تمت الموافقة على سؤالك',"expert",$token);
+        $this->confirmQuestion('مرحبا','لقد تمت الموافقة على سؤالك',"expert",$token);
 
         $note= new Notification();
         $note->content ='لقد تمت الموافقة على سؤالك';
