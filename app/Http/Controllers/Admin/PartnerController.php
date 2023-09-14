@@ -142,7 +142,7 @@ class PartnerController extends Controller
         $this->confirmPartner('مرحبا', 'لقد تمت الموافقة على عقارك', "my_partner", $token);
 
         $note = new Notification();
-        $note->content = 'لقد تمت الموافقة على سؤالك';
+        $note->content = 'لقد تمت الموافقة على عقارك';
         $note->user_id = $admin->id;
         $note->type = 'my_partner';
         $note->route_id = $partner->id;
