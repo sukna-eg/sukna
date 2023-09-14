@@ -56,7 +56,7 @@ class AnswerController extends Controller
             $note= new Notification();
             $note->content ='لقد تم الرد على سؤالك من قبل الخبير العقاري';
             $note->user_id = $user->id;
-            $note->type = 'answer';
+            $note->type = 'expert';
             $note->route_id = $answer->question->id;
             $note->save();
 

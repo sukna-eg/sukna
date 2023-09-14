@@ -117,7 +117,7 @@ class QuestionController extends Controller
         $note = new Notification();
         $note->content = 'لقد تمت الموافقة على سؤالك';
         $note->user_id = $user->id;
-        $note->type = 'question';
+        $note->type = 'expert';
         $note->route_id = $question->id;
         $note->save();
     }

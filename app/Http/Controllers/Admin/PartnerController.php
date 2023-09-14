@@ -134,6 +134,21 @@ class PartnerController extends Controller
 
     // Check if the 'show' field is updated to 1
     if ($partner->show == 0 && isset($updateData['show']) && $updateData['show'] == 1) {
+
+        //send noti to admin
+        $admin = $partner->user;
+
+        $token = $admin->device_token;
+        $this->confirmPartner('مرحبا', 'لقد تمت الموافقة على عقارك', "my_partner", $token);
+
+        $note = new Notification();
+        $note->content = 'لقد تمت الموافقة على سؤالك';
+        $note->user_id = $partner->user->id;
+        $note->type = 'my_partner';
+        $note->route_id = $partner->id;
+        $note->save();
+
+
         // Send notification to users
         $FcmToken = User::whereNotNull('device_token')->pluck('device_token')->all();
         $this->sendPartnerNoti('مرحبا','لقد تم إضافة عقار جديد يمكنك رؤيته من هنا','partner',$partner->id,$FcmToken);
