@@ -556,177 +556,15 @@ return $this->returnData('data', $resources, __('Get nearby branches successfull
 public function allPartners(Request $request)
 {
 
-    //get partners from cat or sub with filter... and sort maybe yes or no
-    if ($request->is_filter == 1)
-    {
-        $resources = [];
-           $partners = Partner::where('show', 1)->get();
-
-           if ($request->is_category == 0) {
-               $subcategoryId = $request->id;
-               $partners = $partners->filter(function ($partner) use ($subcategoryId) {
-                   return $partner->subcategory->id == $subcategoryId;
-               });
-           } else {
-               $categoryId = $request->id;
-               $partners = $partners->filter(function ($partner) use ($categoryId) {
-                   return $partner->subcategory->category_id == $categoryId;
-               });
-           }
-
-           if (isset($request->cities)) {
-               $cityIds = $request->cities;
-               $partners = $partners->filter(function ($partner) use ($cityIds) {
-                   return $partner->area->city_id && in_array($partner->area->city_id, $cityIds);
-               });
-           }
-
-           if (isset($request->areas)) {
-               $areaIds = $request->areas;
-               $partners = $partners->filter(function ($partner) use ($areaIds) {
-                   return in_array($partner->area_id, $areaIds);
-               });
-           }
-
-           if (!is_null($request->space_min) && !is_null($request->space_max)) {
-            $spaceMin = $request->space_min;
-            $spaceMax = $request->space_max;
-
-            $partners = $partners->filter(function ($partner) use ($spaceMin, $spaceMax) {
-                return is_null($partner->space) || ($partner->space >= $spaceMin && $partner->space <= $spaceMax);
-            });
-        }
-
-           if (!is_null($request->price_min) && !is_null($request->price_max)) {
-               $partners = $partners->filter(function ($partner) use ($request) {
-                   return is_null($partner->price) || ($partner->price >= $request->price_min && $partner->price <= $request->price_max);
-               });
-           }
-
-           if (!is_null($request->type)) {
-               $partners = $partners->filter(function ($partner) use ($request) {
-                   return is_null($partner->type) || $partner->type == $request->type;
-               });
-           }
-
-           if (!is_null($request->elevator)) {
-               $partners = $partners->filter(function ($partner) use ($request) {
-                   return is_null($partner->elevator) || $partner->elevator == $request->elevator;
-               });
-           }
-
-           if (!is_null($request->furnished)) {
-               $partners = $partners->filter(function ($partner) use ($request) {
-                   return is_null($partner->furnished) || $partner->furnished == $request->furnished;
-               });
-           }
-
-           if (!is_null($request->is_smart)) {
-            $partners = $partners->filter(function ($partner) use ($request) {
-                return is_null($partner->is_smart) || $partner->is_smart == $request->is_smart;
-            });
-        }
-
-        if (!is_null($request->premium)) {
-            $partners = $partners->filter(function ($partner) use ($request) {
-                return is_null($partner->premium) || $partner->premium == $request->premium;
-            });
-        }
-
-        if (!is_null($request->floor)) {
-            $partners = $partners->filter(function ($partner) use ($request) {
-                return is_null($partner->floor) || $partner->floor == $request->floor;
-            });
-        }
-
-        if (!is_null($request->bedrooms)) {
-            $partners = $partners->filter(function ($partner) use ($request) {
-                return is_null($partner->bedrooms_count) || $partner->bedrooms_count == $request->bedrooms;
-            });
-        }
-
-        if (!is_null($request->bathrooms)) {
-            $partners = $partners->filter(function ($partner) use ($request) {
-                return is_null($partner->bathrooms_count) || $partner->bathrooms_count == $request->bathrooms;
-            });
-        }
-
-         if (!is_null($request->cladding)) {
-            $partners = $partners->filter(function ($partner) use ($request) {
-                return is_null($partner->cladding) || $partner->cladding == $request->cladding;
-            });
-        }
-
-           if (!is_null($request->the_oldest)) {
-
-            $partners = $partners->sortBy('id');
-
-           }
-
-           if (!is_null($request->the_newest)) {
-
-            $partners = $partners->sortByDesc('id');
-
-           }
-
-           if (!is_null($request->the_cheapest)) {
-
-            $partners = $partners->sortBy('price');
-
-           }
-
-           if (!is_null($request->the_expensive)) {
-
-            $partners = $partners->sortByDesc('price');
-
-           }
-
-
-
-           foreach ($partners as $partner) {
-               $matchingAreaIds = $partner->area_id;
-               if (isset($request->areas)) {
-                   $areaIds = $request->areas;
-                   if (!in_array($matchingAreaIds, $areaIds)) {
-                       continue;
-                   }
-               }
-
-               $resource = new PartnerResource($partner);
-               $resources[$partner->id] = $resource;
-           }
-
-           $resources = array_values($resources);
-
-           $perPage = $request->input('per_page', 10);
-
-           $currentPage = $request->input('page', 1);
-$offset = ($currentPage - 1) * $perPage;
-$paginatedPartners = new LengthAwarePaginator(
-    $partners->slice($offset, $perPage),
-    $partners->count(),
-    $perPage,
-    $currentPage,
-    ['path' => $request->url(), 'query' => $request->query()]
-);
-
-$resources = [];
-
-foreach ($paginatedPartners as $partner) {
-    // Your logic for each partner
-    $resource = new PartnerResource($partner);
-    $resources[] = $resource;
-}
-
-           return $this->returnData('data', $resources, __('Get partners successfully'));
-
-    }
-
-    //get partners from cat or sub with sort or without
+    //get partners from cat or sub without filter... and sort maybe yes or no
     if ($request->is_filter == 0)
     {
 
-        $id = $request->id;
+        //sortPartnersInCatOrSub Api
+        if ($request->is_sort == 1)
+        {
+
+             $id = $request->id;
 
            if ($request->is_category == 0) {
                $sub = Subcategory::find($id);
@@ -776,6 +614,213 @@ foreach ($paginatedPartners as $partner) {
            );
 
            return $this->returnData('data', PartnerResource::collection($paginatedPartners), __('Get successfully'));
+
+
+        }
+
+        //get partners from cat or sub
+        if ($request->is_sort == 0)
+        {
+
+            if ($request->is_category == 0)
+            {
+                $sub = Subcategory::find($request->id);
+                $id=$request->id;
+
+                $partners = Partner::where('show', 1)->whereHas('subcategory', function ($query) use ($id) {
+                    $query->where('id', $id);
+                })->orderBy('id', 'asc')->paginate(10);
+
+                return $this->returnData('data', PartnerResource::collection($partners), __('Get successfully'));
+
+            }
+
+            if ($request->is_category == 1)
+            {
+
+
+
+                $category = Category::find($request->id);
+                $id=$request->id;
+
+    $partners = Partner::where('show', 1)->whereHas('subcategory.category', function ($query) use ($id) {
+        $query->where('id', $id);
+    })->orderBy('id', 'asc')->paginate(10);
+
+    return $this->returnData('data', PartnerResource::collection($partners), __('Get successfully'));
+
+            }
+
+
+        }
+
+    }
+
+    //filter partners from cat or sub with sort or without
+    //
+    if ($request->is_filter == 1)
+    {
+
+        $resources = [];
+        $partners = Partner::where('show', 1)->get();
+
+        if ($request->is_category == 0) {
+            $subcategoryId = $request->id;
+            $partners = $partners->filter(function ($partner) use ($subcategoryId) {
+                return $partner->subcategory->id == $subcategoryId;
+            });
+        } else {
+            $categoryId = $request->id;
+            $partners = $partners->filter(function ($partner) use ($categoryId) {
+                return $partner->subcategory->category_id == $categoryId;
+            });
+        }
+
+        if (isset($request->cities)) {
+            $cityIds = $request->cities;
+            $partners = $partners->filter(function ($partner) use ($cityIds) {
+                return $partner->area->city_id && in_array($partner->area->city_id, $cityIds);
+            });
+        }
+
+        if (isset($request->areas)) {
+            $areaIds = $request->areas;
+            $partners = $partners->filter(function ($partner) use ($areaIds) {
+                return in_array($partner->area_id, $areaIds);
+            });
+        }
+
+        if (!is_null($request->space_min) && !is_null($request->space_max)) {
+         $spaceMin = $request->space_min;
+         $spaceMax = $request->space_max;
+
+         $partners = $partners->filter(function ($partner) use ($spaceMin, $spaceMax) {
+             return is_null($partner->space) || ($partner->space >= $spaceMin && $partner->space <= $spaceMax);
+         });
+     }
+
+        if (!is_null($request->price_min) && !is_null($request->price_max)) {
+            $partners = $partners->filter(function ($partner) use ($request) {
+                return is_null($partner->price) || ($partner->price >= $request->price_min && $partner->price <= $request->price_max);
+            });
+        }
+
+        if (!is_null($request->type)) {
+            $partners = $partners->filter(function ($partner) use ($request) {
+                return is_null($partner->type) || $partner->type == $request->type;
+            });
+        }
+
+        if (!is_null($request->elevator)) {
+            $partners = $partners->filter(function ($partner) use ($request) {
+                return is_null($partner->elevator) || $partner->elevator == $request->elevator;
+            });
+        }
+
+        if (!is_null($request->furnished)) {
+            $partners = $partners->filter(function ($partner) use ($request) {
+                return is_null($partner->furnished) || $partner->furnished == $request->furnished;
+            });
+        }
+
+        if (!is_null($request->is_smart)) {
+         $partners = $partners->filter(function ($partner) use ($request) {
+             return is_null($partner->is_smart) || $partner->is_smart == $request->is_smart;
+         });
+     }
+
+     if (!is_null($request->premium)) {
+         $partners = $partners->filter(function ($partner) use ($request) {
+             return is_null($partner->premium) || $partner->premium == $request->premium;
+         });
+     }
+
+     if (!is_null($request->floor)) {
+         $partners = $partners->filter(function ($partner) use ($request) {
+             return is_null($partner->floor) || $partner->floor == $request->floor;
+         });
+     }
+
+     if (!is_null($request->bedrooms)) {
+         $partners = $partners->filter(function ($partner) use ($request) {
+             return is_null($partner->bedrooms_count) || $partner->bedrooms_count == $request->bedrooms;
+         });
+     }
+
+     if (!is_null($request->bathrooms)) {
+         $partners = $partners->filter(function ($partner) use ($request) {
+             return is_null($partner->bathrooms_count) || $partner->bathrooms_count == $request->bathrooms;
+         });
+     }
+
+      if (!is_null($request->cladding)) {
+         $partners = $partners->filter(function ($partner) use ($request) {
+             return is_null($partner->cladding) || $partner->cladding == $request->cladding;
+         });
+     }
+
+        if (!is_null($request->the_oldest)) {
+
+         $partners = $partners->sortBy('id');
+
+        }
+
+        if (!is_null($request->the_newest)) {
+
+         $partners = $partners->sortByDesc('id');
+
+        }
+
+        if (!is_null($request->the_cheapest)) {
+
+         $partners = $partners->sortBy('price');
+
+        }
+
+        if (!is_null($request->the_expensive)) {
+
+         $partners = $partners->sortByDesc('price');
+
+        }
+
+
+
+        foreach ($partners as $partner) {
+            $matchingAreaIds = $partner->area_id;
+            if (isset($request->areas)) {
+                $areaIds = $request->areas;
+                if (!in_array($matchingAreaIds, $areaIds)) {
+                    continue;
+                }
+            }
+
+            $resource = new PartnerResource($partner);
+            $resources[$partner->id] = $resource;
+        }
+
+        $resources = array_values($resources);
+
+           $perPage = $request->input('per_page', 10);
+
+           $currentPage = $request->input('page', 1);
+$offset = ($currentPage - 1) * $perPage;
+$paginatedPartners = new LengthAwarePaginator(
+    $partners->slice($offset, $perPage),
+    $partners->count(),
+    $perPage,
+    $currentPage,
+    ['path' => $request->url(), 'query' => $request->query()]
+);
+
+$resources = [];
+
+foreach ($paginatedPartners as $partner) {
+    // Your logic for each partner
+    $resource = new PartnerResource($partner);
+    $resources[] = $resource;
+}
+
+        return $this->returnData('data', $resources, __('Get partners successfully'));
 
     }
 
