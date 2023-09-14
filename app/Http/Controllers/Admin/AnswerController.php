@@ -51,7 +51,7 @@ class AnswerController extends Controller
 
         $token = $user->device_token;
 
-            $this->sendReplay('مرحبا','لقد تم الرد على سؤالك من قبل الخبير العقاري',$token);
+            $this->sendReplay('مرحبا','لقد تم الرد على سؤالك من قبل الخبير العقاري',"expert",$token);
 
             $note= new Notification();
             $note->content ='لقد تم الرد على سؤالك من قبل الخبير العقاري';

@@ -22,7 +22,7 @@ class QuestionController extends ApiController
     public function questions()
     {
 
-        $data = Question::where('status', 1)->paginate(10);
+        $data = Question::where('status', 1)->orderBy('id', 'desc')->paginate(10);
 
         return $this->returnData('data', $this->resource::collection($data), __('Succesfully'));
     }

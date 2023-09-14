@@ -89,7 +89,7 @@ class NotificationController extends ApiController
     {
 
         // $advertisements = Auth::user()->advertisements;
-        $notifications = Notification::where('user_id',Auth::user()->id)->paginate(10) ;
+        $notifications = Notification::where('user_id',Auth::user()->id)->orderBy('id', 'desc')->paginate(10) ;
         return $this->returnData('data',  NotificationResource::collection( $notifications ), __('Get  succesfully'));
 
     }

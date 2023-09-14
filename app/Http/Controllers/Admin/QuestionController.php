@@ -80,12 +80,36 @@ class QuestionController extends Controller
 
         $request['question']=['en'=>$request->question_en,'ar'=>$request->question_ar];
 
-        $question->update($request->except([
+        $updateData=$question->update($request->except([
 
             'question_en',
             'question_ar',
 
         ]));
+
+  // Check if the 'show' field is updated to 1
+  if ($question->status == 0 && isset($updateData['status']) && $updateData['status'] == 1) {
+
+
+    $user = User::find($question->user_id);
+
+    $token = $user->device_token;
+
+        $this->sendReplay('مرحبا','لقد تمت الموافقة على سؤالك',"expert",$token);
+
+        $note= new Notification();
+        $note->content ='لقد تمت الموافقة على سؤالك';
+        $note->user_id = $user->id;
+        $note->type = 'question';
+        $note->route_id = $question->id;
+        $note->save();
+
+
+
+}
+
+      // Update the partner
+     $question->update($updateData);
 
 
         return redirect()->route('admin.questions.index')

@@ -180,25 +180,68 @@ trait NotificationTrait
         return true;
     }
 
-    public function sendReplay($title,$content,$token)
+    public function confirmQuestion($title,$content,$type,$token)
     {
         $msg['title']=$title;
         $msg['body']=$content;
         $msg['sound'] ='mySound';
-        // $data = [
+        $data = [
 
 
-        //     'partner_id' => $id,
-        //     'type' => $type,
+
+            'type' => $type,
 
 
-        // ];
+        ];
 
             $fields = array
                 (
                 "to" => $token,
                 "notification" => $msg,
-                // "data"=> $data,
+                "data"=> $data,
+
+                );
+
+
+        $headers = array
+            (
+            "Authorization: key=" . env("FIREBASE_API_KEY"),
+            "Content-Type: application/json"
+        );
+        //#Send Reponse To FireBase Server
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, "https://fcm.googleapis.com/fcm/send");
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+        $result = curl_exec($ch);
+        //dd($result);
+        curl_close($ch);
+
+        return true;
+    }
+
+    public function sendReplay($title,$content,$type,$token)
+    {
+        $msg['title']=$title;
+        $msg['body']=$content;
+        $msg['sound'] ='mySound';
+        $data = [
+
+
+
+            'type' => $type,
+
+
+        ];
+
+            $fields = array
+                (
+                "to" => $token,
+                "notification" => $msg,
+                "data"=> $data,
 
                 );
 
