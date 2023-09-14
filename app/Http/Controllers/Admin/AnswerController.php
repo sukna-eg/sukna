@@ -8,9 +8,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\AreaRequest;
 use App\Models\Question;
+use App\Models\Notification;
+use App\Traits\NotificationTrait;
+
 
 class AnswerController extends Controller
 {
+    use NotificationTrait;
     /**
      * Display a listing of the resource.
      */
@@ -37,11 +41,24 @@ class AnswerController extends Controller
     {
         $request['answer']=['en'=>$request->answer_en,'ar'=>$request->answer_ar];
 
-        Answer::create($request->except([
+        $answer=Answer::create($request->except([
             'answer_en',
             'answer_ar',
 
         ]));
+
+        $user = User::find($answer->question->user_id);
+
+        $token = $user->device_token;
+
+            $this->sendReplay('مرحبا','لقد تم الرد على سؤالك من قبل الخبير العقاري',$token);
+
+            $note= new Notification();
+            $note->content ='لقد تم الرد على سؤالك من قبل الخبير العقاري';
+            $note->user_id = $user->id;
+            $note->type = 'answer';
+            $note->route_id = $answer->question->id;
+            $note->save();
 
         return redirect()->route('admin.answers.index')
                         ->with('success','Answer has been added successfully');
