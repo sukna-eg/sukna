@@ -135,6 +135,8 @@ Route::get('spaces-range', [PartnerController::class, 'getMinAndMaxOfSpace']);
 //sortPartnersInCatOrSub
 Route::post('category-sort', [PartnerController::class, 'sortPartnersInCatOrSub']);
 
+//allPartners
+Route::post('all-partners', [PartnerController::class, 'allPartners']);
 
 //city
 Route::get('cities', [CityController::class, 'pagination']);
