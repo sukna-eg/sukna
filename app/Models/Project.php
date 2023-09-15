@@ -12,22 +12,22 @@ class Project extends Model
     protected $guarded=[];
     public $translatable = ['name','description','duration'];
 
-    protected static function booted()
-    {
-        static::deleted(function ($project) {
+    // protected static function booted()
+    // {
+    //     static::deleted(function ($project) {
 
 
-            if ($project->images){
-                foreach ($project->images as $image) {
-                    unlink($image->image);
-                }
-                $project->images()->delete();
-            }
+    //         if ($project->images){
+    //             foreach ($project->images as $image) {
+    //                 unlink($image->image);
+    //             }
+    //             $project->images()->delete();
+    //         }
 
 
 
-        });
-    }
+    //     });
+    // }
 
 
 

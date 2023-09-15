@@ -27,12 +27,12 @@ class Partner extends Model
         static::deleted(function ($partner) {
 
 
-            if ($partner->images){
-                foreach ($partner->images as $image) {
-                    unlink($image->image);
-                }
-                $partner->images()->delete();
-            }
+            // if ($partner->images){
+            //     foreach ($partner->images as $image) {
+            //         unlink($image->image);
+            //     }
+            //     $partner->images()->delete();
+            // }
 
 
             if ($partner->music  && \Illuminate\Support\Facades\File::exists($partner->music)) {

@@ -179,7 +179,7 @@ class PartnerController extends Controller
     {
         $partner=Partner::findOrFail($request->id);
         if ($partner->images){
-            foreach ($project->images as $image) {
+            foreach ($partner->images as $image) {
 
                 if (File::exists(public_path($image->image))) {
                 File::delete(public_path($image->image));

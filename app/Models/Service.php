@@ -33,6 +33,22 @@ class Service extends Model
         }
     }
 
+    protected static function booted()
+    {
+        static::deleted(function ($service) {
+
+
+            if ($service->image  && \Illuminate\Support\Facades\File::exists($service->image)) {
+            unlink($service->image);
+            }
+
+            if ($service->logo  && \Illuminate\Support\Facades\File::exists($service->logo)) {
+                unlink($service->logo);
+                }
+
+        });
+    }
+
     public function category()
 	{
 		return $this->belongsTo(Category::class);
