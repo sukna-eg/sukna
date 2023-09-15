@@ -177,7 +177,21 @@ class PartnerController extends Controller
      */
     public function destroy(Request $request)
     {
-        Partner::findOrFail($request->id)->delete();
+        $partner=Partner::findOrFail($request->id);
+        if ($partner->images){
+            foreach ($project->images as $image) {
+
+                if (File::exists(public_path($image->image))) {
+                File::delete(public_path($image->image));
+                }
+
+            }
+
+
+        }
+
+
+        $partner->delete();
         return redirect()->route('admin.partners.index')->with('success','Partner has been removed successfully');
     }
 

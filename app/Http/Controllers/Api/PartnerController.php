@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\PartnerDistanceResource;
+use File;
 
 class PartnerController extends ApiController
 {
@@ -657,7 +658,7 @@ public function allPartners(Request $request)
     }
 
     //filter partners from cat or sub with sort or without
-    //
+    //sort and filter api
     if ($request->is_filter == 1)
     {
 
@@ -824,6 +825,30 @@ foreach ($paginatedPartners as $partner) {
 
     }
 
+}
+
+public function delete($id)
+{
+    $model = $this->repositry->getByID($id);
+
+    if (!$model) {
+        return $this->returnError(__('Sorry! Failed to get !'));
+    }
+
+        if ($model->images){
+            foreach ($model->images as $image) {
+
+                if (File::exists(public_path($image->image))) {
+                File::delete(public_path($image->image));
+                }
+
+            }
+
+
+        }
+           $this->repositry->deleteByID($id);
+
+    return $this->returnSuccessMessage(__('Delete succesfully!++'));
 }
 
 

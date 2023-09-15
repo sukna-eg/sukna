@@ -10,6 +10,7 @@ use App\Http\Requests\AreaRequest;
 use App\Http\Resources\ProjectResource;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ApiController;
+use File;
 
 class ProjectController extends ApiController
 {
@@ -18,6 +19,30 @@ class ProjectController extends ApiController
         $this->resource = ProjectResource::class;
         $this->model = app(Project::class);
         $this->repositry =  new Repository($this->model);
+    }
+
+    public function delete($id)
+    {
+        $model = $this->repositry->getByID($id);
+
+        if (!$model) {
+            return $this->returnError(__('Sorry! Failed to get !'));
+        }
+
+            if ($model->images){
+                foreach ($model->images as $image) {
+
+                    if (File::exists(public_path($image->image))) {
+                    File::delete(public_path($image->image));
+                    }
+
+                }
+
+
+            }
+               $this->repositry->deleteByID($id);
+
+        return $this->returnSuccessMessage(__('Delete succesfully!++'));
     }
 
 

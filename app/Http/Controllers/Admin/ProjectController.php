@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\Admin\CityRequest;
 
+
 class ProjectController extends Controller
 {
     /**
@@ -119,7 +120,22 @@ class ProjectController extends Controller
      */
     public function destroy(Request $request)
     {
-        Project::findOrFail($request->id)->delete();
+        $project=Project::findOrFail($request->id);
+
+        if ($project->images){
+            foreach ($project->images as $image) {
+
+                if (File::exists(public_path($image->image))) {
+                File::delete(public_path($image->image));
+                }
+
+            }
+
+
+        }
+
+
+        $project->delete();
         return redirect()->route('admin.projects.index')->with('success','Project has been removed successfully');
     }
 }

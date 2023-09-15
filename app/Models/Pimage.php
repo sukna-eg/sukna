@@ -21,14 +21,41 @@ class Pimage extends Model
         }
     }
 
+    // protected static function booted()
+    // {
+    //     static::deleted(function ($partner) {
+    //             if ($partner->image  && \Illuminate\Support\Facades\File::exists($partner->image)) {
+    //             unlink($partner->image);
+    //         }
+    //     });
+    // }
+
     protected static function booted()
     {
         static::deleted(function ($partner) {
-                if ($partner->image  && \Illuminate\Support\Facades\File::exists($partner->image)) {
-                unlink($partner->image);
+
+
+            if ($partner->images){
+                foreach ($partner->images as $image) {
+                    unlink($image->image);
+                }
+                $partner->images()->delete();
+            }
+
+
+
+        });
+
+        static::deleted(function ($pimage) {
+
+
+            if ($pimage->image  && \Illuminate\Support\Facades\File::exists($pimage->image)) {
+            unlink($pimage->image);
             }
         });
     }
+
+
 
     public function partner()
 	{
