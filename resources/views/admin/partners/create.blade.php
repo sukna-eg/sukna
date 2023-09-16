@@ -104,13 +104,13 @@
                                     <div class="col-xl-8 mb-3" id="periodField">
                                         <label class="form-label">Period<span class="text-danger">*</span></label>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="monthly" type="radio" name="period" value="1" @checked(old('period')== "1")>
+                                            <input class="form-check-input" id="monthly" type="radio" name="period" value= 1 @checked(old('period')== 1)>
                                             <label class="form-check-label" for="monthly">
                                                 Monthly
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" id="daily" type="radio" name="period" value="0" @checked(old('period')== "0")>
+                                            <input class="form-check-input" id="daily" type="radio" name="period" value=0 @checked(old('period')== 0)>
                                             <label class="form-check-label" for="daily">
                                                 Daily
                                             </label>
