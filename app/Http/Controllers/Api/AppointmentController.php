@@ -71,7 +71,7 @@ class AppointmentController extends ApiController
 
             $note= new Notification();
             $note->content = ' لديك طلب جديد للعقار رقم'.$appointment->partner_id.'اضغط هنا لمعرفة التفاصيل';
-            $note->user_id = $client->id;
+            $note->user_id = $user->id;
             $note->type = 'order';
             $note->route_id = $appointment->partner_id;
             $note->save();
