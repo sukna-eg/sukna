@@ -11,7 +11,7 @@ class Answer extends Model
     use HasFactory,HasTranslations;
 
     protected $guarded=[];
-    public $translatable = ['answer'];
+    // public $translatable = ['answer'];
 
     public function question()
 	{

@@ -28,10 +28,10 @@
                                 <h4 class="heading mb-5"> {{ $partner->id }}</h4>
 
                                     <p class="mb-3"><strong>Id : </strong> {{  $partner->id  }}</p>
-                                    <p class="mb-3"><strong>Address-En : </strong> {{ $partner->getTranslation('address', 'en') }}</p>
-                                    <p class="mb-3"><strong>Address-Ar : </strong> {{ $partner->getTranslation('address', 'ar') }}</p>
-                                    <p class="mb-3"><strong>Description-En : </strong> {{ $partner->getTranslation('description', 'en') }}</p>
-                                    <p class="mb-3"><strong>Description-Ar : </strong> {{ $partner->getTranslation('description', 'ar') }}</p>
+                                    {{-- <p class="mb-3"><strong>Address-En : </strong> {{ $partner->getTranslation('address', 'en') }}</p> --}}
+                                    <p class="mb-3"><strong>Address : </strong> {{ $partner->address }}</p>
+                                    {{-- <p class="mb-3"><strong>Description-En : </strong> {{ $partner->getTranslation('description', 'en') }}</p> --}}
+                                    <p class="mb-3"><strong>Description : </strong> {{ $partner->description }}</p>
                                     <p class="mb-3"><strong>Type :</strong> {{ $partner->type == 1? 'Sale' : 'Rent' }}</p>
                                     <p class="mb-3"><strong>Show :</strong> {{ $partner->show == 1? 'Visible' : 'Hidden' }}</p>
                                     <p class="mb-3"><strong>Space :</strong> {{ $partner->space }}</p>

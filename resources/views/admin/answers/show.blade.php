@@ -27,8 +27,8 @@
                                 <div class="container-fluid">
                                 <h4 class="heading mb-5"> {{ $answer->id }}</h4>
 
-                                    <p class="mb-3"><strong>Answer-En : </strong> {!! $answer->getTranslation('answer', 'en') !!}</p>
-                                    <p class="mb-3"><strong>Answer-Ar : </strong> {!! $answer->getTranslation('answer', 'ar') !!}</p>
+                                    {{-- <p class="mb-3"><strong>Answer-En : </strong> {!! $answer->getTranslation('answer', 'en') !!}</p> --}}
+                                    <p class="mb-3"><strong>Answer : </strong> {{ $answer->answer }}</p>
 
                                     <p class="mb-3"><strong>Question : </strong> <a href="{{ route('admin.questions.show',$answer->question->id) }}">{!! $answer->question->getTranslation('question', 'en') !!}</a></p>
 

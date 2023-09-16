@@ -10,7 +10,7 @@ class Partner extends Model
 {
     use HasFactory,HasTranslations;
     protected $guarded=[];
-    public $translatable = ['address','description'];
+    // public $translatable = ['address','description'];
 
     public function setMusicAttribute($value){
         if ($value){

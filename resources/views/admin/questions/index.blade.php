@@ -46,7 +46,7 @@
                                                             <thead>
                                                                 <tr>
                                                                     {{-- <th>Question En</th> --}}
-                                                                    <th>Question Ar</th>
+                                                                    <th>Question</th>
 
                                                                     <th>Status</th>
                                                                     {{-- <th>User Id</th> --}}
@@ -60,7 +60,7 @@
                                                                     <tr>
                                                                         {{-- <td><span>{{ $question->getTranslation('question', 'en') }}</span>
                                                                         </td> --}}
-                                                                        <td><span>{{ $question->getTranslation('question', 'ar') }}</span>
+                                                                        <td><span>{{ $question->question }}</span>
                                                                         </td>
                                                                         <td>
                                                                             <span>{{ $question->status == 1? 'Active' : 'InActive' }}</span>

@@ -31,20 +31,20 @@
                                 @csrf
                                 <div class="row">
 
-                                    <div class="col-xl-8 mb-3">
+                                    {{-- <div class="col-xl-8 mb-3">
                                         <label for="ckeditor" class="form-label">Answer-En<span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="exampleFormControlInputfirst" name="answer_en" value="{{ old('answer_en') }}">
 
                                         @error('answer_en')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
-                                    </div>
+                                    </div> --}}
 
                                     <div class="col-xl-8 mb-3">
-                                        <label for="ckeditor1" class="form-label">Answer-Ar<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="answer_ar" value="{{ old('answer_ar') }}">
+                                        <label for="ckeditor1" class="form-label">Answer<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="answer" value="{{ old('answer') }}">
 
-                                        @error('answer_ar')
+                                        @error('answer')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>

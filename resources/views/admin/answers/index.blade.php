@@ -45,8 +45,8 @@
                                                             style="min-width: 845px">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Answer-En</th>
-                                                                    <th>Answer-Ar</th>
+                                                                    {{-- <th>Answer-En</th> --}}
+                                                                    <th>Answer</th>
 
 
                                                                     <th>Question-Id</th>
@@ -58,10 +58,10 @@
                                                             </thead>
                                                             <tbody>
                                                                 @forelse ($data as $answer)
-                                                                    <td><span>{{ $answer->getTranslation('answer', 'en') }}</span>
-                                                                        </td>
+                                                                    {{-- <td><span>{{ $answer->getTranslation('answer', 'en') }}</span>
+                                                                        </td> --}}
                                                                         <td>
-                                                                            <span>{{ $answer->getTranslation('answer', 'ar') }}</span>
+                                                                            <span>{{ $answer->answer }}</span>
                                                                         </td>
                                                                         <td>
                                                                         <span><a href="{{ route('admin.questions.show',$answer->question->id) }}">{{ $answer->question->id }}</a></span>

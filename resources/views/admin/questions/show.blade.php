@@ -26,8 +26,8 @@
                             <div class="offcanvas-body">
                                 <div class="container-fluid">
                                 <h4 class="heading mb-5"> {{ $question->id }}</h4>
-                                    <p class="mb-3"><strong>Question-En : </strong> {!! $question->getTranslation('question', 'en') !!}</p>
-                                    <p class="mb-3"><strong>Question-Ar : </strong> {!! $question->getTranslation('question', 'ar') !!}</p>
+                                    {{-- <p class="mb-3"><strong>Question-En : </strong> {!! $question->getTranslation('question', 'en') !!}</p> --}}
+                                    <p class="mb-3"><strong>Question : </strong> {{ $question->question }}</p>
                                     <p class="mb-3"><strong>Status :</strong> {{ $question->status == 1? 'Active' : 'InActive' }}</p>
                                     <p class="mb-3"><strong>User-Id : </strong> {!! $question->user->id !!}</p>
                                     <p class="mb-3"><strong>User-Name : </strong> {!! $question->user->name !!}</p>
@@ -61,8 +61,8 @@
                                                             style="min-width: 845px">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Answer-En</th>
-                                                                    <th>Answer-Ar</th>
+                                                                    {{-- <th>Answer-En</th> --}}
+                                                                    <th>Answer</th>
 
 
                                                                     <th>Question-Id</th>
@@ -75,10 +75,10 @@
                                                                 @forelse ($question->answers as $answer)
                                                                     <tr>
 
-                                                                        <td><span>{{ $answer->getTranslation('answer', 'en') }}</span>
-                                                                        </td>
+                                                                        {{-- <td><span>{{ $answer->getTranslation('answer', 'en') }}</span>
+                                                                        </td> --}}
                                                                         <td>
-                                                                            <span>{{ $answer->getTranslation('answer', 'ar') }}</span>
+                                                                            <span>{{ $answer->answer }}</span>
                                                                         </td>
 
                                                                         <td><span>{{ $answer->question->id }}</span>

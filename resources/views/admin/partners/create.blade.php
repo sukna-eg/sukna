@@ -30,37 +30,37 @@
                             <form method="POST" action="{{ route('admin.partners.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-xl-8 mb-3">
+                                    {{-- <div class="col-xl-8 mb-3">
                                         <label for="ckeditor" class="form-label">Address-En<span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="exampleFormControlInputfirst" name="address_en" value="{{ old('address_en') }}">
 
                                         @error('address_en')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
-                                    </div>
+                                    </div> --}}
 
                                     <div class="col-xl-8 mb-3">
-                                        <label for="ckeditor" class="form-label">Address-Ar<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="address_ar" value="{{ old('address_ar') }}">
+                                        <label for="ckeditor" class="form-label">Address<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="address" value="{{ old('address') }}">
 
-                                        @error('address_ar')
+                                        @error('address')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <div class="col-xl-8 mb-3">
+                                    {{-- <div class="col-xl-8 mb-3">
                                         <label class="form-label">Description-En<span class="text-danger">*</span></label>
                                         <textarea class="form-txtarea form-control" rows="8" name="description_en">{{ old('description_en') }}</textarea>
                                         @error('description_en')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
-                                    </div>
+                                    </div> --}}
 
                                     <div class="col-xl-8 mb-3">
-                                        <label for="ckeditor1" class="form-label">Description-Ar<span class="text-danger">*</span></label>
+                                        <label for="ckeditor1" class="form-label">Description<span class="text-danger">*</span></label>
                                         {{-- <div class="card-body custom-ekeditor"> --}}
-                                        <textarea id="ckeditor1" class="form-txtarea form-control" rows="8" name="description_ar">{{ old('description_ar') }}</textarea>
+                                        <textarea id="ckeditor1" class="form-txtarea form-control" rows="8" name="description">{{ old('description') }}</textarea>
                                         {{-- </div> --}}
-                                        @error('description_ar')
+                                        @error('description')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>

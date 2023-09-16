@@ -39,13 +39,9 @@ class AnswerController extends Controller
      */
     public function store(Request $request)
     {
-        $request['answer']=['en'=>$request->answer_en,'ar'=>$request->answer_ar];
+        // $request['answer']=['en'=>$request->answer_en,'ar'=>$request->answer_ar];
 
-        $answer=Answer::create($request->except([
-            'answer_en',
-            'answer_ar',
-
-        ]));
+        $answer=Answer::create($request->all());
 
         $user = User::find($answer->question->user_id);
 
@@ -86,12 +82,8 @@ class AnswerController extends Controller
     public function update(Request $request, string $id)
     {
         $answer = Answer::findOrFail($id);
-        $request['answer']=['en'=>$request->answer_en,'ar'=>$request->answer_ar];
-        $answer->update($request->except([
-            'answer_en',
-            'answer_ar',
-
-        ]));
+        // $request['answer']=['en'=>$request->answer_en,'ar'=>$request->answer_ar];
+        $answer->update($request->all());
 
 
         return redirect()->route('admin.answers.index')

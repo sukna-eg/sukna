@@ -10,7 +10,7 @@ class Question extends Model
 {
     use HasFactory,HasTranslations;
     protected $guarded=[];
-    public $translatable = ['question'];
+    // public $translatable = ['question'];
 
     public function answers()
 	{

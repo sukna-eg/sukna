@@ -40,13 +40,9 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
 
-        $request['question']=['en'=>$request->question_en,'ar'=>$request->question_ar];
+        // $request['question']=['en'=>$request->question_en,'ar'=>$request->question_ar];
 
-        $question = Question::create($request->except([
-
-            'question_en',
-            'question_ar'
-        ]));
+        $question = Question::create($request->all());
 
 
 
@@ -104,9 +100,10 @@ class QuestionController extends Controller
 {
     $question = Question::findOrFail($id);
 
-    $request['question'] = ['en' => $request->question_en, 'ar' => $request->question_ar];
+    // $request['question'] = ['en' => $request->question_en, 'ar' => $request->question_ar];
 
-    $updateData = $request->except(['question_en', 'question_ar']);
+    // $updateData = $request->except(['question_en', 'question_ar']);
+    $updateData = $request->all();
 
     // Check if the 'status' field is updated to 1
     if ($question->status == 0 && isset($updateData['status']) && $updateData['status'] == 1) {

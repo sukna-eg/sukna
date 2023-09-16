@@ -47,13 +47,13 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-        $request['address']=['en'=>$request->address_en,'ar'=>$request->address_ar];
-        $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
+        // $request['address']=['en'=>$request->address_en,'ar'=>$request->address_ar];
+        // $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
         $partner=Partner::create($request->except([
-            'address_ar',
-            'address_en',
-            'description_en',
-            'description_ar',
+            // 'address_ar',
+            // 'address_en',
+            // 'description_en',
+            // 'description_ar',
             'images'
             // 'area_id',
             // 'user_id',
@@ -122,15 +122,10 @@ class PartnerController extends Controller
 {
     $partner = Partner::findOrFail($id);
 
-    $request['address']=['en'=>$request->address_en,'ar'=>$request->address_ar];
-    $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
+    // $request['address']=['en'=>$request->address_en,'ar'=>$request->address_ar];
+    // $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
 
-    $updateData = $request->except([
-        'address_en',
-        'address_ar',
-        'description_en',
-        'description_ar',
-    ]);
+    $updateData = $request->all();
 
     // Check if the 'show' field is updated to 1
     if ($partner->show == 0 && isset($updateData['show']) && $updateData['show'] == 1) {
