@@ -99,4 +99,10 @@ class IntroductionController extends Controller
         Introduction::findOrFail($request->id)->delete();
         return redirect()->route('admin.introductions.index')->with('success','Introduction has been removed successfully');
     }
+
+    public function openFile($id)
+    {
+        $intro = Introduction::findOrFail($id);
+        return response()->file($intro->video);
+    }
 }
