@@ -33,7 +33,7 @@ class AreaController extends Controller
      */
     public function store(AreaRequest $request)
     {
-        // $request['name']=['en'=>$request->name_en,'ar'=>$request->name_ar];
+        $request['name']=['en'=>$request->name_en,'ar'=>$request->name_ar];
 
         Area::create($request->except([
             'name_en',
