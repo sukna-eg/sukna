@@ -537,7 +537,7 @@ foreach ($partners as $partner) {
     // if ($branch->partner->status == 1) {
     $distance = $this->distance($request->lat_user, $request->long_user, $partner->lat, $partner->long);
 
-    if ($distance <= 5) { // Check if the distance is within 5 kilometers
+    if ($distance <= 1) { // Check if the distance is within 5 kilometers
         $resource = new PartnerDistanceResource($partner, $distance);
 
         $resources[] = $resource;

@@ -139,10 +139,10 @@ class PartnerController extends Controller
         $admin = $partner->user;
 
         $token = $admin->device_token;
-        $this->confirmPartner('مرحبا', 'لقد تمت الموافقة على عقارك', "my_partner", $token);
+        $this->confirmPartner('تهانينا  👋🏼'.$admin->name,'تم إضافة عقارك الجديد بنجاح .', "my_partner", $token);
 
         $note = new Notification();
-        $note->content = 'لقد تمت الموافقة على عقارك';
+        $note->content = 'تم إضافة عقارك الجديد بنجاح .';
         $note->user_id = $admin->id;
         $note->type = 'my_partner';
         $note->route_id = $partner->id;
@@ -151,7 +151,7 @@ class PartnerController extends Controller
 
         // Send notification to users
         $FcmToken = User::whereNotNull('device_token')->pluck('device_token')->all();
-        $this->sendPartnerNoti('مرحبا','لقد تم إضافة عقار جديد يمكنك رؤيته من هنا','partner',$partner->id,$FcmToken);
+        $this->sendPartnerNoti('👋🏼 مرحبا','تم إضافة عقار جديد ربما يعجبك ، اضغط هنا للمشاهدة.','partner',$partner->id,$FcmToken);
 
         $users = User::whereNotNull('device_token')->get();
 
