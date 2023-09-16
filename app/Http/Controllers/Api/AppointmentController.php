@@ -67,7 +67,7 @@ class AppointmentController extends ApiController
 
         $token = $user->device_token;
 
-            $this->sendAdminNoti('مرحبًا '.$user->name.'👋🏼',' لديك طلب جديد للعقار رقم'.$appointment->partner_id.'اضغط هنا لمعرفة التفاصيل','order',$token);
+            $this->sendAdminNoti('مرحبًا '.$user->name.'👋🏼',' لديك طلب جديد للعقار رقم'.$appointment->partner_id.'اضغط هنا لمعرفة التفاصيل ','order',$token);
 
             $note= new Notification();
             $note->content = ' لديك طلب جديد للعقار رقم'.$appointment->partner_id.'اضغط هنا لمعرفة التفاصيل';

@@ -109,7 +109,7 @@ class QuestionController extends Controller
     if ($question->status == 0 && isset($updateData['status']) && $updateData['status'] == 1) {
         $user = User::find($question->user_id);
         $token = $user->device_token;
-        $this->confirmQuestion('مرحبًا '.$user->name.'👋🏼', 'تم الموافقة على استشارتك العقارية، وسيتم الرد عليها قريبًا.', "expert", $token);
+        $this->confirmQuestion(' مرحبًا '.$user->name.' 👋🏼', 'تم الموافقة على استشارتك العقارية، وسيتم الرد عليها قريبًا.', "expert", $token);
 
         $note = new Notification();
         $note->content = 'تم الموافقة على استشارتك العقارية، وسيتم الرد عليها قريبًا';

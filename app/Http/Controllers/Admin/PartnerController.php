@@ -134,7 +134,7 @@ class PartnerController extends Controller
         $admin = $partner->user;
 
         $token = $admin->device_token;
-        $this->confirmPartner('تهانينا  '.$admin->name .'🎉','تم إضافة عقارك الجديد بنجاح .', "my_partner", $token);
+        $this->confirmPartner(' تهانينا  '.$admin->name .' 🎉','تم إضافة عقارك الجديد بنجاح .', "my_partner", $token);
 
         $note = new Notification();
         $note->content = 'تم إضافة عقارك الجديد بنجاح .';
