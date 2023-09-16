@@ -51,10 +51,10 @@ class AnswerController extends Controller
 
         $token = $user->device_token;
 
-            $this->sendReplay('مرحبا','لقد تم الرد على سؤالك من قبل الخبير العقاري',"expert",$token);
+            $this->sendReplay('مرحبًا '.$user->name.'👋🏼','تم الرد على استشارتك العقارية من قِبل الخبير العقاري. ',"expert",$token);
 
             $note= new Notification();
-            $note->content ='لقد تم الرد على سؤالك من قبل الخبير العقاري';
+            $note->content ='تم الرد على استشارتك العقارية من قِبل الخبير العقاري. ';
             $note->user_id = $user->id;
             $note->type = 'expert';
             $note->route_id = $answer->question->id;

@@ -51,10 +51,10 @@ class BlackDayController extends ApiController
 
         $token = $user->device_token;
 
-            $this->sendUserNoti('مرحبا', 'تم تأكيد حجزك للعقار'.$black->partner_id,$black->partner_id,'partner',$token);
+            $this->sendUserNoti('تهانينا '.$user->name.'🎉 ', '  تم تأكيد حجزك للعقار بنجاح.'.$black->partner_id,$black->partner_id,'partner',$token);
 
             $note= new Notification();
-            $note->content = 'تم تأكيد حجزك للعقار'.$black->partner_id;
+            $note->content = 'تم تأكيد حجزك للعقار بنجاح.'.$black->partner_id;
             $note->user_id = $black->user_id;
             $note->type = 'partner';
             $note->route_id = $black->partner_id;

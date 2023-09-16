@@ -67,13 +67,13 @@ class AppointmentController extends ApiController
 
         $token = $user->device_token;
 
-            $this->sendAdminNoti('مرحبا','لديك طلب حجز من اليوزر '.$client->name. 'على العقار'.$appointment->partner_id,'order',$token);
+            $this->sendAdminNoti('مرحبًا '.$user->name.'👋🏼',' لديك طلب جديد للعقار رقم'.$appointment->partner_id.'اضغط هنا لمعرفة التفاصيل','order',$token);
 
             $note= new Notification();
-            $note->content = 'لديك طلب حجز من اليوزر '.$client->name. 'على العقار'.$appointment->partner_id;
+            $note->content = ' لديك طلب جديد للعقار رقم'.$appointment->partner_id.'اضغط هنا لمعرفة التفاصيل';
             $note->user_id = $client->id;
             $note->type = 'order';
-            $note->route_id = $appointment->id;
+            $note->route_id = $appointment->partner_id;
             $note->save();
 
         return $this->returnData('data', new AppointmentResource($appointment), __('Successfully'));
