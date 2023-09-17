@@ -32,7 +32,13 @@
                                     {{-- <p class="mb-3"><strong>Address-Ar : </strong> {{ $service->getTranslation('address', 'ar') }}</p> --}}
                                     <p class="mb-3"><strong>Description-En : </strong> {{ $smart->getTranslation('description', 'en') }}</p>
                                     <p class="mb-3"><strong>Description-Ar : </strong> {{ $smart->getTranslation('description', 'ar') }}</p>
-                                    <p class="mb-3"><strong>Link :</strong> {{ $smart->link }}</p>
+
+                                    <p class="mb-3"><strong>Video Url : </strong> {{ $smart->link }}</p>
+
+                                    @if ($smart->link)
+                                    <p class="mb-3"><strong>Play:</strong> <a href="{{ route('admin.smarts.file',$smart->id) }}">{{ $smart->link }}</a></p>
+                                    @endif
+
                                     <p class="mb-3"><strong>Phone :</strong> {{ $smart->phone }}</p>
                                     <p class="mb-3"><strong>Whatsapp :</strong> {{ $smart->whatsapp }}</p>
                                     <p class="mb-3"><strong>Facebook :</strong> {{ $smart->facebook }}</p>

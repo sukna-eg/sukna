@@ -51,7 +51,7 @@ class BlackDayController extends ApiController
 
         $token = $user->device_token;
 
-            $this->sendUserNoti(' تهانينا '.$user->name.' 🎉 ', '  تم تأكيد حجزك للعقار بنجاح.'.$black->partner_id,$black->partner_id,'partner',$token);
+            $this->sendUserNoti(' تهانينا '.$user->name.' 🎉 ', '  تم تأكيد حجزك للعقار بنجاح. '.$black->partner_id,$black->partner_id,'partner',$token);
 
             $note= new Notification();
             $note->content = ' تم تأكيد حجزك للعقار بنجاح.'.$black->partner_id;

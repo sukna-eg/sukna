@@ -73,6 +73,15 @@ class IntroductionController extends Controller
     {
         $introduction = Introduction::findOrFail($id);
 
+
+        if ($request->has('image')&&$introduction->image && File::exists($introduction->image)) {
+            unlink($introduction->image);
+        }
+
+        if ($request->has('video')&&$introduction->video && File::exists($introduction->video)) {
+            unlink($introduction->video);
+        }
+
         $request['title']=['en'=>$request->title_en,'ar'=>$request->title_ar];
 
         $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar];

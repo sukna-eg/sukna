@@ -72,7 +72,21 @@
                                     </div>
 
 
+                                    <div class="col-xl-8 mb-3">
+                                        <label for="image" class="form-label">Image<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="file" name="image" id="image">
+                                        @error('image')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
 
+                                    <div class="col-xl-8 mb-3">
+                                        <label class="form-label">Video</label>
+                                        <input type="file" class="form-control" name="video" accept="video/*">
+                                        @error('video')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
 
 
 

@@ -81,6 +81,11 @@ class SmartController extends Controller
         $smart = Smart::findOrFail($id);
 
 
+        if ($request->has('link')&&$smart->link && File::exists($smart->link)) {
+            unlink($smart->link);
+        }
+
+
         $request['name']=['en'=>$request->name_en,'ar'=>$request->name_ar];
         $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
 
@@ -105,5 +110,11 @@ class SmartController extends Controller
     {
         Smart::findOrFail($request->id)->delete();
         return redirect()->route('admin.smarts.index')->with('success','Smart has been removed successfully');
+    }
+
+    public function openFile($id)
+    {
+        $smart = Smart::findOrFail($id);
+        return response()->file($smart->link);
     }
 }

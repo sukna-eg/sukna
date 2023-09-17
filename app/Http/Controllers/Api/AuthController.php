@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Repositories\UserRepository;
 use App\Traits\ResponseTrait;
 use Exception;
+use File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -139,6 +140,9 @@ class AuthController extends Controller
 
 
 
+                if ($request->has('image')&& $user->image  && File::exists($user->image)) {
+                    unlink($user->image);
+                }
 
 
                 $this->userRepositry->edit($request, $user);
@@ -352,6 +356,9 @@ class AuthController extends Controller
                         ]);
 
                 }
+
+
+
 
                 DB::commit();
 

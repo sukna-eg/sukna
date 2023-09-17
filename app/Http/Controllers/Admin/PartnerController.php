@@ -122,6 +122,10 @@ class PartnerController extends Controller
 {
     $partner = Partner::findOrFail($id);
 
+    if ($request->has('music')&&$partner->music && File::exists($partner->music)) {
+        unlink($partner->music);
+    }
+
     // $request['address']=['en'=>$request->address_en,'ar'=>$request->address_ar];
     // $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
 
@@ -134,7 +138,7 @@ class PartnerController extends Controller
         $admin = $partner->user;
 
         $token = $admin->device_token;
-        $this->confirmPartner(' تهانينا  '.$admin->name .' 🎉','تم إضافة عقارك الجديد بنجاح .', "my_partner", $token);
+        $this->confirmPartner(' تهانينا  '.$admin->name .' 🎉',' تم إضافة عقارك الجديد بنجاح . ', "my_partner", $token);
 
         $note = new Notification();
         $note->content = 'تم إضافة عقارك الجديد بنجاح .';
@@ -146,7 +150,7 @@ class PartnerController extends Controller
 
         // Send notification to users
         $FcmToken = User::whereNotNull('device_token')->pluck('device_token')->all();
-        $this->sendPartnerNoti('👋🏼 مرحبا','تم إضافة عقار جديد ربما يعجبك ، اضغط هنا للمشاهدة.','partner',$partner->id,$FcmToken);
+        $this->sendPartnerNoti('👋🏼 مرحبا ',' تم إضافة عقار جديد ربما يعجبك ، اضغط هنا للمشاهدة. ','partner',$partner->id,$FcmToken);
 
         $users = User::whereNotNull('device_token')->get();
 

@@ -32,7 +32,13 @@
 
                                     <p class="mb-3"><strong>Body-Ar : </strong> {{ $introduction->getTranslation('body', 'ar') }}</p>
                                     <p class="mb-3"><strong>Body-En : </strong> {{ $introduction->getTranslation('body', 'en') }}</p>
+                                    <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px" src="{{ asset( $introduction->image ) }}" alt="{{ $introduction->id }}">
 
+                                    <p class="mb-3"><strong>Video Url : </strong> {{ $introduction->video }}</p>
+
+                                    @if ($introduction->video)
+                                    <p class="mb-3"><strong>Play:</strong> <a href="{{ route('admin.introductions.file',$introduction->id) }}">{{ $introduction->video }}</a></p>
+                                    @endif
 
                                 </div>
 

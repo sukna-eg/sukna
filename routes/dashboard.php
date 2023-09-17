@@ -48,6 +48,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
         // general
         Route::resource('emergencies', EmergencyController::class);
         Route::resource('introductions', IntroductionController::class);
+        Route::get('introductions/file/{id}', [IntroductionController::class, 'openFile'])->name('introductions.file');
         Route::resource('notifications', NotificationController::class)->except(['edit','update']);
         Route::resource('faqs', FaqController::class);
         Route::resource('advices', AdviceController::class);
@@ -77,6 +78,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
 
            // smarts
            Route::resource('smarts', SmartController::class);
+           Route::get('smarts/file/{id}', [SmartController::class, 'openFile'])->name('smarts.file');
            Route::resource('works', WorkController::class);
 
 
