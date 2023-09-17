@@ -38,15 +38,20 @@
                                     <p class="mb-3"><strong>Bedrooms Count :</strong> {{ $partner->bedrooms_count }}</p>
                                     <p class="mb-3"><strong>Bathrooms Count :</strong> {{ $partner->bathrooms_count }}</p>
 
-                                    <p class="mb-3"><strong>Cladding :</strong>
+                                    {{-- <p class="mb-3"><strong>Cladding :</strong>
                                         @if($partner->cladding == "normal")
                                             Normal
                                         @elseif($partner->cladding == "delux")
                                             Delux
+                                            @elseif($partner->cladding == "delux")
+                                            Delux
+                                            @elseif($partner->cladding == "delux")
+                                            Delux
                                         @else
                                             Good
                                         @endif
-                                        </p>
+                                        </p> --}}
+                                        <p class="mb-3"><strong>Cladding :</strong> {{ $partner->cladding }}</p>
                                         <p class="mb-3"><strong>Floor :</strong> {{ $partner->floor }}</p>
                                         <p class="mb-3"><strong>Furnished :</strong> {{ $partner->furnished == 1? 'Furnished' : 'Unfurnished' }}</p>
                                     <p class="mb-3"><strong>Lat :</strong> {{ $partner?->lat}}</p>

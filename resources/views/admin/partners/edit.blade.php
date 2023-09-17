@@ -260,19 +260,37 @@
                                         <div class="col-xl-8 mb-3">
                                             <label class="form-label">Cladding<span class="text-danger">*</span></label>
                                             <div class="form-check">
-                                                <input class="form-check-input" id="normal" type="radio" name="cladding" value="normal" @checked(old('cladding',$partner->cladding)=="normal")>
-                                                <label class="form-check-label" for="normal">
-                                                    Normal
+                                                <input class="form-check-input" id="Without" type="radio" name="cladding" value="بدون تشطيب" @checked(old('cladding',$partner->cladding)=="بدون تشطيب")>
+                                                <label class="form-check-label" for="Without">
+                                                    Without Cladding
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" id="good" type="radio" name="cladding" value="good" @checked(old('cladding',$partner->cladding)=="good")>
-                                                <label class="form-check-label" for="suggested">
-                                                    Good
+                                                <input class="form-check-input" id="Half" type="radio" name="cladding" value="نصف تشطيب" @checked(old('cladding',$partner->cladding)=="نصف تشطيب")>
+                                                <label class="form-check-label" for="Half">
+                                                    Half Cladding
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" id="delux" type="radio" name="cladding" value="delux" @checked(old('cladding',$partner->cladding)=="delux")>
+                                                <input class="form-check-input" id="Full" type="radio" name="cladding" value="تشطيب كامل" @checked(old('cladding',$partner->cladding)=="تشطيب كامل")>
+                                                <label class="form-check-label" for="Full">
+                                                    Full Cladding
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="Lux" type="radio" name="cladding" value="تشطيب لوكس" @checked(old('cladding',$partner->cladding)=="تشطيب لوكس")>
+                                                <label class="form-check-label" for="Lux">
+                                                    Lux Cladding
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="Super" type="radio" name="cladding" value="تشطيب سوبر لوكس" @checked(old('cladding',$partner->cladding)=="تشطيب سوبر لوكس")>
+                                                <label class="form-check-label" for="Super">
+                                                   Super Lux Cladding
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="delux" type="radio" name="cladding" value="تشطيب ديلوكس" @checked(old('cladding',$partner->cladding)=="تشطيب ديلوكس")>
                                                 <label class="form-check-label" for="delux">
                                                     Delux
                                                 </label>
