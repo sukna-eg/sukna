@@ -33,7 +33,12 @@
                                     <p class="mb-3"><strong>Description-En : </strong> {{ $work->getTranslation('description', 'en') }}</p>
                                     <p class="mb-3"><strong>Description-Ar : </strong> {{ $work->getTranslation('description', 'ar') }}</p>
 
-                                    <p class="mb-3"><strong>Url :</strong> {{ $work->url }}</p>
+                                    <p class="mb-3"><strong>Video Url : </strong> {{ $work->url }}</p>
+
+                                    @if ($work->url)
+                                    <p class="mb-3"><strong>Play:</strong> <a href="{{ route('admin.works.file',$work->id) }}">{{ $work->url }}</a></p>
+                                    @endif
+
                                     <p class="mb-3"><strong>Duration-En : </strong> {{ $work->getTranslation('duration', 'en') }}</p>
                                     <p class="mb-3"><strong>Duration-Ar : </strong> {{ $work->getTranslation('duration', 'ar') }}</p>
 

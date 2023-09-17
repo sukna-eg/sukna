@@ -84,6 +84,10 @@ class WorkController extends Controller
     {
         $work = Work::findOrFail($id);
 
+        if ($request->has('url')&&$work->url && File::exists($work->url)) {
+            unlink($work->url);
+        }
+
 
         $request['name']=['en'=>$request->name_en,'ar'=>$request->name_ar];
         $request['description']=['en'=>$request->description_en,'ar'=>$request->description_ar];
@@ -112,5 +116,11 @@ class WorkController extends Controller
     {
         Work::findOrFail($request->id)->delete();
         return redirect()->route('admin.works.index')->with('success','Work has been removed successfully');
+    }
+
+    public function openFile($id)
+    {
+        $work = Work::findOrFail($id);
+        return response()->file($work->url);
     }
 }

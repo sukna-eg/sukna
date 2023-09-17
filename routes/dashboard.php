@@ -80,6 +80,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
            Route::resource('smarts', SmartController::class);
            Route::get('smarts/file/{id}', [SmartController::class, 'openFile'])->name('smarts.file');
            Route::resource('works', WorkController::class);
+           Route::get('works/file/{id}', [WorkController::class, 'openFile'])->name('works.file');
 
 
         // categories

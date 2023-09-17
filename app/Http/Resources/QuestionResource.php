@@ -20,6 +20,7 @@ class QuestionResource extends JsonResource
             'question'=> $this->question,
             'status'=> $this->status,
             'created_at'=> $this->created_at,
+            'show_user'=> $this->show_user,
             // 'user_id'=> $this->user?->id,
             'user'=>new UserResource($this?->user),
             'answers'=> AnswerResource::collection($this?->answers),

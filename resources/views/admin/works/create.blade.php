@@ -81,9 +81,9 @@
                                     </div>
 
 
-                                    <div class="col-xl-8 mb-3">
-                                        <label class="form-label">Url</label>
-                                        <input type="url" class="form-control" name="url" value="{{ old('url') }}">
+                                        <div class="col-xl-8 mb-3">
+                                        <label class="form-label">Video</label>
+                                        <input type="file" class="form-control" name="url" accept="video/*">
                                         @error('url')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
