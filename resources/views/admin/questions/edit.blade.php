@@ -81,6 +81,14 @@
                                          @enderror
                                     </div>
 
+                                    <div class="col-xl-8 mb-3">
+                                        <label for="ckeditor1" class="form-label">Answer<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInputfirst" name="answer" value="{{ old('answer') }}">
+
+                                        @error('answer')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
 
                                     <div class="col-xl-8 mb-3">
                                         <input type="submit" class="btn btn-primary me-1" value='Update'>

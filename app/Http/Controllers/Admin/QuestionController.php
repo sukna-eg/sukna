@@ -103,24 +103,52 @@ class QuestionController extends Controller
     // $request['question'] = ['en' => $request->question_en, 'ar' => $request->question_ar];
 
     // $updateData = $request->except(['question_en', 'question_ar']);
-    $updateData = $request->all();
+    $updateData = $request->except(['answer']);
 
     // Check if the 'status' field is updated to 1
-    if ($question->status == 0 && isset($updateData['status']) && $updateData['status'] == 1) {
-        $user = User::find($question->user_id);
-        $token = $user->device_token;
-        $this->confirmQuestion(' مرحبًا '.$user->name.' 👋🏼', 'تم الموافقة على استشارتك العقارية، وسيتم الرد عليها قريبًا.', "expert", $token);
+    // if ($question->status == 0 && isset($updateData['status']) && $updateData['status'] == 1) {
+    //     $user = User::find($question->user_id);
+    //     $token = $user->device_token;
+    //     $this->confirmQuestion(' مرحبًا '.$user->name.' 👋🏼', 'تم الموافقة على استشارتك العقارية، وسيتم الرد عليها قريبًا.', "expert", $token);
 
-        $note = new Notification();
-        $note->content = 'تم الموافقة على استشارتك العقارية، وسيتم الرد عليها قريبًا';
-        $note->user_id = $user->id;
-        $note->type = 'expert';
-        $note->route_id = $question->id;
-        $note->save();
+    //     $note = new Notification();
+    //     $note->content = 'تم الموافقة على استشارتك العقارية، وسيتم الرد عليها قريبًا';
+    //     $note->user_id = $user->id;
+    //     $note->type = 'expert';
+    //     $note->route_id = $question->id;
+    //     $note->save();
+    // }
+
+    $aya=User::where('phone','+963937158233')->first();
+
+    if ($request->has('answer')) {
+        // Create a new answer
+        $answer = new Answer();
+        $answer->answer = $request->answer;
+        $answer->question_id = $question->id;
+        $answer->user_id = $aya->id;
+        $answer->save();
+
+
+
+        $user = User::find($answer->question->user_id);
+
+        $token = $user->device_token;
+
+            $this->sendReplay(' مرحبًا '.$user->name.' 👋🏼',' تمت الموافقة على استشارتك العقارية وتم الرد عليها من قِبل الخبير العقاري. ',"expert",$token);
+
+            $note= new Notification();
+            $note->content ='تمت الموافقة على استشارتك العقارية وتم الرد عليها من قِبل الخبير العقاري.';
+            $note->user_id = $user->id;
+            $note->type = 'expert';
+            $note->route_id = $answer->question->id;
+            $note->save();
     }
 
     // Update the question
     $question->update($updateData);
+
+
 
     return redirect()->route('admin.questions.index')
                     ->with('success', 'Question has been updated successfully');
