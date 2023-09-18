@@ -107,7 +107,7 @@
                                                                                 </button>
                                                                                 <div class="dropdown-menu">
                                                                                     <a class="dropdown-item"
-                                                                                        href="{{ route('admin.questions.edit', $question->id) }}">Edit</a>
+                                                                                        href="{{ route('admin.questions.edit', $question->id) }}">Answer</a>
                                                                                     <a class="dropdown-item"
                                                                                         href="{{ route('admin.questions.show', $question->id) }}">Show</a>
                                                                                     <button class="dropdown-item"
