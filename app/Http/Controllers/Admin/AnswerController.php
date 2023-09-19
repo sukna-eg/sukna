@@ -50,6 +50,7 @@ class AnswerController extends Controller
             $this->sendReplay(' مرحبًا '.$user->name.' 👋🏼','تم الرد على استشارتك العقارية من قِبل الخبير العقاري. ',"expert",$token);
 
             $note= new Notification();
+            $note->title =' مرحبًا '.$user->name.' 👋🏼';
             $note->content ='تم الرد على استشارتك العقارية من قِبل الخبير العقاري. ';
             $note->user_id = $user->id;
             $note->type = 'expert';

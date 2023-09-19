@@ -141,6 +141,7 @@ class PartnerController extends Controller
         $this->confirmPartner(' تهانينا  '.$admin->name .' 🎉',' تم إضافة عقارك الجديد بنجاح . ', "my_partner", $token);
 
         $note = new Notification();
+        $note->title =' تهانينا  '.$admin->name .' 🎉';
         $note->content = 'تم إضافة عقارك الجديد بنجاح .';
         $note->user_id = $admin->id;
         $note->type = 'my_partner';
@@ -156,6 +157,7 @@ class PartnerController extends Controller
 
         foreach ($users as $user) {
             $note = new Notification();
+            $note->title='👋🏼 مرحبا ';
             $note->content = 'لقد تم إضافة عقار جديد يمكنك رؤيته من هنا';
             $note->user_id = $user->id;
             $note->type = 'partner';

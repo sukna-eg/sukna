@@ -54,6 +54,7 @@ class BlackDayController extends ApiController
             $this->sendUserNoti(' تهانينا '.$user->name.' 🎉 ', '  تم تأكيد حجزك للعقار بنجاح. '.$black->partner_id,$black->partner_id,'partner',$token);
 
             $note= new Notification();
+            $note->title =' تهانينا '.$user->name.' 🎉 ';
             $note->content = ' تم تأكيد حجزك للعقار بنجاح.'.$black->partner_id;
             $note->user_id = $black->user_id;
             $note->type = 'partner';

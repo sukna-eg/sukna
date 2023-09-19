@@ -26,7 +26,7 @@
                             <div class="offcanvas-body">
                                 <div class="container-fluid">
                                 <h4 class="heading mb-5"> {{ $notification->title }}</h4>
-                                    @php
+                                    {{-- @php
                                         $decoded = json_decode($notification,true);
                                     @endphp
                                     @if (!empty($decoded['title']['en'])&&!empty($decoded['title']['ar'])&&!empty($decoded['title']['fr'])&&!empty($decoded['title']['es'])&&!empty($decoded['title']['ru']))
@@ -40,10 +40,10 @@
                                         <p class="mb-3"><strong>Body-Fr : </strong> {{ $notification->getTranslation('body', 'fr') }}</p>
                                         <p class="mb-3"><strong>Body-Es : </strong> {{ $notification->getTranslation('body', 'es') }}</p>
                                         <p class="mb-3"><strong>Body-Ru : </strong> {{ $notification->getTranslation('body', 'ru') }}</p>
-                                    @else
+                                    @else --}}
                                         <p class="mb-3"><strong>Title : </strong> {{ $notification->title }}</p>
-                                        <p class="mb-3"><strong>body : </strong> {{ $notification->body }}</p>
-                                    @endif
+                                        <p class="mb-3"><strong>body : </strong> {{ $notification->content }}</p>
+                                    {{-- @endif --}}
 
                         </div>
                         </div>

@@ -7,7 +7,7 @@
         <div class="page-titles">
             <ol class="breadcrumb">
                 <li>
-                    <h5 class="bc-title">{{ __('Add Notification') }}</h5>
+                    <h5 class="bc-title">{{ __('Send Notification') }}</h5>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
@@ -20,7 +20,7 @@
                         </svg>
                         Home </a>
                 </li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Add Notification') }} </a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Send Notification') }} </a></li>
             </ol>
             <a class="text-primary fs-13" href="{{ route('admin.notifications.index') }}">{{ __('Notifications') }}</a>
         </div>
@@ -38,14 +38,14 @@
                                         <!-- Nav tabs -->
                                         <div class="custom-tab-1">
                                             <ul class="nav nav-tabs">
-                                                <li class="nav-item">
+                                                {{-- <li class="nav-item">
                                                     <a class="nav-link active" data-bs-toggle="tab"
                                                         href="#single_lang">Single Language</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" data-bs-toggle="tab" href="#multi_lang">Multi
                                                         Language</a>
-                                                </li>
+                                                </li> --}}
 
                                             </ul>
                                             <div class="tab-content">
@@ -73,13 +73,16 @@
                                                                 <label for="ckeditor5" class="form-label">Body<span
                                                                         class="text-danger">*</span></label>
                                                                 <div class="card-body custom-ekeditor">
-                                                                    <textarea id="ckeditor5" class="form-txtarea form-control" rows="8" name="body">{{ old('body') }}</textarea>
+                                                                    <textarea id="ckeditor5" class="form-txtarea form-control emoji-textarea" rows="8" name="content">{{ old('content') }}</textarea>
                                                                 </div>
-                                                                @error('body')
+                                                                @error('content')
                                                                     <div class="text-danger">{{ $message }}</div>
                                                                 @enderror
+
                                                             </div>
                                                         </div>
+
+
                                                         <div class="col-xl-8 mb-3">
                                                             <input type="submit" class="btn btn-primary me-1"
                                                                 value='Save'>
@@ -88,7 +91,7 @@
                                                     </div>
 
                                                 </div>
-                                                <div class="tab-pane fade" id="multi_lang">
+                                                {{-- <div class="tab-pane fade" id="multi_lang">
                                                     <div class="pt-4">
                                                         <div class="row">
                                                             <form method="POST" action="{{ route('admin.notifications.store') }}">
@@ -176,9 +179,9 @@
                                                                     class="form-label">Body-Ar<span
                                                                         class="text-danger">*</span></label>
                                                                 {{-- <div class="card-body custom-ekeditor"> --}}
-                                                                    <textarea id="ckeditor1" class="form-txtarea form-control" rows="8" name="body_ar">{{ old('body_ar') }}</textarea>
+                                                                    {{-- <textarea id="ckeditor1" class="form-txtarea form-control" rows="8" name="body_ar">{{ old('body_ar') }}</textarea> --}}
                                                                 {{-- </div> --}}
-                                                                @error('body_ar')
+                                                                {{-- @error('body_ar')
                                                                     <div class="text-danger">{{ $message }}</div>
                                                                 @enderror
                                                             </div>
@@ -187,45 +190,45 @@
                                                                     class="form-label">Body-Fr<span
                                                                         class="text-danger">*</span></label>
                                                                 {{-- <div class="card-body custom-ekeditor"> --}}
-                                                                    <textarea id="ckeditor2" class="form-txtarea form-control" rows="8" name="body_fr">{{ old('body_fr') }}</textarea>
+                                                                    {{-- <textarea id="ckeditor2" class="form-txtarea form-control" rows="8" name="body_fr">{{ old('body_fr') }}</textarea> --}}
                                                                 {{-- </div> --}}
-                                                                @error('body_fr')
+                                                                {{-- @error('body_fr')
                                                                     <div class="text-danger">{{ $message }}</div>
                                                                 @enderror
                                                             </div>
                                                             <div class="col-xl-8 mb-3">
                                                                 <label for="ckeditor3"
                                                                     class="form-label">Body-Es<span
-                                                                        class="text-danger">*</span></label>
+                                                                        class="text-danger">*</span></label> --}}
                                                                 {{-- <div class="card-body custom-ekeditor"> --}}
-                                                                    <textarea id="ckeditor3" class="form-txtarea form-control" rows="8" name="body_es">{{ old('body_es') }}</textarea>
+                                                                    {{-- <textarea id="ckeditor3" class="form-txtarea form-control" rows="8" name="body_es">{{ old('body_es') }}</textarea> --}}
                                                                 {{-- </div> --}}
-                                                                @error('body_es')
-                                                                    <div class="text-danger">{{ $message }}</div>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="col-xl-8 mb-3">
-                                                                <label for="ckeditor4"
-                                                                    class="form-label">Body-Ru<span
-                                                                        class="text-danger">*</span></label>
+                                                                {{-- @error('body_es') --}}
+                                                                    {{-- <div class="text-danger">{{ $message }}</div> --}}
+                                                                {{-- @enderror --}}
+                                                            {{-- </div> --}}
+                                                            {{-- <div class="col-xl-8 mb-3"> --}}
+                                                                {{-- <label for="ckeditor4" --}}
+                                                                    {{-- class="form-label">Body-Ru<span --}}
+                                                                        {{-- class="text-danger">*</span></label> --}}
                                                                 {{-- <div class="card-body custom-ekeditor"> --}}
-                                                                    <textarea id="ckeditor4" class="form-txtarea form-control" rows="8" name="body_ru">{{ old('body_ru') }}</textarea>
+                                                                    {{-- <textarea id="ckeditor4" class="form-txtarea form-control" rows="8" name="body_ru">{{ old('body_ru') }}</textarea> --}}
                                                                 {{-- </div> --}}
-                                                                @error('body_ru')
-                                                                    <div class="text-danger">{{ $message }}</div>
-                                                                @enderror
-                                                            </div>
+                                                                {{-- @error('body_ru') --}}
+                                                                    {{-- <div class="text-danger">{{ $message }}</div> --}}
+                                                                {{-- @enderror --}}
+                                                            {{-- </div> --}}
 
-                                                        </div>
-                                                        <div class="col-xl-8 mb-3">
-                                                            <input type="submit" class="btn btn-primary me-1"
-                                                                value='Save'>
-                                                        </div>
-                                                    </form>
+                                                        {{-- </div> --}}
+                                                        {{-- <div class="col-xl-8 mb-3"> --}}
+                                                            {{-- <input type="submit" class="btn btn-primary me-1" --}}
+                                                                {{-- value='Save'> --}}
+                                                        {{-- </div> --}}
+                                                    {{-- </form> --}}
 
-                                                    </div>
+                                                    {{-- </div> --}}
 
-                                                </div>
+                                                {{-- </div>  --}}
 
 
 
@@ -287,18 +290,6 @@
                 });
 
         </script> --}}
-        <script>
-            $(function(){
-                if ($('#multi_lang')..classList.contains('show')) {
-                    $('#single_lang .pt-4').addClass('d-none');
-                    $('#multi_lang').find('.pt-4').removeClass('d-none');
-                }
-                if ($('#single_lang')..classList.contains('show')) {
-                    $('#multi_lang .pt-4').addClass('d-none');
-                    $('#single_lang').find('.pt-4').removeClass('d-none');
-                }
-            })
 
-        </script>
     @endpush
 </x-admin-layouts.admin-app>

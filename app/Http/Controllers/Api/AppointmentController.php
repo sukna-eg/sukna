@@ -70,6 +70,7 @@ class AppointmentController extends ApiController
             $this->sendAdminNoti(' مرحبًا '.$user->name.'👋🏼',' لديك طلب جديد للعقار رقم '.$appointment->partner_id.' اضغط هنا لمعرفة التفاصيل ','order',$token);
 
             $note= new Notification();
+            $note->title=' مرحبًا '.$user->name.'👋🏼';
             $note->content = ' لديك طلب جديد للعقار رقم'.$appointment->partner_id.'اضغط هنا لمعرفة التفاصيل';
             $note->user_id = $user->id;
             $note->type = 'order';

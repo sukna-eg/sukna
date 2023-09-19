@@ -32,18 +32,33 @@ class NotificationController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(NotificationRequest $request)
+    public function store(Request $request)
     {
-        if ($request->has('multi_language')) {
-            $request['title']=['en'=>$request->title_en,'ar'=>$request->title_ar,'fr'=>$request->title_fr,'es'=>$request->title_es,'ru'=>$request->title_ru];
-            $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar,'fr'=>$request->body_fr,'es'=>$request->body_es,'ru'=>$request->body_ru];
-            $notification=Notification::create($request->only('title','body'));
-        }else{
-            $notification=Notification::create($request->only('title','body'));
-        }
+        // if ($request->has('multi_language')) {
+        //     $request['title']=['en'=>$request->title_en,'ar'=>$request->title_ar,'fr'=>$request->title_fr,'es'=>$request->title_es,'ru'=>$request->title_ru];
+        //     $request['body']=['en'=>$request->body_en,'ar'=>$request->body_ar,'fr'=>$request->body_fr,'es'=>$request->body_es,'ru'=>$request->body_ru];
+        //     $notification=Notification::create($request->only('title','body'));
+        // }else{
+
+        // }
         $FcmToken = User::whereNotNull('device_token')->pluck('device_token')->toArray();
 
-        $this->send($notification->body, $notification->title,$FcmToken);
+        $this->send($request->content, $request->title,$FcmToken,true);
+
+        $users=User::whereNotNull('device_token')->get();
+
+        foreach($users as $user){
+
+
+        $note = new Notification();
+        $note->title = $request->title;
+        $note->content = $request->content;
+        $note->user_id = $user->id;
+
+        $note->save();
+
+
+        }
         return redirect()->route('admin.notifications.index')
                         ->with('success','Notification has been added successfully');
     }

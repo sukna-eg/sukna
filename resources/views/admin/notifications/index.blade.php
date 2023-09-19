@@ -22,7 +22,7 @@
                 </li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Notifications') }} </a></li>
             </ol>
-            <a class="text-primary fs-13" href="{{ route('admin.notifications.create') }}">+ Add Notification</a>
+            <a class="text-primary fs-13" href="{{ route('admin.notifications.create') }}">+ Send Notification</a>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -46,8 +46,8 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th>Title</th>
-
-
+                                                                    <th>Body</th>
+                                                                    <th>User</th>
 
                                                                     <th>actions</th>
                                                                 </tr>
@@ -57,8 +57,11 @@
                                                                     <tr>
 
                                                                         <td><span>{{ $notification->title }}</span></td>
+                                                                        <td><span>{{ $notification->content }}</span></td>
+                                                                        <td>
+                                                                            <span><a href="{{ route('admin.users.show',$notification->user->id) }}">{{ $notification->user->name }}</a></span>
+                                                                        </td>
 
-                                                                  
                                                                         <td>
                                                                             <div class="dropdown">
                                                                                 <button type="button"
