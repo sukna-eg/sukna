@@ -87,7 +87,7 @@ class PartnerController extends ApiController
     public function premiumPartners(){
 
 
-        $data=Partner::where('show',1)->where('premium', 1)->orderBy('order', 'ASC')->paginate(10);
+        $data=Partner::where('show',1)->where('premium', 1)->orderBy('order', 'ASC')->get();
         return $this->returnData('data',  PartnerResource::collection( $data ), __('Get  succesfully'));
 
        }
