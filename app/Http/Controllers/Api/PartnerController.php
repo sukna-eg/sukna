@@ -84,11 +84,20 @@ class PartnerController extends ApiController
 
     //    }
 
-       public function partners()
+//        public function partners()
+// {
+//     $seed = floor(time() / 300); // 300 seconds = 5 minutes
+//     $data = Partner::where('show', 1)
+//         ->orderByRaw("RAND($seed)")
+//         ->paginate(10);
+
+//     return $this->returnData('data', PartnerResource::collection($data), __('Get successfully'));
+// }
+
+public function partners()
 {
-    $seed = floor(time() / 300); // 300 seconds = 5 minutes
     $data = Partner::where('show', 1)
-        ->orderByRaw("RAND($seed)")
+        ->orderByRaw('RAND('.date('Ymd').')')
         ->paginate(10);
 
     return $this->returnData('data', PartnerResource::collection($data), __('Get successfully'));
