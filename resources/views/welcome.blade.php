@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    {{-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('landing2/css/open-iconic-bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ asset('landing2/css/animate.css')}}">
@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="{{ asset('landing2/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{ asset('landing2/css/icomoon.css')}}">
-    <link rel="stylesheet" href="{{ asset('landing2/css/style.css')}}"> --}}
+    <link rel="stylesheet" href="{{ asset('landing2/css/style.css')}}">
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -41,9 +41,8 @@
 						    <span class="text">youremail@email.com</span>
 					    </div> --}}
 					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><a  href="#"><span class="icon-twitter"></span></a></div>
-                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><a href="#"><span class="icon-facebook"></span></a></div>
-                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><a href="#"><span class="icon-instagram"></span></a></div>
+                            <span class="icon-paper-plane"></span></div>
+						    <span class="text">shbabeek.eg@gmail.com</span>
 
 
 					    </div>
@@ -60,12 +59,12 @@
                 <ul class="navbar-nav nav ml-auto">
                   <li class="nav-item"><a href="#home-section" class="nav-link"><span>الرئيسية</span></a></li>
                   <li class="nav-item"><a href="#services-section" class="nav-link"><span>خدماتنا</span></a></li>
-                  <li class="nav-item"><a href="#properties-section" class="nav-link"><span>Listing</span></a></li>
-                  <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-                  <li class="nav-item"><a href="#workflow-section" class="nav-link"><span>How it works</span></a></li>
-                  <li class="nav-item"><a href="#agent-section" class="nav-link"><span>Agent</span></a></li>
-                  <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
-                  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+                  {{-- <li class="nav-item"><a href="#properties-section" class="nav-link"><span>Listing</span></a></li> --}}
+                  <li class="nav-item"><a href="#about-section" class="nav-link"><span>عن التطبيق</span></a></li>
+                  <li class="nav-item"><a href="#workflow-section" class="nav-link"><span>كيف يعمل</span></a></li>
+                  <li class="nav-item"><a href="#apps" class="nav-link"><span>تطبيقاتنا</span></a></li>
+                  <li class="nav-item"><a href="#team" class="nav-link"><span>فريقنا</span></a></li>
+                  <li class="nav-item"><a href="#contact" class="nav-link"><span>التواصل</span></a></li>
                 </ul>
                 </div>
               </div>
@@ -101,13 +100,13 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8 text-center">
                       <div class="btn-group" role="group">
-                        <a href="#" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px; margin-right: 10px;width: 200px;">
+                        <a href="https://play.google.com/store/apps/details?id=com.m0ustafamahm0ud.shbabeek" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px; margin-right: 10px;width: 200px;">
                             {{-- <i class="bi bi-google-play" style="font-size: 20px; margin-bottom: 5px;"></i> --}}
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
                                 <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
                               </svg>
                               <span style="vertical-align: middle;">Google Play</span></a>
-                        <a href="#" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px;margin-right: 10px;width: 200px;">
+                        <a href="https://apps.apple.com/eg/app/%D8%B4%D8%A8%D8%A7%D8%A8%D9%8A%D9%83/id6465523209" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px;margin-right: 10px;width: 200px;">
                             {{-- <i class="ion-logo-apple" style="font-size: 40px; margin-bottom: 5px;"></i> --}}
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
                                 <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
@@ -130,8 +129,8 @@
 		<section class="ftco-section ftco-services-2 bg-light" id="services-section">
 			<div class="container">
 				<div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-            <h2 class="mb-4">خدماتنا</h2>
+          <div class="col-md-12 heading-section  text-center ftco-animate">
+            <h2 class="mb-4 ">خدماتنا</h2>
             <p>نقوم بتقديم العديد من الخدمات في مكان واحد في تطبيق شبابيك للتسهيل على العملاء</p>
           </div>
         </div>
@@ -176,7 +175,7 @@
 			</div>
 		</section>
 
-		<section class="ftco-section ftco-properties" id="properties-section">
+		{{-- <section class="ftco-section ftco-properties" id="properties-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
@@ -295,26 +294,51 @@
           </div>
         </div>
     	</div>
-    </section>
+    </section> --}}
 
-    <section class="ftco-intro img" id="about-section" style="background-image: url(landing2/images/bg_1.jpg);">
+    <section class="ftco-intro img"  style="background-image: url(landing2/images/bg_1.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-9 text-center">
 						<h2>اختر منزل أحلامك</h2>
 						<p>حمّل التطبيق دلوقتي وابدأ بإستكشاف العقارات .</p>
-						<p class="mb-0"><a href="#" class="btn btn-white px-4 py-3">Search Places</a></p>
+						{{-- <p class="mb-0"><a href="#" class="btn btn-white px-4 py-3">Search Places</a></p> --}}
+
+
+
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                              <div class="btn-group" role="group">
+                                <a href="https://play.google.com/store/apps/details?id=com.m0ustafamahm0ud.shbabeek" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px; margin-right: 10px;width: 200px;">
+                                    {{-- <i class="bi bi-google-play" style="font-size: 20px; margin-bottom: 5px;"></i> --}}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+                                        <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+                                      </svg>
+                                      <span style="vertical-align: middle;">Google Play</span></a>
+                                <a href="https://apps.apple.com/eg/app/%D8%B4%D8%A8%D8%A7%D8%A8%D9%8A%D9%83/id6465523209" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px;margin-right: 10px;width: 200px;">
+                                    {{-- <i class="ion-logo-apple" style="font-size: 40px; margin-bottom: 5px;"></i> --}}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+                                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                                      </svg>
+                                      <span style="vertical-align: right;"> Apple Store</span></a>
+                              </div>
+                            </div>
+                          </div>
+
+
+
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb">
+		<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
     	<div class="container">
     		<div class="row no-gutters d-flex">
     			<div class="col-md-6 col-lg-5 d-flex">
-    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(landing2/images/about.jpg);">
+    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(landing2/images/work-3.jpg);">
     				</div>
     			</div>
     			<div class="col-md-6 col-lg-7 px-lg-5 py-md-5">
@@ -329,7 +353,13 @@
                         <p>بالنسبة لأصحاب العقارات، يمكنهم إضافة عقاراتهم وتعديل معلوماتها في أي وقت ومراقبة حجوزات العقار بسهولة. ويمكن للمستخدمين أيضًا إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة</p>
 			          <p>باختصار، تطبيق شبابيك يوفر منصة شاملة تجمع بين سهولة البحث والاستكشاف للمستخدمين وإمكانيات إدارة ممتازة لأصحاب العقارات، مما يجعله حلاً مثاليًا لأولئك الذين يبحثون عن السكن أو يرغبون في استثمار عقاراتهم بكفاءة وسهولة.
                     </p>
-                        {{-- <p><a href="#" class="btn btn-primary py-3 px-4">Book now</a> <a href="#" class="btn btn-secondary py-3 px-4">Contact us</a></p> --}}
+
+                      <ul class="ftco-footer-social list-unstyled mt-5">
+    <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+    <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+    <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+  </ul>
+                        {{-- <p><a href="#" class="btn btn-primary py-3 px-4">Book now</a> <a href="#" class="btn btn-secondary py-3 px-4">Contact us</a></p>--}}
 			          </div>
 			        </div>
 		        </div>
@@ -640,7 +670,7 @@
       </div>
     </section> --}}
 
-    <section class="ftco-section testimony-section">
+    <section class="ftco-section testimony-section" id="apps">
       <div class="container">
         <div class="row justify-content-center pb-3">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
@@ -653,74 +683,121 @@
             <div class="carousel-testimony owl-carousel ftco-owl">
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
-                  <div class="user-img" style="background-image: url(landing2/images/person_1.jpg)">
+                  <div class="user-img" style="background-image: url(landing2/images/jordan.png)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Jeff Freshman</p>
-                    <span class="position">Artist</span>
+                    <p class="name">Jordan Starts Here</p>
+                    <p class="mb-4">بوابتك لعجائب الأردن. اكتشف الكنوز القديمة والثقافة الحيوية والمناظر الطبيعية الساحرة مع 'الأردن يبدأ هنا.' دليلك الشخصي لرحلة لا تُنسى في هذه الوجهة الساحرة.</p>
+
+                    <span class="position">اكتشف إمكانيات لا حصر لها باستخدام تطبيقنا الثوري! أطلق إمكاناتك اليوم.</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
-                  <div class="user-img" style="background-image: url(landing2/images/person_2.jpg)">
+                  <div class="user-img" style="background-image: url(landing2/images/way.png)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Jeff Freshman</p>
-                    <span class="position">Artist</span>
+                    <p class="name">Way To Doctor</p>
+                    <p class="mb-4">هو عبارة عن تطبيقين:
+                    تطبيق يتيح للمريض التواصل مع الطبيب عبر عدة وسائل تواصل (فيديو، شات، اتصال، مقاطع صوتية)</p>
+
+                    <span class="position">وتطبيق للطبيب للتواصل مع المريض وتنظيم المواعيد والعديد من الميزات.</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
-                  <div class="user-img" style="background-image: url(landing2/images/person_3.jpg)">
+                  <div class="user-img" style="background-image: url(landing2/images/golden.png)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Jeff Freshman</p>
-                    <span class="position">Artist</span>
+                     <p class="name">Golden Card</p>
+                    <p class="mb-4">خصومات رهيبة ومتعددة من مختلف المطاعم، تابعوها ولا تفوتوا الفرصة
+ليس هناك أروع من المشاركة.... شاركها مع من تحب
+متوفر في العديد من الأماكن في مختلف مناطق المملكة
+عيش عالم المتعة المزدوجة...</p>
+
+                    <span class="position">خصم سهل وواضح ومباشر مباشرة من فاتورتك قبل السداد</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
-                  <div class="user-img" style="background-image: url(landing2/images/person_1.jpg)">
+                  <div class="user-img" style="background-image: url(landing2/images/balteem.png)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Jeff Freshman</p>
-                    <span class="position">Artist</span>
+                     <p class="name">بلطيم</p>
+                    <p class="mb-4">تطبيق أطباء بلطيم وبرج البرلس لتسهيل عملية البحث عن طبيب - إذا لزم الأمر - في حوالي 20 تخصصا ويوجد في التطبيق أكثر من 80 طبيبا.
+بحيث يسهل عليك التعرف على الأطباء المتواجدين في معظم التخصصات وكذلك المختبرات ومراكز الأشعة ومراكز التخاطب.
+واعرف مواعيدها واختر الموعد الأنسب لك.</p>
+
+                    <span class="position">ويعرض العناوين ويختار الأقرب إليك.</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
-                  <div class="user-img" style="background-image: url(landing2/images/person_3.jpg)">
+                  <div class="user-img" style="background-image: url(landing2/images/tasty.png)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Jeff Freshman</p>
-                    <span class="position">Artist</span>
+                    <p class="name">Tasty</p>
+                    <p class="mb-4">أول مطعم في بلطيم متخصص في البروستد والبرجر والسندويشات الشرقية معًا،
+الشيف على أعلى مستوى
+والطعم قصة</p>
+
+                    {{-- <span class="position">Artist</span> --}}
                   </div>
                 </div>
               </div>
+  <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img" style="background-image: url(landing2/images/yallamzad.png)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text px-4 pb-5">
+                    <p class="name">Yallamzad</p>
+                    <p class="mb-4">المزادات الحقيقية الرسمية التي يمكنك المشاركة فيها بكل سهولة، سجل الآن وابدأ المشاركة في المزادات العامة، لا تفوت الفرصة</p>
+
+                    {{-- <span class="position">وتطبيق للطبيب للتواصل مع المريض وتنظيم المواعيد والعديد من الميزات.</span> --}}
+                  </div>
+                </div>
+              </div>
+
+                <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img" style="background-image: url(landing2/images/compasty.png)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text px-4 pb-5">
+                    <p class="name">Compassty</p>
+                    <p class="mb-4">أنشئ عناوين بسيطة واحتفظ بها في مكان واحد دون فقدانها أو نسيانها. شاركها مع أصدقائك وتعرف على عناوين الأماكن القريبة منك بفئاتها المختلفة.
+                    </p>
+
+                    {{-- <span class="position">وتطبيق للطبيب للتواصل مع المريض وتنظيم المواعيد والعديد من الميزات.</span> --}}
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -734,19 +811,19 @@
         <div class="container">
 
           <div class="section-title">
-            <span>Team</span>
-            <h2>Team</h2>
-            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+            <span>فريقنا</span>
+            <h2>فريقنا</h2>
+            <p>نحن مهندسو برمجيات وقمنا ببرمجة العديد من التطبيقات داخل مصر وخارجها وتطبيق شبابيك هو بداية استثماراتنا</p>
           </div>
 
           <div class="row">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
               <div class="member">
                 <img src="landing/assets/img/team/team-1.jpg" alt="">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>أحمد</h4>
+                <span>محاسب</span>
                 <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                  بكالوريوس تجارة واقتصاد
                 </p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -759,7 +836,7 @@
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
               <div class="member">
-                <img src="landing/assets/img/team/team-2.jpg" alt="">
+                <img src="landing2/images/mustafa.jpg" alt="">
                 <h4>مصطفى محمود</h4>
                 <span>مهندس برمجيات</span>
                 <p>
@@ -776,7 +853,7 @@
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
               <div class="member">
-                <img src="landing/assets/img/team/team-3.jpg" alt="">
+                <img src="landing2/images/aya.jpg" alt="">
                 <h4>آية مطرود</h4>
                 <span>مهندسة برمجيات</span>
                 <p>
@@ -796,7 +873,7 @@
         </div>
       </section><!-- End Team Section -->
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    {{-- <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -878,7 +955,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
 
      <!-- ======= Contact Section ======= -->
@@ -886,9 +963,9 @@
         <div class="container">
 
           <div class="section-title">
-            <span>Contact</span>
-            <h2>Contact</h2>
-            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+            <span>التواصل</span>
+            <h2>التواصل</h2>
+            <p>يمكنكم التواصل معنا عبر الرقم أو القدوم إلى عنوانا الموضح بالخريطة</p>
           </div>
 
           <div class="row" data-aos="fade-up">
@@ -896,7 +973,7 @@
               <div class="info-box mb-4">
                 <i class="bx bx-map"></i>
                 <h3>Our Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Egypt, Balteem, NY 535022</p>
               </div>
             </div>
 
@@ -904,7 +981,7 @@
               <div class="info-box  mb-4">
                 <i class="bx bx-envelope"></i>
                 <h3>Email Us</h3>
-                <p>contact@example.com</p>
+                <p>shbabeek.eg@gmail.com</p>
               </div>
             </div>
 
@@ -920,11 +997,11 @@
 
           <div class="row" data-aos="fade-up">
 
-            <div class="col-lg-6 ">
-              <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+            <div class="col-lg-12 ">
+              <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d849.9229993961817!2d31.0786486!3d31.5600664!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7238a9ade38c5%3A0xfefe860d6a62210a!2z2YUuINmF2LXYt9mB2Yog2YXYrdmF2YjYryDZgdmH2YrZhQ!5e0!3m2!1sen!2seg!4v1695905417308!5m2!1sen!2seg" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-6">
+            {{-- <div class="col-lg-6">
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="row">
                   <div class="col-md-6 form-group">
@@ -947,94 +1024,39 @@
                 </div>
                 <div class="text-center"><button type="submit">Send Message</button></div>
               </form>
-            </div>
+            </div> --}}
 
           </div>
 
         </div>
       </section><!-- End Contact Section -->
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb">
-			<div id="map" class="bg-white"></div>
-		</section>
+
 
     <footer class="ftco-footer ftco-section">
       <div class="container-fluid px-md-5">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Stayhome</h2>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
-              <ul class="ftco-footer-social list-unstyled mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Community</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>For Agents</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Reviews</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">About Us</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Careers</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Company</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About Us</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Press</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Careers</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
+
         <div class="row">
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://sukna-eg.com" target="_blank">Shbabeek</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+
           </div>
         </div>
       </div>
     </footer>
 
 
+    {{-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="icon-heart color-danger"></i></a> --}}
+    {{-- <div id="preloader"></div> --}}
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  {{-- <script src="{{ asset('landing2/js/jquery.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/jquery.min.js')}}"></script>
   <script src="{{ asset('landing2/js/jquery-migrate-3.0.1.min.js')}}"></script>
   <script src="{{ asset('landing2/js/popper.min.js')}}"></script>
   <script src="{{ asset('landing2/js/bootstrap.min.js')}}"></script>
@@ -1049,7 +1071,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="{{ asset('landing2/js/google-map.js')}}"></script>
 
-  <script src="{{ asset('landing2/js/main.js')}}"></script> --}}
+  <script src="{{ asset('landing2/js/main.js')}}"></script>
 
   </body>
 </html>
