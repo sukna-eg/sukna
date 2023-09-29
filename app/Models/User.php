@@ -25,6 +25,8 @@ class User extends Authenticatable
         'long',
         'type',
         'active',
+        'is_block',
+        'reason',
         'image',
         'password',
     ];
