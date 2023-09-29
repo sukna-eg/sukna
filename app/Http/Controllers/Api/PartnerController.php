@@ -96,8 +96,9 @@ class PartnerController extends ApiController
 
 public function partners()
 {
+    $seed = floor(date('G') / 5); // Current hour divided by 5
     $data = Partner::where('show', 1)
-        ->orderByRaw('RAND('.date('Ymd').')')
+        ->orderByRaw("RAND($seed)")
         ->paginate(10);
 
     return $this->returnData('data', PartnerResource::collection($data), __('Get successfully'));
