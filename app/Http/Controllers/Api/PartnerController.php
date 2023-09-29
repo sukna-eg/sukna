@@ -76,13 +76,23 @@ class PartnerController extends ApiController
         return $this->returnError(__('Sorry! Failed to get !'));
     }
 
-    public function partners(){
+    // public function partners(){
 
 
-        $data=Partner::where('show',1)->paginate(10);
-        return $this->returnData('data',  PartnerResource::collection( $data ), __('Get  succesfully'));
+    //     $data=Partner::where('show',1)->paginate(10);
+    //     return $this->returnData('data',  PartnerResource::collection( $data ), __('Get  succesfully'));
 
-       }
+    //    }
+
+       public function partners()
+{
+    $seed = floor(time() / 300); // 300 seconds = 5 minutes
+    $data = Partner::where('show', 1)
+        ->orderByRaw("RAND($seed)")
+        ->paginate(10);
+
+    return $this->returnData('data', PartnerResource::collection($data), __('Get successfully'));
+}
 
     public function premiumPartners(){
 
