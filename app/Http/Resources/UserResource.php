@@ -26,6 +26,8 @@ class UserResource extends JsonResource
             'image'=> $this?->image,
             'type'=> $this?->type,
             'active'=> $this?->active,
+            'is_block'=> $this?->is_block,
+            'reason'=> $this?->reason,
             // 'partners' => PartnerResource::collection($this->partners),
         ];
     }

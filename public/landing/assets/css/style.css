@@ -160,14 +160,23 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: rgba(25, 25, 25, 0.95);
+  /* background: rgba(25, 25, 25, 0.95); */
+  background: rgba(25, 25, 25, 0.8) !important;
+
+  /* background-color: rgba(255, 255, 255, 0.9)!important; */
+  /* transition: all 0.3s; */
   transition: all 0.5s;
   z-index: 997;
   height: 70px;
+
+   /* Adjust the opacity value (1.0 for full opacity) */
+
+
 }
 
 #header.fixed-top {
   background: #191919;
+
 }
 
 #header .logo {
@@ -199,6 +208,7 @@ h6 {
 * Desktop Navigation
 */
 .navbar {
+
   padding: 0;
 }
 
@@ -438,6 +448,7 @@ h6 {
   left: 0;
   right: 0;
 }
+
 
 #hero h1 {
   margin: 0 0 10px 0;

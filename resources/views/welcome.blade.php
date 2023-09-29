@@ -1,709 +1,1055 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>شبابيك</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-  <title>Day Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <link rel="stylesheet" href="{{ asset('landing2/css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('landing2/css/animate.css')}}">
 
-  <!-- Favicons -->
-  <link href="landing/assets/img/favicon.png" rel="icon">
-  <link href="landing/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="{{ asset('landing2/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('landing2/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('landing2/css/magnific-popup.css')}}">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('landing2/css/aos.css')}}">
 
-  <!-- Vendor CSS Files -->
-  <link href="landing/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="landing/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="landing/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="landing/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="landing/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="landing/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('landing2/css/ionicons.min.css')}}">
 
-  <!-- Template Main CSS File -->
-  <link href="landing/assets/css/style.css" rel="stylesheet">
+    <link href="landing/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="landing/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Day
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
+    <link rel="stylesheet" href="{{ asset('landing2/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{ asset('landing2/css/icomoon.css')}}">
+    <link rel="stylesheet" href="{{ asset('landing2/css/style.css')}}"> --}}
 
-<body>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  	<div class="py-1 bg-black top">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+		    			<div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">+ 1235 2355 98</span>
+					    </div>
+					    {{-- <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">youremail@email.com</span>
+					    </div> --}}
+					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><a  href="#"><span class="icon-twitter"></span></a></div>
+                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><a href="#"><span class="icon-facebook"></span></a></div>
+                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><a href="#"><span class="icon-instagram"></span></a></div>
 
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a>
-        <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
-      </div>
-      <div class="social-links d-none d-md-block">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		   </div>
+     </div>
 
-      <h1 class="logo"><a href="landing/index.html">Shababeek</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <div class="col-md   align-items-start">
+                <ul class="navbar-nav nav ml-auto">
+                  <li class="nav-item"><a href="#home-section" class="nav-link"><span>الرئيسية</span></a></li>
+                  <li class="nav-item"><a href="#services-section" class="nav-link"><span>خدماتنا</span></a></li>
+                  <li class="nav-item"><a href="#properties-section" class="nav-link"><span>Listing</span></a></li>
+                  <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                  <li class="nav-item"><a href="#workflow-section" class="nav-link"><span>How it works</span></a></li>
+                  <li class="nav-item"><a href="#agent-section" class="nav-link"><span>Agent</span></a></li>
+                  <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
+                  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
                 </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> --}}
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-      <h1>Welcome to Shababeek</h1>
-      <h2>لسنا الوحيدين ولكننا الأفضل</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-            <div class="col-lg-6 order-1 order-lg-2 content" data-aos="fade-left">
-                <h3>About Application:</h3>
-                <p class="fst-italic">
-                   يمكنك التطبيق من استعراض مجموعة واسعة من العقارات المتاحة للبيع أو الإيجار. واكتشاف مميزات العقارات المختلفة عبرالقيام بجولة افتراضية داخل العقارات
-
-
-
-                    كما يمكن المستخدمين من إضافة استشاراتهم واستفساراتهم العقارية مجانا، ويقوم الخبير العقاري المختص بالرد عليها وتقديم المشورة المناسبة، بالاضافة إلى إمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد. كما يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.
-                </p>
-                  <p class="fst-italic">
-                  : لتحميل التطبيق
-                </p>
-                <ul>
-                  <li><a href="https://play.google.com/store/apps/details?id=com.m0ustafamahm0ud.shbabeek"><i class="bi bi-google-play"></i> اضغط هنا</a></li>
-                  <li><a href="https://apps.apple.com/eg/app/%D8%B4%D8%A8%D8%A7%D8%A8%D9%8A%D9%83/id6465523209"><i class="bi bi-bag"></i> اضغط هنا</a></li>
-                  {{-- <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li> --}}
-                </ul>
-
+                </div>
               </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
-            <img src="landing/assets/img/about.jpg" class="img-fluid" alt="">
+	      <a class="navbar-brand" href="index.html">شبابيك</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+
+	    </div>
+	  </nav>
+
+	  <section class="hero-wrap js-fullheight" style="background-image: url('landing2/images/bg_2.png');" data-section="home" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+          <div class="col-md-5 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <h1 class="mb-5" style="text-align: right;" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">اكتشف مميزات العقارات المختلفة عبرالقيام بجولة افتراضية داخل العقارات</h1>
+            <p class="mb-5" style="text-align: right;" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">حمّل التطبيق دلوقتي وابدأ بإستكشاف العقارات </p>
+            {{-- <form action="#" class="search-location">
+	        		<div class="row">
+	        			<div class="col-lg align-items-end">
+	        				<div class="form-group">
+	          				<div class="form-field">
+			                <input type="text" class="form-control">
+			                <button><span class="ion-ios-search"></span></button>
+
+			              </div>
+		              </div>
+	        			</div>
+	        		</div>
+	        	</form> --}}
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                      <div class="btn-group" role="group">
+                        <a href="#" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px; margin-right: 10px;width: 200px;">
+                            {{-- <i class="bi bi-google-play" style="font-size: 20px; margin-bottom: 5px;"></i> --}}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+                                <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+                              </svg>
+                              <span style="vertical-align: middle;">Google Play</span></a>
+                        <a href="#" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px;margin-right: 10px;width: 200px;">
+                            {{-- <i class="ion-logo-apple" style="font-size: 40px; margin-bottom: 5px;"></i> --}}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+                                <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                                <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                              </svg>
+                              <span style="vertical-align: right;"> Apple Store</span></a>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
           </div>
-
         </div>
-
       </div>
-    </section><!-- End About Section -->
+    </section>
 
-    <!-- ======= Why Us Section ======= -->
-    {{-- <section id="why-us" class="why-us"> --}}
-      {{-- <div class="container">
 
+		<section class="ftco-section ftco-services-2 bg-light" id="services-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">خدماتنا</h2>
+            <p>نقوم بتقديم العديد من الخدمات في مكان واحد في تطبيق شبابيك للتسهيل على العملاء</p>
+          </div>
+        </div>
         <div class="row">
-
-          <div class="col-lg-4" data-aos="fade-up">
-            <div class="box">
-              <span>01</span>
-              <h4>Lorem Ipsum</h4>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+        	<div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-pin"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">استكشاف العقارات</h3>
+                <p>تطبيق شبابيك  تطبيق متميز يهدف إلى تسهيل عملية البحث عن العقارات وإدارتها بشكل مريح وسهل. و بالنسبة لأصحاب العقارات، يمكنهم إضافة عقاراتهم وتعديل معلوماتها في أي وقت ومراقبة حجوزات العقار بسهولة.</p>
+              </div>
             </div>
           </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
-            <div class="box">
-              <span>02</span>
-              <h4>Repellat Nihil</h4>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
+              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-detective"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">الخبير العقاري</h3>
+                <p>يمكن للمستخدمين إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة في أسرع وقت بشكل مجاني.</p>
+              </div>
             </div>
           </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <span>03</span>
-              <h4> Ad ad velit qui</h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-house"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">مكاتب التصميم &amp;  والمقاولات</h3>
+                <p>يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.</p>
+              </div>
             </div>
           </div>
-
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
+              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-purse"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">البيوت الذكية</h3>
+                <p>يتميز التطبيق بإمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد.</p>
+              </div>
+            </div>
+          </div>
         </div>
+			</div>
+		</section>
 
-      </div> --}}
-    {{-- </section> --}}
-    <!-- End Why Us Section -->
-
-    <!-- ======= Clients Section ======= -->
-    {{-- <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="row d-flex align-items-center">
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="landing/assets/img/clients/client-1.png" class="img-fluid" alt="">
+		<section class="ftco-section ftco-properties" id="properties-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Our Property</h2>
           </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="landing/assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="landing/assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="landing/assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="landing/assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="landing/assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
         </div>
+    		<div class="row">
+        	<div class="col-md-12">
+            <div class="carousel-properties owl-carousel">
+            	<div class="item">
+            		<div class="properties ftco-animate">
+		    					<div class="img">
+				    				<img src="landing2/images/work-1.jpg" class="img-fluid" alt="Colorlib Template">
+			    				</div>
+			    				<div class="desc">
+			    					<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+				    					<span>Sale</span>
+				    				</div>
+			    					<div class="d-flex pt-5">
+				    					<div>
+					    					<h3><a href="properties.html">Fatima Subdivision</a></h3>
+											</div>
+											<div class="pl-md-4">
+												<h4 class="price">$120,000</h4>
+											</div>
+										</div>
+										<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+			    				</div>
+		    				</div>
+            	</div>
+            	<div class="item">
+            		<div class="properties ftco-animate">
+		    					<div class="img">
+				    				<img src="landing2/images/work-2.jpg" class="img-fluid" alt="Colorlib Template">
+			    				</div>
+			    				<div class="desc">
+			    					<div class="text bg-secondary d-flex text-center align-items-center justify-content-center">
+				    					<span>Rent</span>
+				    				</div>
+			    					<div class="d-flex pt-5">
+				    					<div>
+					    					<h3><a href="properties.html">Fatima Subdivision</a></h3>
+											</div>
+											<div class="pl-md-4">
+												<h4 class="price">$120<span>/mo</span></h4>
+											</div>
+										</div>
+										<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+			    				</div>
+		    				</div>
+            	</div>
+            	<div class="item">
+            		<div class="properties ftco-animate">
+		    					<div class="img">
+				    				<img src="landing2/images/work-3.jpg" class="img-fluid" alt="Colorlib Template">
+			    				</div>
+			    				<div class="desc">
+			    					<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+				    					<span>Sale</span>
+				    				</div>
+			    					<div class="d-flex pt-5">
+				    					<div>
+					    					<h3><a href="properties.html">Fatima Subdivision</a></h3>
+											</div>
+											<div class="pl-md-4">
+												<h4 class="price">$230,000</h4>
+											</div>
+										</div>
+										<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+			    				</div>
+		    				</div>
+            	</div>
+            	<div class="item">
+            		<div class="properties ftco-animate">
+		    					<div class="img">
+				    				<img src="landing2/images/work-4.jpg" class="img-fluid" alt="Colorlib Template">
+			    				</div>
+			    				<div class="desc">
+			    					<div class="text bg-primary d-flex text-center align-items-center justify-content-center">
+				    					<span>Sale</span>
+				    				</div>
+			    					<div class="d-flex pt-5">
+				    					<div>
+					    					<h3><a href="properties.html">Fatima Subdivision</a></h3>
+											</div>
+											<div class="pl-md-4">
+												<h4 class="price">$120,000</h4>
+											</div>
+										</div>
+										<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+			    				</div>
+		    				</div>
+            	</div>
+            	<div class="item">
+            		<div class="properties ftco-animate">
+		    					<div class="img">
+				    				<img src="landing2/images/work-5.jpg" class="img-fluid" alt="Colorlib Template">
+			    				</div>
+			    				<div class="desc">
+			    					<div class="text bg-secondary d-flex text-center align-items-center justify-content-center">
+				    					<span>Rent</span>
+				    				</div>
+			    					<div class="d-flex pt-5">
+				    					<div>
+					    					<h3><a href="properties.html">Fatima Subdivision</a></h3>
+											</div>
+											<div class="pl-md-4">
+												<h4 class="price">$50<span>/mo</span></h4>
+											</div>
+										</div>
+										<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+			    				</div>
+		    				</div>
+            	</div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
 
+    <section class="ftco-intro img" id="about-section" style="background-image: url(landing2/images/bg_1.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-9 text-center">
+						<h2>اختر منزل أحلامك</h2>
+						<p>حمّل التطبيق دلوقتي وابدأ بإستكشاف العقارات .</p>
+						<p class="mb-0"><a href="#" class="btn btn-white px-4 py-3">Search Places</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb">
+    	<div class="container">
+    		<div class="row no-gutters d-flex">
+    			<div class="col-md-6 col-lg-5 d-flex">
+    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(landing2/images/about.jpg);">
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-7 px-lg-5 py-md-5">
+    				<div class="py-md-5">
+	    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate p-4 p-lg-5">
+			            <h2 class="mb-4">شبابيك</h2>
+			            <p>تطبيق شبابيك  تطبيق متميز يهدف إلى تسهيل عملية البحث عن العقارات وإدارتها بشكل مريح وسهل. يتيح هذا التطبيق للمستخدمين استعراض مجموعة واسعة من العقارات المتاحة للبيع أو الإيجار وتخصيص عمليات البحث والتصفية وفقًا لاحتياجاتهم الخاصة.</p>
+			            <p>بالإضافة إلى ذلك، يمكن للمستخدمين اكتشاف مميزات العقارات المختلفة عبر تصفح مجموعة من الصور والوصف المفصل لكل عقار. بإمكانهم أيضًا القيام بجولة افتراضية داخل العقار باستخدام تقنيات الواقع الافتراضي للاستمتاع بتجربة وكأنهم يتجولون في العقار بشكل حقيقي.                            .</p>
+			            <p>يتميز التطبيق بإمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد. كما يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.
+                        </p>
+                        <p>بالنسبة لأصحاب العقارات، يمكنهم إضافة عقاراتهم وتعديل معلوماتها في أي وقت ومراقبة حجوزات العقار بسهولة. ويمكن للمستخدمين أيضًا إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة</p>
+			          <p>باختصار، تطبيق شبابيك يوفر منصة شاملة تجمع بين سهولة البحث والاستكشاف للمستخدمين وإمكانيات إدارة ممتازة لأصحاب العقارات، مما يجعله حلاً مثاليًا لأولئك الذين يبحثون عن السكن أو يرغبون في استثمار عقاراتهم بكفاءة وسهولة.
+                    </p>
+                        {{-- <p><a href="#" class="btn btn-primary py-3 px-4">Book now</a> <a href="#" class="btn btn-secondary py-3 px-4">Contact us</a></p> --}}
+			          </div>
+			        </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-services-2 bg-light" id="workflow-section">
+			<div class="container">
+				<div class="row">
+          <div class="col-md-4 heading-section ftco-animate">
+            <h2 class="mb-4">كيف يعمل</h2>
+            <p>إليك خطوات إنشاء حسابك كمطوّر عقاري للاستفادة من مميزات التطبيق من إضافة وتعديل العقارات ومتابعة حجوزات العقارات.</p>
+            <div class="media block-6 services text-center d-block pt-md-5 mt-md-5">
+              <div class="icon justify-content-center align-items-center d-flex"><span>1</span></div>
+              <div class="media-body p-md-3">
+                <h3 class="heading mb-3">إنشاء حساب من خلال التطبيق </h3>
+                <p class="mb-5">قم بتحميل التطبيق من المتجر ومن ثم قم بإنشاء حساب إن لم يكن لديك حساب أو تسجيل الدخول إلي التطبيق.</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate mt-lg-5">
+            <div class="media block-6 services text-center d-block mt-lg-5 pt-md-5 pt-lg-4">
+              <div class="icon justify-content-center align-items-center d-flex"><span>2</span></div>
+              <div class="media-body p-md-3">
+                <h3 class="heading mb-3">التواصل معنا لتحويل حسابك</h3>
+                <p class="mb-5">قم بالتواصل معنا من خلال الاتصال المباشر أو محادثة على الواتساب أو زيارتنا لتحويل حسابك إلى حساب مطوّر عقاري ومناقشة باقي التفاصيل .</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon justify-content-center align-items-center d-flex"><span>3</span></div>
+              <div class="media-body p-md-3">
+                <h3 class="heading mb-3">ابدأ باستقبال الحجوزات</h3>
+                <p class="mb-5">بعد تحويل حسابك إلى مطوّر عقاري يمكنك إضافة عقاراتك بكل سهولة والتعديل علي تفاصيلها مثل السعر والحالة .. إلخ في أي وقت. كما تقوم باستقبال الحجوزات والتأكيد عليها وتعديلها وحذفها متى شئت.</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+		{{-- <section class="ftco-intro img" id="hotel-section" style="background-image: url(images/bg_4.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-end">
+					<div class="col-md-7">
+						<h2 class="mb-4">Choose Your House for Only <span>$120,000</span></h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<p class="mb-0"><a href="#" class="btn btn-white px-4 py-3">Advance Search</a></p>
+					</div>
+				</div>
+			</div>
+		</section> --}}
+
+		{{-- <section class="ftco-section ftco-agent" id="agent-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Our Agents</h2>
+          </div>
+        </div>
+    		<div class="row">
+        	<div class="col-md-12">
+            <div class="carousel-agent owl-carousel">
+            	<div class="item">
+            		<div class="agent">
+		    					<div class="img">
+				    				<img src="landing2/images/team-1.jpg" class="img-fluid" alt="Colorlib Template">
+				    				<div>
+				    					<h3>I'm an agent</h3>
+				    				</div>
+			    				</div>
+			    				<div class="desc pt-3">
+			    					<div>
+				    					<h3><a href="properties.html">James Stallon</a></h3>
+											<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+										</div>
+			    				</div>
+		    				</div>
+            	</div>
+            	<div class="item">
+            		<div class="agent">
+		    					<div class="img">
+				    				<img src="landing2/images/team-2.jpg" class="img-fluid" alt="Colorlib Template">
+				    				<div>
+				    					<h3>I'm an agent</h3>
+				    				</div>
+			    				</div>
+			    				<div class="desc pt-3">
+			    					<div>
+				    					<h3><a href="properties.html">James Stallon</a></h3>
+											<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+										</div>
+			    				</div>
+		    				</div>
+            	</div>
+            	<div class="item">
+            		<div class="agent">
+		    					<div class="img">
+				    				<img src="landing2/images/team-3.jpg" class="img-fluid" alt="Colorlib Template">
+				    				<div>
+				    					<h3>I'm an agent</h3>
+				    				</div>
+			    				</div>
+			    				<div class="desc pt-3">
+			    					<div>
+				    					<h3><a href="properties.html">James Stallon</a></h3>
+											<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+										</div>
+			    				</div>
+		    				</div>
+            	</div>
+            	<div class="item">
+            		<div class="agent">
+		    					<div class="img">
+				    				<img src="landing2/images/team-4.jpg" class="img-fluid" alt="Colorlib Template">
+				    				<div>
+				    					<h3>I'm an agent</h3>
+				    				</div>
+			    				</div>
+			    				<div class="desc pt-3">
+			    					<div>
+				    					<h3><a href="properties.html">James Stallon</a></h3>
+											<p class="h-info"><span class="position">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+										</div>
+			    				</div>
+		    				</div>
+            	</div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section> --}}
+
+    {{-- <section class="ftco-section bg-light" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Our Blog</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </a>
+              <div class="text float-right d-block">
+              	<div class="d-flex align-items-center pt-2 mb-4 topp">
+              		<div class="one mr-2">
+              			<span class="day">12</span>
+              		</div>
+              		<div class="two">
+              			<span class="yr">2019</span>
+              			<span class="mos">april</span>
+              		</div>
+              	</div>
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <div class="d-flex align-items-center mt-4 meta">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </a>
+              <div class="text float-right d-block">
+              	<div class="d-flex align-items-center pt-2 mb-4 topp">
+              		<div class="one mr-2">
+              			<span class="day">12</span>
+              		</div>
+              		<div class="two">
+              			<span class="yr">2019</span>
+              			<span class="mos">april</span>
+              		</div>
+              	</div>
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <div class="d-flex align-items-center mt-4 meta">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </a>
+              <div class="text float-right d-block">
+              	<div class="d-flex align-items-center pt-2 mb-4 topp">
+              		<div class="one mr-2">
+              			<span class="day">12</span>
+              		</div>
+              		<div class="two">
+              			<span class="yr">2019</span>
+              			<span class="mos">april</span>
+              		</div>
+              	</div>
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <div class="d-flex align-items-center mt-4 meta">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+              </a>
+              <div class="text float-right d-block">
+              	<div class="d-flex align-items-center pt-2 mb-4 topp">
+              		<div class="one mr-2">
+              			<span class="day">12</span>
+              		</div>
+              		<div class="two">
+              			<span class="yr">2019</span>
+              			<span class="mos">april</span>
+              		</div>
+              	</div>
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <div class="d-flex align-items-center mt-4 meta">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_5.jpg');">
+              </a>
+              <div class="text float-right d-block">
+              	<div class="d-flex align-items-center pt-2 mb-4 topp">
+              		<div class="one mr-2">
+              			<span class="day">12</span>
+              		</div>
+              		<div class="two">
+              			<span class="yr">2019</span>
+              			<span class="mos">april</span>
+              		</div>
+              	</div>
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <div class="d-flex align-items-center mt-4 meta">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_6.jpg');">
+              </a>
+              <div class="text float-right d-block">
+              	<div class="d-flex align-items-center pt-2 mb-4 topp">
+              		<div class="one mr-2">
+              			<span class="day">12</span>
+              		</div>
+              		<div class="two">
+              			<span class="yr">2019</span>
+              			<span class="mos">april</span>
+              		</div>
+              	</div>
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <div class="d-flex align-items-center mt-4 meta">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section> --}}
-    <!-- End Clients Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section class="ftco-section testimony-section">
       <div class="container">
-
-        <div class="section-title">
-          <span>Services</span>
-          <h2>Services</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4><a href="">Dele cardo</a></h4>
-              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="750">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-arch"></i></div>
-              <h4><a href="">Divera don</a></h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="text-center">
-          <h3>Call To Action</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Portfolio</span>
-          <h2>Portfolio</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
+        <div class="row justify-content-center pb-3">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          	{{-- <span class="subheading">Read testimonials</span> --}}
+            <h2 class="mb-4">معرض أعمالنا</h2>
           </div>
         </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="150">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="landing/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="landing/portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="landing/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="landing/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="landing/portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="landing/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="landing/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="landing/portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="landing/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="landing/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="landing/portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="landing/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="landing/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="landing/portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="landing/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="landing/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="landing/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="landing/portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="landing/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="landing/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="landing/portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="landing/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="landing/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="landing/portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Pricing</span>
-          <h2>Pricing</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
-            <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img" style="background-image: url(landing2/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text px-4 pb-5">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Jeff Freshman</p>
+                    <span class="position">Artist</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img" style="background-image: url(landing2/images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text px-4 pb-5">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Jeff Freshman</p>
+                    <span class="position">Artist</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img" style="background-image: url(landing2/images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text px-4 pb-5">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Jeff Freshman</p>
+                    <span class="position">Artist</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img" style="background-image: url(landing2/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text px-4 pb-5">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Jeff Freshman</p>
+                    <span class="position">Artist</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img" style="background-image: url(landing2/images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text px-4 pb-5">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Jeff Freshman</p>
+                    <span class="position">Artist</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="zoom-in">
-            <div class="box featured">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
-            <div class="box">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
         </div>
-
       </div>
-    </section><!-- End Pricing Section -->
+    </section>
+
+
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
-      <div class="container">
+        <div class="container">
 
-        <div class="section-title">
-          <span>Team</span>
-          <h2>Team</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-            <div class="member">
-              <img src="assets/img/team/team-1.jpg" alt="">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <p>
-                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-              </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="section-title">
+            <span>Team</span>
+            <h2>Team</h2>
+            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-            <div class="member">
-              <img src="landing/assets/img/team/team-2.jpg" alt="">
-              <h4>Sarah Jhinson</h4>
-              <span>Product Manager</span>
-              <p>
-                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-              </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-            <div class="member">
-              <img src="landing/assets/img/team/team-3.jpg" alt="">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <p>
-                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-              </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Contact</span>
-          <h2>Contact</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-6">
-            <div class="info-box mb-4">
-              <i class="bx bx-map"></i>
-              <h3>Our Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-box  mb-4">
-              <i class="bx bx-envelope"></i>
-              <h3>Email Us</h3>
-              <p>contact@example.com</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-box  mb-4">
-              <i class="bx bx-phone-call"></i>
-              <h3>Call Us</h3>
-              <p>+1 5589 55488 55</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row" data-aos="fade-up">
-
-          <div class="col-lg-6 ">
-            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-          </div>
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+              <div class="member">
+                <img src="landing/assets/img/team/team-1.jpg" alt="">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+              <div class="member">
+                <img src="landing/assets/img/team/team-2.jpg" alt="">
+                <h4>مصطفى محمود</h4>
+                <span>مهندس برمجيات</span>
+                <p>
+                 Flutter Developer
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+              <div class="member">
+                <img src="landing/assets/img/team/team-3.jpg" alt="">
+                <h4>آية مطرود</h4>
+                <span>مهندسة برمجيات</span>
+                <p>
+                 Backend Developer
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            </div>
+
           </div>
 
         </div>
+      </section><!-- End Team Section -->
 
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
-        <div class="row">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <span class="subheading">Contact</span>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-info">
-              <h3>Day</h3>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <div class="row block-9">
+          <div class="col-md-7 order-md-last d-flex ftco-animate">
+            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
             </form>
 
           </div>
 
+          <div class="col-md-5 d-flex">
+          	<div class="row d-flex contact-info mb-5">
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-map-signs"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Address</h3>
+				            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+			            </div>
+			          </div>
+		          </div>
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-phone2"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Contact Number</h3>
+				            <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+			            </div>
+			          </div>
+		          </div>
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-paper-plane"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Email Address</h3>
+				            <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+			            </div>
+			          </div>
+		          </div>
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-globe"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Website</h3>
+				            <p><a href="#">yoursite.com</a></p>
+			            </div>
+			          </div>
+		          </div>
+		        </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Day</span></strong>. All Rights Reserved
+
+     <!-- ======= Contact Section ======= -->
+     <section id="contact" class="contact">
+        <div class="container">
+
+          <div class="section-title">
+            <span>Contact</span>
+            <h2>Contact</h2>
+            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+          </div>
+
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-map"></i>
+                <h3>Our Address</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box  mb-4">
+                <i class="bx bx-envelope"></i>
+                <h3>Email Us</h3>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box  mb-4">
+                <i class="bx bx-phone-call"></i>
+                <h3>Call Us</h3>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row" data-aos="fade-up">
+
+            <div class="col-lg-6 ">
+              <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-6">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- End Contact Section -->
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div id="map" class="bg-white"></div>
+		</section>
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container-fluid px-md-5">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Stayhome</h2>
+              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <ul class="ftco-footer-social list-unstyled mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Community</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>For Agents</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Reviews</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">About Us</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Careers</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Company</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About Us</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Press</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Careers</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+    </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="landing/assets/vendor/aos/aos.js"></script>
-  <script src="landing/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="landing/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="landing/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="landing/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="landing/assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="landing/assets/js/main.js"></script>
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-</body>
 
+  {{-- <script src="{{ asset('landing2/js/jquery.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/popper.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/bootstrap.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/jquery.easing.1.3.js')}}"></script>
+  <script src="{{ asset('landing2/js/jquery.waypoints.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/jquery.stellar.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/owl.carousel.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/aos.js')}}"></script>
+  <script src="{{ asset('landing2/js/jquery.animateNumber.min.js')}}"></script>
+  <script src="{{ asset('landing2/js/scrollax.min.js')}}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{{ asset('landing2/js/google-map.js')}}"></script>
+
+  <script src="{{ asset('landing2/js/main.js')}}"></script> --}}
+
+  </body>
 </html>
