@@ -20,7 +20,7 @@ trait NotificationTrait
                 (
                 'registration_ids' => $token,
                 'notification' => $msg,
-                 'priority' => 'max',
+                 'priority' => 'high',
 
             );
         } else {
@@ -28,7 +28,7 @@ trait NotificationTrait
                 (
                 "to" => $token,
                 "notification" => $msg,
-                'priority' => 'max',
+                'priority' => 'high',
             );
         }
 
