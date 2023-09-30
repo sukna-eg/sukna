@@ -689,8 +689,8 @@
       </div>
     </section> --}}
 
-    {{-- style="background: #212529" --}}
-    <section class="ftco-section testimony-section"  id="apps">
+
+    <section class="ftco-section testimony-section" style="background: #212529" id="apps">
       <div class="container">
         <div class="row justify-content-center pb-3">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">

@@ -9805,10 +9805,10 @@ textarea.form-control {
 
   .contact .info-box i {
     font-size: 32px;
-    color:  #4b69bd;
+    color:  #212529;
     border-radius: 50%;
     padding: 8px;
-    border: 2px dotted #4b69bd;
+    border: 2px dotted #212529;
   }
 
   .contact .info-box h3 {
