@@ -9314,7 +9314,7 @@ textarea.form-control {
     height: 50px;
     width: 50px;
     display: block;
-    background: #212529;
+    background: #212529 !important;
     border-radius: 50%;
     position: relative; }
     .ftco-footer-social li a span {
