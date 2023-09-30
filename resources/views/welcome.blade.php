@@ -80,7 +80,7 @@
                 </ul>
                 </div>
               </div>
-	      <a class="navbar-brand" href="index.html" style="font-family: 'Tajawal', sans-serif">شبابيك</a>
+	      <a class="navbar-brand" href="https://sukna-eg.com" style="font-family: 'Tajawal', sans-serif">شبابيك</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" >
 	        <span class="oi oi-menu"></span>
 	      </button>
@@ -89,7 +89,7 @@
 	    </div>
 	  </nav>
 
-	  <section class="hero-wrap js-fullheight" style="background-image: url('landing2/images/bg_2.png');" data-section="home" data-stellar-background-ratio="0.5">
+	  <section class="hero-wrap js-fullheight" style="background-image: url('landing2/images/bg_2.png');" data-section="home" data-stellar-background-ratio="0.5" id="home-section">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
