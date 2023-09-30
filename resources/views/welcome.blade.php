@@ -7,6 +7,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ asset('landing2/css/open-iconic-bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ asset('landing2/css/animate.css')}}">
 
@@ -57,20 +59,30 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <div class="col-md   align-items-start">
                 <ul class="navbar-nav nav ml-auto">
-                  <li class="nav-item"><a href="#home-section" class="nav-link"><span>الرئيسية</span></a></li>
-                  <li class="nav-item"><a href="#services-section" class="nav-link"><span>خدماتنا</span></a></li>
+
+
                   {{-- <li class="nav-item"><a href="#properties-section" class="nav-link"><span>Listing</span></a></li> --}}
-                  <li class="nav-item"><a href="#about-section" class="nav-link"><span>عن التطبيق</span></a></li>
-                  <li class="nav-item"><a href="#workflow-section" class="nav-link"><span>كيف يعمل</span></a></li>
-                  <li class="nav-item"><a href="#apps" class="nav-link"><span>تطبيقاتنا</span></a></li>
-                  <li class="nav-item"><a href="#team" class="nav-link"><span>فريقنا</span></a></li>
-                  <li class="nav-item"><a href="#contact" class="nav-link"><span>التواصل</span></a></li>
+
+
+
+
+                  <li class="nav-item"><a href="#contact" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">التواصل</span></a></li>
+
+
+
+                  <li class="nav-item"><a href="#apps" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">تطبيقاتنا</span></a></li>
+
+                  <li class="nav-item"><a href="#workflow-section" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">كيف يعمل</span></a></li>
+                  <li class="nav-item"><a href="#about-section" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">عن التطبيق</span></a></li>
+                  <li class="nav-item"><a href="#services-section" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">خدماتنا</span></a></li>
+                  <li class="nav-item"><a href="#home-section" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">الرئيسية</span></a></li>
+                  {{-- <li class="nav-item"><a href="#team" class="nav-link"><span>فريقنا</span></a></li> --}}
                 </ul>
                 </div>
               </div>
-	      <a class="navbar-brand" href="index.html">شبابيك</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	      <a class="navbar-brand" href="index.html" style="font-family: 'Tajawal', sans-serif">شبابيك</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" >
+	        <span class="oi oi-menu"></span>
 	      </button>
 
 
@@ -82,8 +94,8 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-5 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-5" style="text-align: right;" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">اكتشف مميزات العقارات المختلفة عبرالقيام بجولة افتراضية داخل العقارات</h1>
-            <p class="mb-5" style="text-align: right;" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">حمّل التطبيق دلوقتي وابدأ بإستكشاف العقارات </p>
+            <h1 class="mb-5" style="text-align: right; font-family: 'Tajawal', sans-serif" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">اكتشف مميزات العقارات المختلفة عبرالقيام بجولة افتراضية داخل العقارات</h1>
+            <p  style="text-align: right; font-family: 'Tajawal', sans-serif" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">حمّل التطبيق دلوقتي وابدأ بإستكشاف العقارات </p>
             {{-- <form action="#" class="search-location">
 	        		<div class="row">
 	        			<div class="col-lg align-items-end">
@@ -97,22 +109,22 @@
 	        			</div>
 	        		</div>
 	        	</form> --}}
-                <div class="row justify-content-center">
-                    <div class="col-md-8 text-center">
+                <div class="row justify-content-end">
+                    <div class="col-md-8 text-end">
                       <div class="btn-group" role="group">
-                        <a href="https://play.google.com/store/apps/details?id=com.m0ustafamahm0ud.shbabeek" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px; margin-right: 10px;width: 200px;">
+                        <a href="https://play.google.com/store/apps/details?id=com.m0ustafamahm0ud.shbabeek" class="btn btn-white" style="border-radius: 20px; padding: 20px 10px; margin-right: 10px;width: 150px;height:50px;font-size: 14px; text-align: center; display: flex; align-items: center; justify-content: center;">
                             {{-- <i class="bi bi-google-play" style="font-size: 20px; margin-bottom: 5px;"></i> --}}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
                                 <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
                               </svg>
-                              <span style="vertical-align: middle;">Google Play</span></a>
-                        <a href="https://apps.apple.com/eg/app/%D8%B4%D8%A8%D8%A7%D8%A8%D9%8A%D9%83/id6465523209" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px;margin-right: 10px;width: 200px;">
+                              <span style="margin-left: 5px;vertical-align: middle;">Google Play</span></a>
+                        <a href="https://apps.apple.com/eg/app/%D8%B4%D8%A8%D8%A7%D8%A8%D9%8A%D9%83/id6465523209" class="btn btn-white" style="border-radius: 20px; padding: 20px 10px; margin-right: 10px;width: 150px;height:50px;font-size: 14px; text-align: center; display: flex; align-items: center; justify-content: center;">
                             {{-- <i class="ion-logo-apple" style="font-size: 40px; margin-bottom: 5px;"></i> --}}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
                                 <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
                                 <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
                               </svg>
-                              <span style="vertical-align: right;"> Apple Store</span></a>
+                              <span style="margin-left: 5px;vertical-align: right;"> App Store</span></a>
                       </div>
                     </div>
                   </div>
@@ -130,8 +142,8 @@
 			<div class="container">
 				<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section  text-center ftco-animate">
-            <h2 class="mb-4 ">خدماتنا</h2>
-            <p>نقوم بتقديم العديد من الخدمات في مكان واحد في تطبيق شبابيك للتسهيل على العملاء</p>
+            <h2 class="mb-4 " style="font-family: 'Tajawal', sans-serif">خدماتنا</h2>
+            <p style="font-family: 'Tajawal', sans-serif;font-weight: bold ">نقوم بتقديم العديد من الخدمات في مكان واحد في تطبيق شبابيك للتسهيل على العملاء</p>
           </div>
         </div>
         <div class="row">
@@ -139,8 +151,8 @@
             <div class="media block-6 services text-center d-block">
               <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-pin"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">استكشاف العقارات</h3>
-                <p>تطبيق شبابيك  تطبيق متميز يهدف إلى تسهيل عملية البحث عن العقارات وإدارتها بشكل مريح وسهل. و بالنسبة لأصحاب العقارات، يمكنهم إضافة عقاراتهم وتعديل معلوماتها في أي وقت ومراقبة حجوزات العقار بسهولة.</p>
+                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">استكشاف العقارات</h3>
+                <p style="font-family: 'Tajawal', sans-serif">تطبيق شبابيك  تطبيق متميز يهدف إلى تسهيل عملية البحث عن العقارات وإدارتها بشكل مريح وسهل. و بالنسبة لأصحاب العقارات، يمكنهم إضافة عقاراتهم وتعديل معلوماتها في أي وقت ومراقبة حجوزات العقار بسهولة.</p>
               </div>
             </div>
           </div>
@@ -148,8 +160,8 @@
             <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
               <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-detective"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">الخبير العقاري</h3>
-                <p>يمكن للمستخدمين إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة في أسرع وقت بشكل مجاني.</p>
+                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">الخبير العقاري</h3>
+                <p style="font-family: 'Tajawal', sans-serif">يمكن للمستخدمين إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة في أسرع وقت بشكل مجاني.</p>
               </div>
             </div>
           </div>
@@ -157,8 +169,8 @@
             <div class="media block-6 services text-center d-block">
               <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-house"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">مكاتب التصميم &amp;  والمقاولات</h3>
-                <p>يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.</p>
+                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">مكاتب التصميم &amp;  والمقاولات</h3>
+                <p style="font-family: 'Tajawal', sans-serif">يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.</p>
               </div>
             </div>
           </div>
@@ -166,8 +178,8 @@
             <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
               <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-purse"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">البيوت الذكية</h3>
-                <p>يتميز التطبيق بإمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد.</p>
+                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">البيوت الذكية</h3>
+                <p style="font-family: 'Tajawal', sans-serif">يتميز التطبيق بإمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد.</p>
               </div>
             </div>
           </div>
@@ -301,8 +313,8 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-9 text-center">
-						<h2>اختر منزل أحلامك</h2>
-						<p>حمّل التطبيق دلوقتي وابدأ بإستكشاف العقارات .</p>
+						<h2 style="font-family: 'Tajawal', sans-serif">اختر منزل أحلامك</h2>
+						<p style="font-family: 'Tajawal', sans-serif">حمّل التطبيق دلوقتي وابدأ بإستكشاف العقارات .</p>
 						{{-- <p class="mb-0"><a href="#" class="btn btn-white px-4 py-3">Search Places</a></p> --}}
 
 
@@ -310,26 +322,28 @@
                         <div class="row justify-content-center">
                             <div class="col-md-8 text-center">
                               <div class="btn-group" role="group">
-                                <a href="https://play.google.com/store/apps/details?id=com.m0ustafamahm0ud.shbabeek" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px; margin-right: 10px;width: 200px;">
+                                <a href="https://play.google.com/store/apps/details?id=com.m0ustafamahm0ud.shbabeek" class="btn btn-white" style="border-radius: 20px; padding: 20px 10px; margin-right: 10px;width: 150px;height:50px;font-size: 14px; text-align: center; display: flex; align-items: center; justify-content: center;">
                                     {{-- <i class="bi bi-google-play" style="font-size: 20px; margin-bottom: 5px;"></i> --}}
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
                                         <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
                                       </svg>
-                                      <span style="vertical-align: middle;">Google Play</span></a>
-                                <a href="https://apps.apple.com/eg/app/%D8%B4%D8%A8%D8%A7%D8%A8%D9%8A%D9%83/id6465523209" class="btn btn-white" style="border-radius: 30px; padding: 10px 20px;margin-right: 10px;width: 200px;">
+                                      <span style="margin-left: 5px;vertical-align: middle;">Google Play</span></a>
+                                <a href="https://apps.apple.com/eg/app/%D8%B4%D8%A8%D8%A7%D8%A8%D9%8A%D9%83/id6465523209" class="btn btn-white" style="border-radius: 20px; padding: 20px 10px; margin-right: 10px;width: 150px;height:50px;font-size: 14px; text-align: center; display: flex; align-items: center; justify-content: center;">
                                     {{-- <i class="ion-logo-apple" style="font-size: 40px; margin-bottom: 5px;"></i> --}}
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
                                         <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
                                         <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
                                       </svg>
-                                      <span style="vertical-align: right;"> Apple Store</span></a>
+                                      <span style="margin-left: 5px;vertical-align: right;"> App Store</span></a>
                               </div>
                             </div>
                           </div>
 
 
 
-					</div>
+
+                  </div>
+
 				</div>
 			</div>
 		</section>
@@ -343,15 +357,15 @@
     			</div>
     			<div class="col-md-6 col-lg-7 px-lg-5 py-md-5">
     				<div class="py-md-5">
-	    				<div class="row justify-content-start pb-3">
+	    				<div class="row justify-content-start pb-3" style="text-align: right;">
 			          <div class="col-md-12 heading-section ftco-animate p-4 p-lg-5">
-			            <h2 class="mb-4">شبابيك</h2>
-			            <p>تطبيق شبابيك  تطبيق متميز يهدف إلى تسهيل عملية البحث عن العقارات وإدارتها بشكل مريح وسهل. يتيح هذا التطبيق للمستخدمين استعراض مجموعة واسعة من العقارات المتاحة للبيع أو الإيجار وتخصيص عمليات البحث والتصفية وفقًا لاحتياجاتهم الخاصة.</p>
-			            <p>بالإضافة إلى ذلك، يمكن للمستخدمين اكتشاف مميزات العقارات المختلفة عبر تصفح مجموعة من الصور والوصف المفصل لكل عقار. بإمكانهم أيضًا القيام بجولة افتراضية داخل العقار باستخدام تقنيات الواقع الافتراضي للاستمتاع بتجربة وكأنهم يتجولون في العقار بشكل حقيقي.                            .</p>
-			            <p>يتميز التطبيق بإمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد. كما يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.
+			            <h2 class="mb-4" style="text-align: right;font-family: 'Tajawal', sans-serif">شبابيك</h2>
+			            <p style="text-align: right;font-family: 'Tajawal', sans-serif">تطبيق شبابيك  تطبيق متميز يهدف إلى تسهيل عملية البحث عن العقارات وإدارتها بشكل مريح وسهل. يتيح هذا التطبيق للمستخدمين استعراض مجموعة واسعة من العقارات المتاحة للبيع أو الإيجار وتخصيص عمليات البحث والتصفية وفقًا لاحتياجاتهم الخاصة.</p>
+			            <p style="text-align: right;font-family: 'Tajawal', sans-serif">بالإضافة إلى ذلك، يمكن للمستخدمين اكتشاف مميزات العقارات المختلفة عبر تصفح مجموعة من الصور والوصف المفصل لكل عقار. بإمكانهم أيضًا القيام بجولة افتراضية داخل العقار باستخدام تقنيات الواقع الافتراضي للاستمتاع بتجربة وكأنهم يتجولون في العقار بشكل حقيقي.                            .</p>
+			            <p style="text-align: right;font-family: 'Tajawal', sans-serif">يتميز التطبيق بإمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد. كما يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.
                         </p>
-                        <p>بالنسبة لأصحاب العقارات، يمكنهم إضافة عقاراتهم وتعديل معلوماتها في أي وقت ومراقبة حجوزات العقار بسهولة. ويمكن للمستخدمين أيضًا إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة</p>
-			          <p>باختصار، تطبيق شبابيك يوفر منصة شاملة تجمع بين سهولة البحث والاستكشاف للمستخدمين وإمكانيات إدارة ممتازة لأصحاب العقارات، مما يجعله حلاً مثاليًا لأولئك الذين يبحثون عن السكن أو يرغبون في استثمار عقاراتهم بكفاءة وسهولة.
+                        <p style="text-align: right;font-family: 'Tajawal', sans-serif">بالنسبة لأصحاب العقارات، يمكنهم إضافة عقاراتهم وتعديل معلوماتها في أي وقت ومراقبة حجوزات العقار بسهولة. ويمكن للمستخدمين أيضًا إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة</p>
+			          <p style="text-align: right;font-family: 'Tajawal', sans-serif">باختصار، تطبيق شبابيك يوفر منصة شاملة تجمع بين سهولة البحث والاستكشاف للمستخدمين وإمكانيات إدارة ممتازة لأصحاب العقارات، مما يجعله حلاً مثاليًا لأولئك الذين يبحثون عن السكن أو يرغبون في استثمار عقاراتهم بكفاءة وسهولة.
                     </p>
 
                       <ul class="ftco-footer-social list-unstyled mt-5">
@@ -371,38 +385,43 @@
     <section class="ftco-section ftco-services-2 bg-light" id="workflow-section">
 			<div class="container">
 				<div class="row">
+
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services text-center d-block">
+                          <div class="icon justify-content-center align-items-center d-flex"><span>3</span></div>
+                          <div class="media-body p-md-3">
+                            <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">ابدأ باستقبال الحجوزات</h3>
+                            <p class="mb-5" style="font-family: 'Tajawal', sans-serif">بعد تحويل حسابك إلى مطوّر عقاري يمكنك إضافة عقاراتك بكل سهولة والتعديل علي تفاصيلها مثل السعر والحالة .. إلخ في أي وقت. كما تقوم باستقبال الحجوزات والتأكيد عليها وتعديلها وحذفها متى شئت.</p>
+                            <hr>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 d-flex align-self-stretch ftco-animate mt-lg-5">
+                        <div class="media block-6 services text-center d-block mt-lg-5 pt-md-5 pt-lg-4">
+                          <div class="icon justify-content-center align-items-center d-flex"><span>2</span></div>
+                          <div class="media-body p-md-3">
+                            <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">التواصل معنا لتحويل حسابك</h3>
+                            <p class="mb-5" style="font-family: 'Tajawal', sans-serif">قم بالتواصل معنا من خلال الاتصال المباشر أو محادثة على الواتساب أو زيارتنا لتحويل حسابك إلى حساب مطوّر عقاري ومناقشة باقي التفاصيل .</p>
+                            <hr>
+                          </div>
+                        </div>
+                      </div>
+
           <div class="col-md-4 heading-section ftco-animate">
-            <h2 class="mb-4">كيف يعمل</h2>
-            <p>إليك خطوات إنشاء حسابك كمطوّر عقاري للاستفادة من مميزات التطبيق من إضافة وتعديل العقارات ومتابعة حجوزات العقارات.</p>
+            <h2 class="mb-4" style="text-align: right;font-family: 'Tajawal', sans-serif"> كيف يعمل ؟</h2>
+            <p style="text-align: right;font-family: 'Tajawal', sans-serif">إليك خطوات إنشاء حسابك كمطوّر عقاري للاستفادة من مميزات التطبيق من إضافة وتعديل العقارات ومتابعة حجوزات العقارات.</p>
             <div class="media block-6 services text-center d-block pt-md-5 mt-md-5">
               <div class="icon justify-content-center align-items-center d-flex"><span>1</span></div>
               <div class="media-body p-md-3">
-                <h3 class="heading mb-3">إنشاء حساب من خلال التطبيق </h3>
-                <p class="mb-5">قم بتحميل التطبيق من المتجر ومن ثم قم بإنشاء حساب إن لم يكن لديك حساب أو تسجيل الدخول إلي التطبيق.</p>
+                <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">إنشاء حساب من خلال التطبيق </h3>
+                <p class="mb-5" style="font-family: 'Tajawal', sans-serif">قم بتحميل التطبيق من المتجر ومن ثم قم بإنشاء حساب إن لم يكن لديك حساب أو تسجيل الدخول إلي التطبيق.</p>
                 <hr>
               </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate mt-lg-5">
-            <div class="media block-6 services text-center d-block mt-lg-5 pt-md-5 pt-lg-4">
-              <div class="icon justify-content-center align-items-center d-flex"><span>2</span></div>
-              <div class="media-body p-md-3">
-                <h3 class="heading mb-3">التواصل معنا لتحويل حسابك</h3>
-                <p class="mb-5">قم بالتواصل معنا من خلال الاتصال المباشر أو محادثة على الواتساب أو زيارتنا لتحويل حسابك إلى حساب مطوّر عقاري ومناقشة باقي التفاصيل .</p>
-                <hr>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services text-center d-block">
-              <div class="icon justify-content-center align-items-center d-flex"><span>3</span></div>
-              <div class="media-body p-md-3">
-                <h3 class="heading mb-3">ابدأ باستقبال الحجوزات</h3>
-                <p class="mb-5">بعد تحويل حسابك إلى مطوّر عقاري يمكنك إضافة عقاراتك بكل سهولة والتعديل علي تفاصيلها مثل السعر والحالة .. إلخ في أي وقت. كما تقوم باستقبال الحجوزات والتأكيد عليها وتعديلها وحذفها متى شئت.</p>
-                <hr>
-              </div>
-            </div>
-          </div>
+
+
         </div>
 			</div>
 		</section>
@@ -675,7 +694,7 @@
         <div class="row justify-content-center pb-3">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
           	{{-- <span class="subheading">Read testimonials</span> --}}
-            <h2 class="mb-4">معرض أعمالنا</h2>
+            <h2 class="mb-4" style="font-family: 'Tajawal', sans-serif">تطبيقاتنا </h2>
           </div>
         </div>
         <div class="row ftco-animate justify-content-center">
@@ -689,10 +708,10 @@
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="name">Jordan Starts Here</p>
-                    <p class="mb-4">بوابتك لعجائب الأردن. اكتشف الكنوز القديمة والثقافة الحيوية والمناظر الطبيعية الساحرة مع 'الأردن يبدأ هنا.' دليلك الشخصي لرحلة لا تُنسى في هذه الوجهة الساحرة.</p>
+                    <p class="name" style="font-family: 'Tajawal', sans-serif">Jordan Starts Here</p>
+                    <p class="mb-4" style="font-family: 'Tajawal', sans-serif">بوابتك لعجائب الأردن. اكتشف الكنوز القديمة والثقافة الحيوية والمناظر الطبيعية الساحرة مع 'الأردن يبدأ هنا.' دليلك الشخصي لرحلة لا تُنسى في هذه الوجهة الساحرة.</p>
 
-                    <span class="position">اكتشف إمكانيات لا حصر لها باستخدام تطبيقنا الثوري! أطلق إمكاناتك اليوم.</span>
+                    {{-- <span class="position" >اكتشف إمكانيات لا حصر لها باستخدام تطبيقنا الثوري! أطلق إمكاناتك اليوم.</span> --}}
                   </div>
                 </div>
               </div>
@@ -704,11 +723,11 @@
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="name">Way To Doctor</p>
-                    <p class="mb-4">هو عبارة عن تطبيقين:
+                    <p class="name" style="font-family: 'Tajawal', sans-serif">Way To Doctor</p>
+                    <p class="mb-4" style="font-family: 'Tajawal', sans-serif">هو عبارة عن تطبيقين:
                     تطبيق يتيح للمريض التواصل مع الطبيب عبر عدة وسائل تواصل (فيديو، شات، اتصال، مقاطع صوتية)</p>
 
-                    <span class="position">وتطبيق للطبيب للتواصل مع المريض وتنظيم المواعيد والعديد من الميزات.</span>
+                    <span class="position" style="font-family: 'Tajawal', sans-serif">وتطبيق للطبيب للتواصل مع المريض وتنظيم المواعيد والعديد من الميزات.</span>
                   </div>
                 </div>
               </div>
@@ -720,13 +739,13 @@
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                     <p class="name">Golden Card</p>
-                    <p class="mb-4">خصومات رهيبة ومتعددة من مختلف المطاعم، تابعوها ولا تفوتوا الفرصة
+                     <p class="name" style="font-family: 'Tajawal', sans-serif">Golden Card</p>
+                    <p class="mb-4" style="font-family: 'Tajawal', sans-serif">خصومات رهيبة ومتعددة من مختلف المطاعم، تابعوها ولا تفوتوا الفرصة
 ليس هناك أروع من المشاركة.... شاركها مع من تحب
 متوفر في العديد من الأماكن في مختلف مناطق المملكة
 عيش عالم المتعة المزدوجة...</p>
 
-                    <span class="position">خصم سهل وواضح ومباشر مباشرة من فاتورتك قبل السداد</span>
+                    {{-- <span class="position">خصم سهل وواضح ومباشر مباشرة من فاتورتك قبل السداد</span> --}}
                   </div>
                 </div>
               </div>
@@ -738,12 +757,12 @@
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                     <p class="name">بلطيم</p>
-                    <p class="mb-4">تطبيق أطباء بلطيم وبرج البرلس لتسهيل عملية البحث عن طبيب - إذا لزم الأمر - في حوالي 20 تخصصا ويوجد في التطبيق أكثر من 80 طبيبا.
+                     <p class="name" style="font-family: 'Tajawal', sans-serif">أطباء بلطيم</p>
+                    <p class="mb-4" style="font-family: 'Tajawal', sans-serif">تطبيق أطباء بلطيم وبرج البرلس لتسهيل عملية البحث عن طبيب - إذا لزم الأمر - في حوالي 20 تخصصا ويوجد في التطبيق أكثر من 80 طبيبا.
 بحيث يسهل عليك التعرف على الأطباء المتواجدين في معظم التخصصات وكذلك المختبرات ومراكز الأشعة ومراكز التخاطب.
 واعرف مواعيدها واختر الموعد الأنسب لك.</p>
 
-                    <span class="position">ويعرض العناوين ويختار الأقرب إليك.</span>
+                    <span class="position" style="font-family: 'Tajawal', sans-serif">ويعرض العناوين ويختار الأقرب إليك.</span>
                   </div>
                 </div>
               </div>
@@ -755,8 +774,8 @@
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="name">Tasty</p>
-                    <p class="mb-4">أول مطعم في بلطيم متخصص في البروستد والبرجر والسندويشات الشرقية معًا،
+                    <p class="name" style="font-family: 'Tajawal', sans-serif">Tasty</p>
+                    <p class="mb-4" style="font-family: 'Tajawal', sans-serif">أول مطعم في بلطيم متخصص في البروستد والبرجر والسندويشات الشرقية معًا،
 الشيف على أعلى مستوى
 والطعم قصة</p>
 
@@ -772,8 +791,8 @@
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="name">Yallamzad</p>
-                    <p class="mb-4">المزادات الحقيقية الرسمية التي يمكنك المشاركة فيها بكل سهولة، سجل الآن وابدأ المشاركة في المزادات العامة، لا تفوت الفرصة</p>
+                    <p class="name" style="font-family: 'Tajawal', sans-serif">Yallamzad</p>
+                    <p class="mb-4" style="font-family: 'Tajawal', sans-serif">المزادات الحقيقية الرسمية التي يمكنك المشاركة فيها بكل سهولة، سجل الآن وابدأ المشاركة في المزادات العامة، لا تفوت الفرصة</p>
 
                     {{-- <span class="position">وتطبيق للطبيب للتواصل مع المريض وتنظيم المواعيد والعديد من الميزات.</span> --}}
                   </div>
@@ -788,8 +807,8 @@
                     </span>
                   </div>
                   <div class="text px-4 pb-5">
-                    <p class="name">Compassty</p>
-                    <p class="mb-4">أنشئ عناوين بسيطة واحتفظ بها في مكان واحد دون فقدانها أو نسيانها. شاركها مع أصدقائك وتعرف على عناوين الأماكن القريبة منك بفئاتها المختلفة.
+                    <p class="name" style="font-family: 'Tajawal', sans-serif">Compassty</p>
+                    <p class="mb-4" style="font-family: 'Tajawal', sans-serif">أنشئ عناوين بسيطة واحتفظ بها في مكان واحد دون فقدانها أو نسيانها. شاركها مع أصدقائك وتعرف على عناوين الأماكن القريبة منك بفئاتها المختلفة.
                     </p>
 
                     {{-- <span class="position">وتطبيق للطبيب للتواصل مع المريض وتنظيم المواعيد والعديد من الميزات.</span> --}}
@@ -807,7 +826,7 @@
 
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
+    {{-- <section id="team" class="team">
         <div class="container">
 
           <div class="section-title">
@@ -871,7 +890,7 @@
           </div>
 
         </div>
-      </section><!-- End Team Section -->
+      </section><!-- End Team Section --> --}}
 
     {{-- <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
@@ -963,33 +982,33 @@
         <div class="container">
 
           <div class="section-title">
-            <span>التواصل</span>
-            <h2>التواصل</h2>
-            <p>يمكنكم التواصل معنا عبر الرقم أو القدوم إلى عنوانا الموضح بالخريطة</p>
+            <span style="font-family: 'Tajawal', sans-serif">التواصل</span>
+            <h2 style="font-family: 'Tajawal', sans-serif">التواصل</h2>
+            <p style="font-family: 'Tajawal', sans-serif">يمكنكم التواصل معنا عبر الرقم أو القدوم إلى عنوانا الموضح بالخريطة</p>
           </div>
 
           <div class="row" data-aos="fade-up">
             <div class="col-lg-6">
               <div class="info-box mb-4">
                 <i class="bx bx-map"></i>
-                <h3>Our Address</h3>
-                <p>Egypt, Balteem, NY 535022</p>
+                <h3 style="font-family: 'Tajawal', sans-serif">العنوان</h3>
+                <p style="font-family: 'Tajawal', sans-serif">مصر، كفر الشيخ، بلطيم.</p>
               </div>
             </div>
 
             <div class="col-lg-3 col-md-6">
               <div class="info-box  mb-4">
                 <i class="bx bx-envelope"></i>
-                <h3>Email Us</h3>
-                <p>shbabeek.eg@gmail.com</p>
+                <h3 style="font-family: 'Tajawal', sans-serif">البريد الإلكتروني</h3>
+                <p style="font-family: 'Tajawal', sans-serif">shbabeek.eg@gmail.com</p>
               </div>
             </div>
 
             <div class="col-lg-3 col-md-6">
               <div class="info-box  mb-4">
                 <i class="bx bx-phone-call"></i>
-                <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <h3 style="font-family: 'Tajawal', sans-serif">اتصل بنا</h3>
+                <p style="font-family: 'Tajawal', sans-serif">+1 5589 55488 55</p>
               </div>
             </div>
 
