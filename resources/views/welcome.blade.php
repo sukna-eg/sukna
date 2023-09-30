@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+    <link rel="stylesheet" href="landing2/css/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400&display=swap" rel="stylesheet">
@@ -25,7 +28,7 @@
 
     <link rel="stylesheet" href="{{ asset('landing2/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{ asset('landing2/css/icomoon.css')}}">
-    <link rel="stylesheet" href="landing2/css/style.css">
+
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -94,7 +97,7 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-5 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-5" style="text-align: right; font-family: 'Tajawal', sans-serif" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">اكتشف مميزات العقارات المختلفة عبرالقيام بجولة افتراضية داخل العقارات</h1>
+            <h1 class="mb-5" style="font-size:30px;text-align: right; font-family: 'Tajawal', sans-serif" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">اكتشف مميزات العقارات المختلفة عبرالقيام بجولة افتراضية داخل العقارات</h1>
             <p  style="text-align: right; font-family: 'Tajawal', sans-serif" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">حمّل التطبيق دلوقتي وابدأ بإستكشاف العقارات </p>
             {{-- <form action="#" class="search-location">
 	        		<div class="row">
