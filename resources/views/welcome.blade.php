@@ -72,10 +72,10 @@
 
                   <li class="nav-item"><a href="#apps" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">تطبيقاتنا</span></a></li>
 
-                  <li class="nav-item"><a href="#workflow-section" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">كيف يعمل</span></a></li>
+                  <li class="nav-item"><a href="#workflow-section" class="nav-link"><span style="font-family: 'Tajawal', sans-serif" >كيف يعمل</span></a></li>
                   <li class="nav-item"><a href="#about-section" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">عن التطبيق</span></a></li>
                   <li class="nav-item"><a href="#services-section" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">خدماتنا</span></a></li>
-                  <li class="nav-item"><a href="#home-section" class="nav-link"><span style="font-family: 'Tajawal', sans-serif">الرئيسية</span></a></li>
+                  <li class="nav-item"><a href="#home-section" class="nav-link" ><span style="font-family: 'Tajawal', sans-serif">الرئيسية</span></a></li>
                   {{-- <li class="nav-item"><a href="#team" class="nav-link"><span>فريقنا</span></a></li> --}}
                 </ul>
                 </div>
@@ -149,7 +149,7 @@
         <div class="row">
         	<div class="col-md d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services text-center d-block">
-              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-pin"></span></div>
+              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-pin"></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">استكشاف العقارات</h3>
                 <p style="font-family: 'Tajawal', sans-serif">تطبيق شبابيك  تطبيق متميز يهدف إلى تسهيل عملية البحث عن العقارات وإدارتها بشكل مريح وسهل. و بالنسبة لأصحاب العقارات، يمكنهم إضافة عقاراتهم وتعديل معلوماتها في أي وقت ومراقبة حجوزات العقار بسهولة.</p>
@@ -158,7 +158,7 @@
           </div>
           <div class="col-md d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
-              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-detective"></span></div>
+              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-detective"></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">الخبير العقاري</h3>
                 <p style="font-family: 'Tajawal', sans-serif">يمكن للمستخدمين إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة في أسرع وقت بشكل مجاني.</p>
@@ -167,7 +167,7 @@
           </div>
           <div class="col-md d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services text-center d-block">
-              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-house"></span></div>
+              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-house"></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">مكاتب التصميم &amp;  والمقاولات</h3>
                 <p style="font-family: 'Tajawal', sans-serif">يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.</p>
@@ -176,7 +176,7 @@
           </div>
           <div class="col-md d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
-              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-purse"></span></div>
+              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-purse"></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">البيوت الذكية</h3>
                 <p style="font-family: 'Tajawal', sans-serif">يتميز التطبيق بإمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد.</p>
@@ -369,9 +369,9 @@
                     </p>
 
                       <ul class="ftco-footer-social list-unstyled mt-5">
-    <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-    <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-    <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+    <li class="ftco-animate"><a href="#" style="background:#212529"><span class="icon-twitter"></span></a></li>
+    <li class="ftco-animate"><a href="#" style="background:#212529"><span class="icon-facebook"></span></a></li>
+    <li class="ftco-animate"><a href="#" style="background:#212529"><span class="icon-instagram"></span></a></li>
   </ul>
                         {{-- <p><a href="#" class="btn btn-primary py-3 px-4">Book now</a> <a href="#" class="btn btn-secondary py-3 px-4">Contact us</a></p>--}}
 			          </div>
@@ -388,7 +388,7 @@
 
                     <div class="col-md-4 d-flex align-self-stretch ftco-animate">
                         <div class="media block-6 services text-center d-block">
-                          <div class="icon justify-content-center align-items-center d-flex"><span>3</span></div>
+                          <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>3</span></div>
                           <div class="media-body p-md-3">
                             <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">ابدأ باستقبال الحجوزات</h3>
                             <p class="mb-5" style="font-family: 'Tajawal', sans-serif">بعد تحويل حسابك إلى مطوّر عقاري يمكنك إضافة عقاراتك بكل سهولة والتعديل علي تفاصيلها مثل السعر والحالة .. إلخ في أي وقت. كما تقوم باستقبال الحجوزات والتأكيد عليها وتعديلها وحذفها متى شئت.</p>
@@ -399,7 +399,7 @@
 
                       <div class="col-md-4 d-flex align-self-stretch ftco-animate mt-lg-5">
                         <div class="media block-6 services text-center d-block mt-lg-5 pt-md-5 pt-lg-4">
-                          <div class="icon justify-content-center align-items-center d-flex"><span>2</span></div>
+                          <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>2</span></div>
                           <div class="media-body p-md-3">
                             <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">التواصل معنا لتحويل حسابك</h3>
                             <p class="mb-5" style="font-family: 'Tajawal', sans-serif">قم بالتواصل معنا من خلال الاتصال المباشر أو محادثة على الواتساب أو زيارتنا لتحويل حسابك إلى حساب مطوّر عقاري ومناقشة باقي التفاصيل .</p>
@@ -412,7 +412,7 @@
             <h2 class="mb-4" style="text-align: right;font-family: 'Tajawal', sans-serif"> كيف يعمل ؟</h2>
             <p style="text-align: right;font-family: 'Tajawal', sans-serif">إليك خطوات إنشاء حسابك كمطوّر عقاري للاستفادة من مميزات التطبيق من إضافة وتعديل العقارات ومتابعة حجوزات العقارات.</p>
             <div class="media block-6 services text-center d-block pt-md-5 mt-md-5">
-              <div class="icon justify-content-center align-items-center d-flex"><span>1</span></div>
+              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>1</span></div>
               <div class="media-body p-md-3">
                 <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">إنشاء حساب من خلال التطبيق </h3>
                 <p class="mb-5" style="font-family: 'Tajawal', sans-serif">قم بتحميل التطبيق من المتجر ومن ثم قم بإنشاء حساب إن لم يكن لديك حساب أو تسجيل الدخول إلي التطبيق.</p>
@@ -704,7 +704,7 @@
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
                   <div class="user-img" style="background-image: url(landing2/images/jordan.png)">
-                    <span class="quote d-flex align-items-center justify-content-center">
+                    <span class="quote d-flex align-items-center justify-content-center" style="background: #212529">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
@@ -719,7 +719,7 @@
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
                   <div class="user-img" style="background-image: url(landing2/images/way.png)">
-                    <span class="quote d-flex align-items-center justify-content-center">
+                    <span class="quote d-flex align-items-center justify-content-center" style="background: #212529">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
@@ -735,7 +735,7 @@
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
                   <div class="user-img" style="background-image: url(landing2/images/golden.png)">
-                    <span class="quote d-flex align-items-center justify-content-center">
+                    <span class="quote d-flex align-items-center justify-content-center" style="background: #212529">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
@@ -753,7 +753,7 @@
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
                   <div class="user-img" style="background-image: url(landing2/images/balteem.png)">
-                    <span class="quote d-flex align-items-center justify-content-center">
+                    <span class="quote d-flex align-items-center justify-content-center" style="background: #212529">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
@@ -770,7 +770,7 @@
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
                   <div class="user-img" style="background-image: url(landing2/images/tasty.png)">
-                    <span class="quote d-flex align-items-center justify-content-center">
+                    <span class="quote d-flex align-items-center justify-content-center" style="background: #212529">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
@@ -787,7 +787,7 @@
   <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
                   <div class="user-img" style="background-image: url(landing2/images/yallamzad.png)">
-                    <span class="quote d-flex align-items-center justify-content-center">
+                    <span class="quote d-flex align-items-center justify-content-center" style="background: #212529">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
@@ -803,7 +803,7 @@
                 <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
                   <div class="user-img" style="background-image: url(landing2/images/compasty.png)">
-                    <span class="quote d-flex align-items-center justify-content-center">
+                    <span class="quote d-flex align-items-center justify-content-center" style="background: #212529">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
@@ -990,8 +990,8 @@
 
           <div class="row" data-aos="fade-up">
             <div class="col-lg-6">
-              <div class="info-box mb-4">
-                <i class="bx bx-map"></i>
+              <div class="info-box mb-4" >
+                <i class="bx bx-map" style="color: #212529; border: 2px dotted #212529;"></i>
                 <h3 style="font-family: 'Tajawal', sans-serif">العنوان</h3>
                 <p style="font-family: 'Tajawal', sans-serif">مصر، كفر الشيخ، بلطيم.</p>
               </div>
@@ -1060,7 +1060,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://sukna-eg.com" target="_blank">Shbabeek</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://sukna-eg.com" target="_blank" style="color: #212529">Shbabeek</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 
           </div>

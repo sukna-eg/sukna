@@ -138,7 +138,7 @@ a {
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #0056b3;
+    color: #212529;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -9314,7 +9314,7 @@ textarea.form-control {
     height: 50px;
     width: 50px;
     display: block;
-    background: #4b69bd !important;
+    background: #4b69bd;
     border-radius: 50%;
     position: relative; }
     .ftco-footer-social li a span {
