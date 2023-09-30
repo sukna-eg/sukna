@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="{{ asset('landing2/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{ asset('landing2/css/icomoon.css')}}">
-    <link rel="stylesheet" href="{{ asset('landing2/css/style.css')}}">
+    <link rel="stylesheet" href="landing2/css/style.css">
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
