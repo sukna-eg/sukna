@@ -3,8 +3,8 @@ $enable-deprecation-messages: false;
 $ignore-warning             : true;
 
 // Custom class not bootstrap
-$fn:'HelveticaNeue'; // fn = font normal 
-$fm:'HelveticaNeueMed'; // fm = font Medium 
+$fn:'HelveticaNeue'; // fn = font normal
+$fm:'HelveticaNeueMed'; // fm = font Medium
 $border-radius: 0.75rem;
 // Body
 // $body-bg   : #C7EBFC;
@@ -43,7 +43,7 @@ $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-900: #4b69bd !default;
 $black   : #000 !default;
 
 
@@ -97,9 +97,9 @@ $colors: map-merge((
     "gray": $gray-600,
     "gray-dark": $gray-800),
   $colors);
-  
 
-  
+
+
 $primary  : #0D99FF !default;
 $secondary: #2C2C2C !default;
 $success  : #3AC977 !default;
@@ -136,7 +136,7 @@ $dark     : #6e6e6e;
 	--rgba-secondary-9: #{rgba($secondary, 0.9)};
 	--font-family-base: #{$font-family-base};
 	--font-family-title: #{$font-family-base};
-	 --title: #{$headings-color}; 
+	 --title: #{$headings-color};
 }
 
 
