@@ -999,7 +999,7 @@
 
             <div class="col-lg-3 col-md-6">
               <div class="info-box  mb-4">
-                <i class="bx bx-envelope"></i>
+                <i class="bx bx-envelope" style="color: #212529; border: 2px dotted #212529;"></i>
                 <h3 style="font-family: 'Tajawal', sans-serif">البريد الإلكتروني</h3>
                 <p style="font-family: 'Tajawal', sans-serif">shbabeek.eg@gmail.com</p>
               </div>
@@ -1007,7 +1007,7 @@
 
             <div class="col-lg-3 col-md-6">
               <div class="info-box  mb-4">
-                <i class="bx bx-phone-call"></i>
+                <i class="bx bx-phone-call" style="color: #212529; border: 2px dotted #212529;"></i>
                 <h3 style="font-family: 'Tajawal', sans-serif">اتصل بنا</h3>
                 <p style="font-family: 'Tajawal', sans-serif">+1 5589 55488 55</p>
               </div>
