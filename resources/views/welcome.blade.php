@@ -157,7 +157,41 @@
             <p style="font-family: 'Tajawal', sans-serif;font-weight: bold ">نقوم بتقديم العديد من الخدمات في مكان واحد في تطبيق شبابيك للتسهيل على العملاء</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row flex-column-reverse flex-lg-row">
+
+  <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
+              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-purse"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">البيوت الذكية</h3>
+                <p style="font-family: 'Tajawal', sans-serif">يتميز التطبيق بإمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد.</p>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-house"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">مكاتب التصميم &amp;  والمقاولات</h3>
+                <p style="font-family: 'Tajawal', sans-serif">يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.</p>
+              </div>
+            </div>
+          </div>
+
+
+             <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
+              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-detective"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">الخبير العقاري</h3>
+                <p style="font-family: 'Tajawal', sans-serif">يمكن للمستخدمين إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة في أسرع وقت بشكل مجاني.</p>
+              </div>
+            </div>
+          </div>
+
+
         	<div class="col-md d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services text-center d-block">
               <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-pin"></span></div>
@@ -167,33 +201,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
-              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-detective"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">الخبير العقاري</h3>
-                <p style="font-family: 'Tajawal', sans-serif">يمكن للمستخدمين إضافة استشاراتهم واستفساراتهم حول العقارات المعروضة، حيث يتمكن الخبير العقاري المخصص من الرد عليها وتقديم المشورة المناسبة في أسرع وقت بشكل مجاني.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services text-center d-block">
-              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-house"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">مكاتب التصميم &amp;  والمقاولات</h3>
-                <p style="font-family: 'Tajawal', sans-serif">يوفر التطبيق أيضًا قسمًا خاصًا لعرض مكاتب التصميم والمقاولات المعتمدة للمساعدة في تنفيذ أي تعديلات أو تجديدات داخل العقار.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
-              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-purse"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3" style="font-family: 'Tajawal', sans-serif;font-weight: bold ">البيوت الذكية</h3>
-                <p style="font-family: 'Tajawal', sans-serif">يتميز التطبيق بإمكانية تحويل منزلك إلى منزل ذكي عبر العديد من الخدمات المتاحة، مثل التحكم في الإضاءة والتدفئة والتبريد وأجهزة الأمان عن بُعد.</p>
-              </div>
-            </div>
-          </div>
+
+
         </div>
 			</div>
 		</section>
@@ -395,16 +404,14 @@
 
     <section class="ftco-section ftco-services-2 bg-light" id="workflow-section">
 			<div class="container">
-				<div class="row"  >
+				<div class="row flex-column-reverse flex-lg-row">
 
-                    <div class="col-md-4 heading-section ftco-animate ">
-                        <h2 class="mb-4" style="text-align: right;font-family: 'Tajawal', sans-serif"> كيف يعمل ؟</h2>
-                        <p style="text-align: right;font-family: 'Tajawal', sans-serif">إليك خطوات إنشاء حسابك كمطوّر عقاري للاستفادة من مميزات التطبيق من إضافة وتعديل العقارات ومتابعة حجوزات العقارات.</p>
-                        <div class="media block-6 services text-center d-block pt-md-5 mt-md-5">
-                          <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>1</span></div>
+                  <div class="col-md-4 d-flex align-self-stretch ftco-animate ">
+                        <div class="media block-6 services text-center d-block">
+                          <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>3</span></div>
                           <div class="media-body p-md-3">
-                            <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">إنشاء حساب من خلال التطبيق </h3>
-                            <p class="mb-5" style="font-family: 'Tajawal', sans-serif">قم بتحميل التطبيق من المتجر ومن ثم قم بإنشاء حساب إن لم يكن لديك حساب أو تسجيل الدخول إلي التطبيق.</p>
+                            <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">ابدأ باستقبال الحجوزات</h3>
+                            <p class="mb-5" style="font-family: 'Tajawal', sans-serif">بعد تحويل حسابك إلى مطوّر عقاري يمكنك إضافة عقاراتك بكل سهولة والتعديل علي تفاصيلها مثل السعر والحالة .. إلخ في أي وقت. كما تقوم باستقبال الحجوزات والتأكيد عليها وتعديلها وحذفها متى شئت.</p>
                             <hr>
                           </div>
                         </div>
@@ -425,17 +432,21 @@
                         </div>
                       </div>
 
-
-                      <div class="col-md-4 d-flex align-self-stretch ftco-animate ">
-                        <div class="media block-6 services text-center d-block">
-                          <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>3</span></div>
+                           <div class="col-md-4 heading-section ftco-animate ">
+                        <h2 class="mb-4" style="text-align: right;font-family: 'Tajawal', sans-serif"> كيف يعمل ؟</h2>
+                        <p style="text-align: right;font-family: 'Tajawal', sans-serif">إليك خطوات إنشاء حسابك كمطوّر عقاري للاستفادة من مميزات التطبيق من إضافة وتعديل العقارات ومتابعة حجوزات العقارات.</p>
+                        <div class="media block-6 services text-center d-block pt-md-5 mt-md-5">
+                          <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>1</span></div>
                           <div class="media-body p-md-3">
-                            <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">ابدأ باستقبال الحجوزات</h3>
-                            <p class="mb-5" style="font-family: 'Tajawal', sans-serif">بعد تحويل حسابك إلى مطوّر عقاري يمكنك إضافة عقاراتك بكل سهولة والتعديل علي تفاصيلها مثل السعر والحالة .. إلخ في أي وقت. كما تقوم باستقبال الحجوزات والتأكيد عليها وتعديلها وحذفها متى شئت.</p>
+                            <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">إنشاء حساب من خلال التطبيق </h3>
+                            <p class="mb-5" style="font-family: 'Tajawal', sans-serif">قم بتحميل التطبيق من المتجر ومن ثم قم بإنشاء حساب إن لم يكن لديك حساب أو تسجيل الدخول إلي التطبيق.</p>
                             <hr>
                           </div>
                         </div>
                       </div>
+
+
+
 
 
 
