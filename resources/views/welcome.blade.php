@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
   <head>
     <title>شبابيك</title>
     <meta charset="utf-8">
@@ -31,17 +31,10 @@
 
 
 
-      <style>
-  @media (max-width: 767.98px) {
-      /* Small screens */
-      .ftco-section .row {
-        display: flex;
-        flex-wrap: wrap;
-      }
-    }
 
 
-  </style>
+
+
 
 
 
@@ -404,8 +397,32 @@
 			<div class="container">
 				<div class="row"  >
 
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate ">
+                        <div class="media block-6 services text-center d-block">
+                          <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>3</span></div>
+                          <div class="media-body p-md-3">
+                            <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">ابدأ باستقبال الحجوزات</h3>
+                            <p class="mb-5" style="font-family: 'Tajawal', sans-serif">بعد تحويل حسابك إلى مطوّر عقاري يمكنك إضافة عقاراتك بكل سهولة والتعديل علي تفاصيلها مثل السعر والحالة .. إلخ في أي وقت. كما تقوم باستقبال الحجوزات والتأكيد عليها وتعديلها وحذفها متى شئت.</p>
+                            <hr>
+                          </div>
+                        </div>
+                      </div>
 
-                    <div class="col-md-4 heading-section ftco-animate">
+
+
+
+                      <div class="col-md-4 d-flex align-self-stretch ftco-animate mt-lg-5 " >
+                        <div class="media block-6 services text-center d-block mt-lg-5 pt-md-5 pt-lg-4">
+                          <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>2</span></div>
+                          <div class="media-body p-md-3">
+                            <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">التواصل معنا لتحويل حسابك</h3>
+                            <p class="mb-5" style="font-family: 'Tajawal', sans-serif">قم بالتواصل معنا من خلال الاتصال المباشر أو محادثة على الواتساب أو زيارتنا لتحويل حسابك إلى حساب مطوّر عقاري ومناقشة باقي التفاصيل .</p>
+                            <hr>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 heading-section ftco-animate ">
                         <h2 class="mb-4" style="text-align: right;font-family: 'Tajawal', sans-serif"> كيف يعمل ؟</h2>
                         <p style="text-align: right;font-family: 'Tajawal', sans-serif">إليك خطوات إنشاء حسابك كمطوّر عقاري للاستفادة من مميزات التطبيق من إضافة وتعديل العقارات ومتابعة حجوزات العقارات.</p>
                         <div class="media block-6 services text-center d-block pt-md-5 mt-md-5">
@@ -418,29 +435,8 @@
                         </div>
                       </div>
 
-                      <div class="col-md-4 d-flex align-self-stretch ftco-animate mt-lg-5" >
-                        <div class="media block-6 services text-center d-block mt-lg-5 pt-md-5 pt-lg-4">
-                          <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>2</span></div>
-                          <div class="media-body p-md-3">
-                            <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">التواصل معنا لتحويل حسابك</h3>
-                            <p class="mb-5" style="font-family: 'Tajawal', sans-serif">قم بالتواصل معنا من خلال الاتصال المباشر أو محادثة على الواتساب أو زيارتنا لتحويل حسابك إلى حساب مطوّر عقاري ومناقشة باقي التفاصيل .</p>
-                            <hr>
-                          </div>
-                        </div>
-                      </div>
 
 
-
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services text-center d-block">
-              <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>3</span></div>
-              <div class="media-body p-md-3">
-                <h3 class="heading mb-3" style="font-weight: bold;font-family: 'Tajawal', sans-serif">ابدأ باستقبال الحجوزات</h3>
-                <p class="mb-5" style="font-family: 'Tajawal', sans-serif">بعد تحويل حسابك إلى مطوّر عقاري يمكنك إضافة عقاراتك بكل سهولة والتعديل علي تفاصيلها مثل السعر والحالة .. إلخ في أي وقت. كما تقوم باستقبال الحجوزات والتأكيد عليها وتعديلها وحذفها متى شئت.</p>
-                <hr>
-              </div>
-            </div>
-          </div>
 
         </div>
 			</div>
