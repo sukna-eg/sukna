@@ -387,9 +387,9 @@
 
     <section class="ftco-section ftco-services-2 bg-light" id="workflow-section">
 			<div class="container">
-				<div class="row" style="display: flex; flex-wrap: wrap;">
+				<div class="row reverse-order" >
 
-                    <div class="col-md-4 d-flex align-self-stretch ftco-animate" style="order: 3;">
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
                         <div class="media block-6 services text-center d-block">
                           <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>3</span></div>
                           <div class="media-body p-md-3">
@@ -400,7 +400,7 @@
                         </div>
                       </div>
 
-                      <div class="col-md-4 d-flex align-self-stretch ftco-animate mt-lg-5" style="order: 2;">
+                      <div class="col-md-4 d-flex align-self-stretch ftco-animate mt-lg-5">
                         <div class="media block-6 services text-center d-block mt-lg-5 pt-md-5 pt-lg-4">
                           <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span>2</span></div>
                           <div class="media-body p-md-3">
@@ -411,7 +411,7 @@
                         </div>
                       </div>
 
-          <div class="col-md-4 heading-section ftco-animate" style="order: 1;">
+          <div class="col-md-4 heading-section ftco-animate" >
             <h2 class="mb-4" style="text-align: right;font-family: 'Tajawal', sans-serif"> كيف يعمل ؟</h2>
             <p style="text-align: right;font-family: 'Tajawal', sans-serif">إليك خطوات إنشاء حسابك كمطوّر عقاري للاستفادة من مميزات التطبيق من إضافة وتعديل العقارات ومتابعة حجوزات العقارات.</p>
             <div class="media block-6 services text-center d-block pt-md-5 mt-md-5">

@@ -9192,6 +9192,12 @@ h1, h2, h3, h4, h5,
             }
           }
 
+          @media (max-width: 991.98px) {
+            .ftco-section .row.reverse-order {
+              display: flex;
+              flex-direction: column-reverse;
+            }
+          }
 
 .form-control {
   height: 52px !important;
