@@ -158,7 +158,7 @@
           </div>
         </div>
         <div class="row">
-        	<div class="col-md d-flex align-self-stretch ftco-animate order-4">
+        	<div class="col-md d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services text-center d-block">
               <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-pin"></span></div>
               <div class="media-body">
@@ -167,7 +167,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md d-flex align-self-stretch ftco-animate order-3">
+          <div class="col-md d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
               <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-detective"></span></div>
               <div class="media-body">
@@ -176,7 +176,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md d-flex align-self-stretch ftco-animate order-2 order-md-1">
+          <div class="col-md d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services text-center d-block">
               <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-house"></span></div>
               <div class="media-body">
@@ -185,7 +185,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md d-flex align-self-stretch ftco-animate order-1 order-md-2">
+          <div class="col-md d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services text-center d-block mt-lg-5 pt-lg-4">
               <div class="icon justify-content-center align-items-center d-flex" style="background: #212529"><span class="flaticon-purse"></span></div>
               <div class="media-body">
