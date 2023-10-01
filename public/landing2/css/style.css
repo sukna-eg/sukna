@@ -9173,6 +9173,26 @@ h1, h2, h3, h4, h5,
         background: transparent;
         display: none; } }
 
+        @media (max-width: 767.98px) {
+            .ftco-section .row {
+              display: flex;
+              flex-wrap: wrap;
+            }
+
+            .ftco-section .col-md-4:nth-child(1) {
+              order: 1;
+            }
+
+            .ftco-section .col-md-4:nth-child(2) {
+              order: 2;
+            }
+
+            .ftco-section .col-md-4:nth-child(3) {
+              order: 3;
+            }
+          }
+
+
 .form-control {
   height: 52px !important;
   background: #fff !important;
