@@ -38,7 +38,7 @@
           }
 
           .ftco-section .col-md-4:nth-child(1) {
-            order: 1;
+            order: 3;
           }
 
           .ftco-section .col-md-4:nth-child(2) {
@@ -46,7 +46,7 @@
           }
 
           .ftco-section .col-md-4:nth-child(3) {
-            order: 3;
+            order: 1;
           }
         }
       </style>
