@@ -49,6 +49,18 @@
             order: 1;
           }
         }
+
+
+    @media (min-width: 768px) {
+      /* Medium and large screens */
+      .ftco-section .row {
+        display: flex;
+      }
+
+      .ftco-section .col-md-4 {
+        order: unset;
+      }
+    }
       </style>
 
 
