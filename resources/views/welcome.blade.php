@@ -429,6 +429,27 @@
 			</div>
 		</section>
 
+        <style>
+            @media (max-width: 767.98px) {
+              .ftco-section .row {
+                display: flex;
+                flex-wrap: wrap;
+              }
+
+              .ftco-section .col-md-4:nth-child(1) {
+                order: 1;
+              }
+
+              .ftco-section .col-md-4:nth-child(2) {
+                order: 2;
+              }
+
+              .ftco-section .col-md-4:nth-child(3) {
+                order: 3;
+              }
+            }
+            </style>
+
 		{{-- <section class="ftco-intro img" id="hotel-section" style="background-image: url(images/bg_4.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
