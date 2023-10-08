@@ -49,6 +49,8 @@
                                                     <th>Phone</th>
                                                     <th>Type</th>
                                                     <th>Active</th>
+                                                    <th>Is Block</th>
+                                                       <th>Created At</th>
                                                     <th>Image</th>
 
 
@@ -72,6 +74,12 @@
                                                         </td>
                                                         <td>
                                                             <span>{{ $user->active == 1? 'Active' : 'InActive' }}</span>
+                                                        </td>
+                                                          <td>
+                                                            <span>{{ $user->is_block == 1? 'Blocked' : 'NotBlocked' }}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span>{{ $user->created_at }}</span>
                                                         </td>
 
                                                         <td>

@@ -115,6 +115,32 @@
                                              @enderror
                                         </div>
 
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Block<span class="text-danger">*</span></label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="notblocked" type="radio" name="is_block" value="0" @checked(old('is_block',$user->is_block)==0)>
+                                                <label class="form-check-label" for="notblocked">
+                                                    NotBlocked
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="blocked" type="radio" name="is_block" value="1" @checked(old('is_block',$user->is_block)==1)>
+                                                <label class="form-check-label" for="blocked">
+                                                    Blocked
+                                                </label>
+                                            </div>
+                                            @error('is_block')
+                                            <div class="text-danger">{{ $message }}</div>
+                                             @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Reason</label>
+                                            <input type="text" class="form-control" name="reason" value="{{ old('reason',$user->reason) }}">
+                                            @error('reason')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
 
                                         <div class="col-xl-8 mb-3">
                                             <label for="image" class="form-label">Image</label>

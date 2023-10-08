@@ -34,12 +34,15 @@
                                     <h4 class="heading mb-5"> {{ $user->name }}</h4>
                                     <p class="mb-3"><strong>Id : </strong> {{  $user->id  }}</p>
                                     <p class="mb-3"><strong>Name: </strong> {{ $user->name }}</p>
-                                    {{-- <p class="mb-3"><strong>Email : </strong> {{ $user->email }}</p> --}}
+                                    <p class="mb-3"><strong>Email : </strong> {{ $user->email }}</p>
                                     <p class="mb-3"><strong>Phone :</strong> {{ $user->phone }}</p>
                                     <p class="mb-3"><strong>Type :</strong> {{ $user->type==1?'Agent':'User' }}</p>
                                     <p class="mb-3"><strong>Lat :</strong> {{ $user?->lat}}</p>
                                     <p class="mb-3"><strong> Long : </strong> {{ $user->long }}</p>
                                     <p class="mb-3"><strong>Status :</strong> {{ $user->active == 1? 'Active' : 'InActive' }}</p>
+                                    <p class="mb-3"><strong>Block :</strong> {{ $user->is_block == 1? 'Blocked' : 'NotBlocked' }}</p>
+                                    <p class="mb-3"><strong>Reason :</strong> {{ $user->reason }}</p>
+                                    <p class="mb-3"><strong>Created At :</strong> {{ $user->created_at }}</p>
                                     <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px"
                                         src="{{ asset($user->image) }}" alt="{{ $user->name }}">
 

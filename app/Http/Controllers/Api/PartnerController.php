@@ -106,8 +106,9 @@ public function partners()
 
     public function premiumPartners(){
 
-
-        $data=Partner::where('show',1)->where('premium', 1)->orderBy('order', 'ASC')->get();
+        $seed = floor(date('G') / 2) % 2; // Current hour divided by 2, modulo 2
+        // $data=Partner::where('show',1)->where('premium', 1)->orderBy('order', 'ASC')->get();
+        $data=Partner::where('show',1)->where('premium', 1)->orderByRaw("RAND($seed)")->get();
         return $this->returnData('data',  PartnerResource::collection( $data ), __('Get  succesfully'));
 
        }
