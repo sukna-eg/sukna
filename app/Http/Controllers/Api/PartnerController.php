@@ -116,37 +116,31 @@ public function partners()
 
     public function premiumPartners()
     {
-        $currentTime = time();
-        $interval = 2 * 60 * 60; // 2 hours in seconds
-        $order = floor($currentTime / $interval); // Calculate the order based on the current time
-
-        // Retrieve the pre-generated random order for the current interval
-        $randomOrder = $this->getRandomOrder($order, $interval); // Add $interval as an argument
+        $randomOrder = $this->getRandomOrder();
 
         $data = Partner::where('show', 1)
             ->where('premium', 1)
-            ->orderByRaw("FIELD(`order`, " . implode(',', $randomOrder) . ")") // Update this line
+            ->orderByRaw("FIELD(`id`, " . implode(',', $randomOrder) . ")")
             ->get();
 
         return $this->returnData('data', PartnerResource::collection($data), __('Get successfully'));
     }
 
-    private function getRandomOrder($order, $interval)
+    private function getRandomOrder()
     {
-        // You can store the random orders in a cache or database for persistence
-        // Generate a new random order if it doesn't exist or if the current order has changed
-        if (!Cache::has('random_order') || Cache::get('order') !== $order) {
+        $cacheKey = 'random_order';
+
+        if (!Cache::has($cacheKey)) {
             $partners = Partner::where('show', 1)
                 ->where('premium', 1)
                 ->pluck('id')
                 ->toArray();
 
             shuffle($partners);
-            Cache::put('random_order', $partners, $interval);
-            Cache::put('order', $order, $interval);
+            Cache::put($cacheKey, $partners, now()->addHours(2));
         }
 
-        return Cache::get('random_order');
+        return Cache::get($cacheKey);
     }
 
 
