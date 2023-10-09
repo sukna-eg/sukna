@@ -121,7 +121,7 @@ public function partners()
     $order = floor($currentTime / $interval); // Calculate the order based on the current time
 
     // Retrieve the pre-generated random order for the current interval
-    $randomOrder = $this->getRandomOrder($order);
+    $randomOrder = $this->getRandomOrder($order, $interval);
 
     $data = Partner::where('show', 1)
         ->where('premium', 1)
@@ -131,7 +131,7 @@ public function partners()
     return $this->returnData('data', PartnerResource::collection($data), __('Get successfully'));
 }
 
-private function getRandomOrder($order)
+private function getRandomOrder($order, $interval)
 {
     // You can store the random orders in a cache or database for persistence
     // Generate a new random order if it doesn't exist or if the current order has changed
