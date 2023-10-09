@@ -21,6 +21,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\PartnerDistanceResource;
 use File;
+use Illuminate\Support\Facades\Cache;
 
 class PartnerController extends ApiController
 {
