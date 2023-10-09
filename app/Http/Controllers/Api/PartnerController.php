@@ -104,14 +104,30 @@ public function partners()
     return $this->returnData('data', PartnerResource::collection($data), __('Get successfully'));
 }
 
-    public function premiumPartners(){
+    // public function premiumPartners(){
 
-        $seed = floor(date('G') / 2) % 2; // Current hour divided by 2, modulo 2
-        // $data=Partner::where('show',1)->where('premium', 1)->orderBy('order', 'ASC')->get();
-        $data=Partner::where('show',1)->where('premium', 1)->orderByRaw("RAND($seed)")->get();
-        return $this->returnData('data',  PartnerResource::collection( $data ), __('Get  succesfully'));
 
-       }
+    //     $data=Partner::where('show',1)->where('premium', 1)->orderBy('order', 'ASC')->get();
+
+    //     return $this->returnData('data',  PartnerResource::collection( $data ), __('Get  succesfully'));
+
+    //    }
+
+    public function premiumPartners() {
+        $currentTime = time();
+        $interval = 2 * 60 * 60; // 2 hours in seconds
+        $order = floor($currentTime / $interval); // Calculate the order based on the current time
+
+        // Set the random seed based on the order to get consistent random results for each order
+        mt_srand($order);
+
+        $data = Partner::where('show', 1)
+            ->where('premium', 1)
+            ->orderByRaw('RAND()')
+            ->get();
+
+        return $this->returnData('data', PartnerResource::collection($data), __('Get successfully'));
+    }
 
        public function bedrooms()
        {
