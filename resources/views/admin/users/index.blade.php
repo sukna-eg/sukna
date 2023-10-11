@@ -50,7 +50,8 @@
                                                     <th>Type</th>
                                                     <th>Active</th>
                                                     <th>Is Block</th>
-                                                       <th>Created At</th>
+                                                    <th>Properties Count</th>
+                                                    <th>Created At</th>
                                                     <th>Image</th>
 
 
