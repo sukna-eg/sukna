@@ -38,20 +38,23 @@ class PartnerController extends ApiController
         $currentDate = Carbon::now()->toDateString();
         $notificationDate = Carbon::now()->addDays(2)->toDateString();
 
-        $partners = Partner::where('show', 1)->where('end_date', $currentDate)->get();
+        $partners = Partner::where('show', 1)->get();
 
         foreach ($partners as $partner) {
 
             $userId = $partner->user_id;
 
+            if ($partner->end_date === $currentDate) {
+
             // Update the is_show flag of the partner to 0
-            $partner->is_show = 0;
+            $partner->show = 0;
             $partner->save();
 
             // Update the properties_count of the user
             $user = User::find($userId);
             $user->properties_count -= 1;
             $user->save();
+            }
 
             // Send notification to the user if there are two days remaining
             if ($partner->end_date === $notificationDate) {
