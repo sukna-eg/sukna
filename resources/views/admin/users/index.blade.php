@@ -79,7 +79,11 @@
                                                             <span>{{ $user->is_block == 1? 'Blocked' : 'NotBlocked' }}</span>
                                                         </td>
                                                         <td>
-                                                            <span>{{ $user->created_at }}</span>
+                                                            <span>{{ $user->properties_count }}</span>
+                                                        </td>
+
+                                                        <td>
+                                                            <span>{{ $user->phone }}</span>
                                                         </td>
 
                                                         <td>

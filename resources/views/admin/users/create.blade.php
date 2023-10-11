@@ -99,6 +99,14 @@
                                     </div>
 
                                     <div class="col-xl-8 mb-3">
+                                        <label class="form-label">Properties Count</label>
+                                        <input type="integer" class="form-control" name="properties_count" value="{{ old('properties_count') }}">
+                                        @error('properties_count')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-xl-8 mb-3">
                                         <label class="form-label">Status<span class="text-danger">*</span></label>
                                         <div class="form-check">
                                             <input class="form-check-input" id="notsuggested" type="radio" name="active" value="0" @checked(old('active')==0)>
