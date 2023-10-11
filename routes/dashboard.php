@@ -17,7 +17,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PortraitController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\EmergencyController;
+use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\LandscapeController;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\CounterController;
@@ -46,7 +46,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
         Route::get('/dashboard/{period?}',[DashboardController::class, 'index'])->name('dashboard');
 
         // general
-        Route::resource('emergencies', EmergencyController::class);
+        Route::resource('plans', PlanController::class);
         Route::resource('introductions', IntroductionController::class);
         Route::get('introductions/file/{id}', [IntroductionController::class, 'openFile'])->name('introductions.file');
         Route::resource('notifications', NotificationController::class)->except(['edit','update']);

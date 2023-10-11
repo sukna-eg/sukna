@@ -29,6 +29,8 @@ class User extends Authenticatable
         'reason',
         'image',
         'password',
+        'properties_count',
+        'start_date'
     ];
 
     /**

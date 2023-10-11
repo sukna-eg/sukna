@@ -151,6 +151,14 @@
                                         </div>
 
                                         <div class="col-xl-8 mb-3">
+                                            <label class="form-label">Start Date</label>
+                                            <input type="date" class="form-control" name="start_date" value="{{ old('start_date',$user->start_date) }}">
+                                            @error('start_date')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-xl-8 mb-3">
                                             <label for="image" class="form-label">Image</label>
                                             <input class="form-control" type="file" name="image" id="image">
                                             @error('image')

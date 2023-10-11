@@ -7,6 +7,7 @@ use App\Models\Area;
 use App\Models\City;
 use App\Models\Branch;
 use App\Models\Partner;
+use App\Models\Plan;
 use App\Models\Notification;
 use App\Traits\NotificationTrait;
 use App\Models\User;
@@ -39,7 +40,8 @@ class PartnerController extends Controller
         $areas = Area::all();
         $users = User::all();
         $cities = City::all();
-        return view('admin.partners.create',compact('subcategories','areas','cities','users'));
+        $plans = Plan::all();
+        return view('admin.partners.create',compact('subcategories','areas','cities','users','plans'));
     }
 
     /**
@@ -92,7 +94,8 @@ class PartnerController extends Controller
         $subcategories = Subcategory::all();
         $areas = Area::all();
         $users = User::all();
-        return view('admin.partners.edit',compact('partner','subcategories','areas','users'));
+        $plans = Plan::all();
+        return view('admin.partners.edit',compact('partner','subcategories','areas','users','plans'));
     }
 
     /**

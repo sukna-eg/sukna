@@ -43,6 +43,7 @@
                                     <p class="mb-3"><strong>Block :</strong> {{ $user->is_block == 1? 'Blocked' : 'NotBlocked' }}</p>
                                     <p class="mb-3"><strong>Reason :</strong> {{ $user->reason }}</p>
                                     <p class="mb-3"><strong>Properties Count :</strong> {{ $user->properties_count }}</p>
+                                    <p class="mb-3"><strong>Start Date :</strong> {{ $user->start_date }}</p>
                                     <p class="mb-3"><strong>Created At :</strong> {{ $user->created_at }}</p>
                                     <img class="card-img-bottom img-thumbnail mb-3" style="width: 500px"
                                         src="{{ asset($user->image) }}" alt="{{ $user->name }}">

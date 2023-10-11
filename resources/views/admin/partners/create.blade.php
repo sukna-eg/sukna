@@ -65,6 +65,21 @@
                                         @enderror
                                     </div>
 
+                                    <div class="col-xl-8 mb-3" id="toField">
+                                        <label class="form-label">Start Date</label>
+                                        <input type="date" class="form-control" name="start_date" value="{{ old('start_date') }}">
+                                        @error('start_date')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-xl-8 mb-3" id="toField">
+                                        <label class="form-label">End Date</label>
+                                        <input type="date" class="form-control" name="end_date" value="{{ old('end_date') }}">
+                                        @error('end_date')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
 
                                     <div class="col-xl-8 mb-3">
                                         <label class="form-label">Type<span class="text-danger">*</span></label>
@@ -535,6 +550,20 @@
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
+
+                                    <div class="col-xl-8 mb-3">
+                                        <label class="form-label">Plan<span class="text-danger">*</span></label>
+                                        <select class="default-select form-control wide mb-3" name="plan_id" tabindex="null">
+                                            <option selected disabled>Select Plan</option>
+                                            @foreach ($plans as $plan)
+                                                <option value="{{ $plan->id }}" @selected(old('plan_id')==$plan->id)>{{$plan->name}}</option>
+                                            @endforeach
+										</select>
+                                        @error('plan_id')
+                                            <div class="text-danger">{{ $message }}</div>
+                                         @enderror
+                                    </div>
+
 
                                     <div class="col-xl-8 mb-3">
                                         <label class="form-label">Area<span class="text-danger">*</span></label>

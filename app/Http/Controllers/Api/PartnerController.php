@@ -107,6 +107,10 @@ class PartnerController extends ApiController
             if ($partner->type != 1) {
                 $user->properties_count = $user->properties_count - 1;
                 $user->save();
+
+                $partner->start_date=$user->start_date;
+                $partner->end_date = Carbon::parse($user->start_date)->addMonths(3);
+                $partner->save();
             }
 
             return $this->returnData('data', new PartnerResource($partner), __('Succesfully'));

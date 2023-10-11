@@ -32,6 +32,8 @@
                                     <p class="mb-3"><strong>Address : </strong> {{ $partner->address }}</p>
                                     {{-- <p class="mb-3"><strong>Description-En : </strong> {{ $partner->getTranslation('description', 'en') }}</p> --}}
                                     <p class="mb-3"><strong>Description : </strong> {{ $partner->description }}</p>
+                                    <p class="mb-3"><strong>Start Date : </strong> {{ $partner->start_date }}</p>
+                                    <p class="mb-3"><strong>End Date : </strong> {{ $partner->end_date }}</p>
                                     <p class="mb-3"><strong>Type :</strong> {{ $partner->type == 1? 'Sale' : 'Rent' }}</p>
                                     <p class="mb-3"><strong>Show :</strong> {{ $partner->show == 1? 'Visible' : 'Hidden' }}</p>
                                     <p class="mb-3"><strong>Space :</strong> {{ $partner->space }}</p>
@@ -87,6 +89,7 @@
 
                                     <p class="mb-3"><strong>Purpose :</strong> {{ $partner?->purpose }}</p>
                                     <p class="mb-3"><strong>Price :</strong> {{ $partner?->price }}</p>
+                                    <p class="mb-3"><strong>Plan :</strong> {{ $partner->plan?->name }}</p>
                                     <p class="mb-3"><strong>Area :</strong> {!! $partner->area->getTranslation('name', 'ar') !!}</p>
                                     <p class="mb-3"><strong>Agent :</strong> {{ $partner?->user?->name }}</p>
                                     <p class="mb-3"><strong>Subcategory :</strong> {!! $partner->subcategory->getTranslation('name', 'ar') !!}</p>

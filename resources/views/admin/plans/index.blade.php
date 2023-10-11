@@ -7,7 +7,7 @@
         <div class="page-titles">
             <ol class="breadcrumb">
                 <li>
-                    <h5 class="bc-title">{{ __('Emergencies') }}</h5>
+                    <h5 class="bc-title">{{ __('Plans') }}</h5>
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
@@ -20,9 +20,9 @@
                         </svg>
                         Home </a>
                 </li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Emergencies') }} </a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Plans') }} </a></li>
             </ol>
-            <a class="text-primary fs-13" href="{{ route('admin.emergencies.create') }}">+ Add Emergency</a>
+            <a class="text-primary fs-13" href="{{ route('admin.plans.create') }}">+ Add Plan</a>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -34,7 +34,7 @@
                                     <x-admin-layouts.alerts />
                                     <div class="table-responsive active-projects manage-client">
                                         <div class="tbl-caption">
-                                            <h4 class="heading mb-0"> {{ __('Emergencies') }}</h4>
+                                            <h4 class="heading mb-0"> {{ __('Plans') }}</h4>
                                         </div>
                                         <div class="tab-content" id="myTabContent">
                                             <div class="tab-pane fade show active" id="Preview" role="tabpanel"
@@ -45,29 +45,30 @@
                                                             style="min-width: 845px">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Entity responsible-En</th>
-                                                                    <th>Entity responsible-Ar</th>
-                                                                    <th>Phone</th>
-                                                                    <th>Whatsapp</th>
+                                                                    <th>Id</th>
+                                                                    <th>Name</th>
+                                                                    <th>Type</th>
+                                                                    <th>Count</th>
 
 
                                                                     <th>actions</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                @forelse ($data as $emergency)
+                                                                @forelse ($data as $plan)
                                                                     <tr>
+                                                                        <td>
+                                                                            <span>{{ $plan->id }}</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span>{{ $plan->name }}</span>
+                                                                        </td>
 
-                                                                        <td><span>{{ $emergency->getTranslation('agency', 'en') }}</span>
+                                                                        <td>
+                                                                            <span>{{ $plan->type }}</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span>{{ $emergency->getTranslation('agency', 'ar') }}</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span>{{ $emergency->phone }}</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span>{{ $emergency->whatsapp }}</span>
+                                                                            <span>{{ $plan->counts }}</span>
                                                                         </td>
 
                                                                         <td>
@@ -103,14 +104,14 @@
                                                                                 </button>
                                                                                 <div class="dropdown-menu">
                                                                                     <a class="dropdown-item"
-                                                                                        href="{{ route('admin.emergencies.edit', $emergency->id) }}">Edit</a>
+                                                                                        href="{{ route('admin.plans.edit', $plan->id) }}">Edit</a>
                                                                                     <a class="dropdown-item"
-                                                                                        href="{{ route('admin.emergencies.show', $emergency->id) }}">Show</a>
+                                                                                        href="{{ route('admin.plans.show', $plan->id) }}">Show</a>
                                                                                         <button class="dropdown-item"
                                                                                         data-bs-toggle="modal"
                                                                                         data-bs-target="#deleteModal"
-                                                                                        data-id="{{ $emergency->id }}"
-                                                                                        data-name="{{ $emergency->agency }}">Delete</button>
+                                                                                        data-id="{{ $plan->id }}"
+                                                                                        data-name="{{ $plan->name }}">Delete</button>
                                                                                 </div>
                                                                             </div>
                                                                         </td>
@@ -151,10 +152,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Delete Emergency</h5>
+                <h5 class="modal-title" id="deleteModalLabel">Delete Plan</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ route('admin.emergencies.destroy', 'test') }}" method="post">
+            <form action="{{ route('admin.plans.destroy', 'test') }}" method="post">
                 {{ method_field('delete') }}
                 @csrf
                 <div class="modal-body">
