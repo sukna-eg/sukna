@@ -43,6 +43,7 @@ class PartnerController extends ApiController
         foreach ($partners as $partner) {
 
             $userId = $partner->user_id;
+            $user = User::find($userId);
 
             if ($partner->end_date === $currentDate) {
 
