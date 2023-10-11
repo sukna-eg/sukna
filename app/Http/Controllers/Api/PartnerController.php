@@ -67,7 +67,7 @@ class PartnerController extends ApiController
 
                 $token = $user->device_token;
 
-                $this->send(' مرحبًا '.$user->name.'👋🏼',' نود أن نذكرك بأن باقتك سوف تنتهي بعد يومين وشكرا',$token);
+                $this->send(' نود أن نذكرك بأن باقتك سوف تنتهي بعد يومين وشكرا',' مرحبًا '.$user->name.'👋🏼',$token);
 
                     $note= new Notification();
                     $note->title=' مرحبًا '.$user->name.'👋🏼';
