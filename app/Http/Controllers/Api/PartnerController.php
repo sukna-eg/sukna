@@ -38,7 +38,7 @@ class PartnerController extends ApiController
         $currentDate = Carbon::now()->toDateString();
         $notificationDate = Carbon::now()->addDays(2)->toDateString();
 
-        $partners = Partner::where('is_show', 1)->where('end_date', $currentDate)->get();
+        $partners = Partner::where('show', 1)->where('end_date', $currentDate)->get();
 
         foreach ($partners as $partner) {
 
