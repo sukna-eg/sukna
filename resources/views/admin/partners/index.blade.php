@@ -23,7 +23,7 @@
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ __('Partners') }} </a></li>
             </ol>
             <!-- Assuming you're using Blade templating engine -->
-            <a href="{{ route('admin.partners.check') }}" class="text-primary fs-13">Check Partners</a>
+            <a href="{{ route('admin.check') }}" class="text-primary fs-13">Check Partners</a>
             <a class="text-primary fs-13" href="{{ route('admin.partners.create') }}">+ Add Partner</a>
         </div>
         <div class="container-fluid">
