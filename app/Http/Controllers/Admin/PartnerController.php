@@ -18,6 +18,7 @@ use App\Models\Pimage;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\Admin\PartnerRequest;
+use Carbon\Carbon;
 
 class PartnerController extends Controller
 {
@@ -203,5 +204,53 @@ class PartnerController extends Controller
     {
         $partner = Partner::findOrFail($id);
         return response()->file($partner->music);
+    }
+
+
+    public function checkPartners()
+    {
+
+        $currentDate = Carbon::now()->toDateString();
+
+
+        $partners = Partner::where('show', 1)->get();
+
+        foreach ($partners as $partner) {
+
+            $notificationDate = Carbon::parse($partner->end_date)->subDays(2)->toDateString();
+
+            $userId = $partner->user_id;
+            $user = User::find($userId);
+
+            if ($partner->end_date === $currentDate) {
+
+            // Update the is_show flag of the partner to 0
+            $partner->show = 0;
+            $partner->save();
+
+            // Update the properties_count of the user
+            $user = User::find($userId);
+            $user->properties_count -= 1;
+            $user->save();
+            }
+
+
+            if ($currentDate === $notificationDate) {
+
+
+                $token = $user->device_token;
+
+                $this->send(' نود أن نذكرك بأن باقتك سوف تنتهي بعد يومين وشكرا',' مرحبًا '.$user->name.'👋🏼',$token);
+
+                    $note= new Notification();
+                    $note->title=' مرحبًا '.$user->name.'👋🏼';
+                    $note->content = ' نود أن نذكرك بأن باقتك سوف تنتهي بعد يومين وشكرا';
+                    $note->user_id = $user->id;
+                    $note->route_id = $partner->id;
+                    $note->save();
+            }
+        }
+
+        return redirect()->route('admin.partners.index')->with('success','Partner has been updated successfully');
     }
 }
