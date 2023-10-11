@@ -23,9 +23,12 @@ use App\Http\Resources\PartnerDistanceResource;
 use File;
 use Illuminate\Support\Facades\Cache;
 use Carbon\Carbon;
+use App\Traits\NotificationTrait;
 
 class PartnerController extends ApiController
 {
+    use NotificationTrait;
+
     public function __construct()
     {
         $this->resource = PartnerResource::class;
