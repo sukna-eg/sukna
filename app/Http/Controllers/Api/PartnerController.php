@@ -9,6 +9,7 @@ use App\Models\Area;
 use App\Models\Category;
 use App\Models\Subcategory;
 use App\Models\Pimage;
+use App\Models\Notification;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
 use App\Http\Requests\PartnerRequest;
