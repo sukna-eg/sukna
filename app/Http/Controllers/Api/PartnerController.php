@@ -68,7 +68,7 @@ class PartnerController extends ApiController
                     $note->title=' مرحبًا '.$user->name.'👋🏼';
                     $note->content = ' نود أن نذكرك بأن باقتك سوف تنتهي بعد يومين وشكرا';
                     $note->user_id = $user->id;
-                    $note->route_id = partner->id;
+                    $note->route_id = $partner->id;
                     $note->save();
             }
         }
