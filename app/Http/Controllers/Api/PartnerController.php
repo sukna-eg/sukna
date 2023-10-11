@@ -58,10 +58,7 @@ class PartnerController extends ApiController
             $partner->show = 0;
             $partner->save();
 
-            // Update the properties_count of the user
-            $user = User::find($userId);
-            $user->properties_count -= 1;
-            $user->save();
+
             }
 
 
