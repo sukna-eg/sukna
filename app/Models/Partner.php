@@ -80,4 +80,10 @@ class Partner extends Model
     {
         return $this->hasMany(BlackDay::class)->paginate(10);
     }
+
+
+    public function plan()
+	{
+		return $this->belongsTo(Plan::class);
+	}
 }

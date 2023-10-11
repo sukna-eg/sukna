@@ -65,6 +65,9 @@ class PartnerResource extends JsonResource
             'created_at'=> $this->created_at,
             'area'=> $this->area?->name,
             'city'=> $this->area?->city?->name,
+            'start_date' => $this->start_date,
+            'end_date' => $this->end_date,
+            'plan_id' => $this->plan?->id,
             'user'=> new UserResource($this?->user),
 
             'rating'=>(double)$this?->reviews?->avg('points'),

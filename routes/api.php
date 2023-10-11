@@ -98,6 +98,9 @@ Route::post('partner/edit/{id}', [PartnerController::class, 'edit']);
 //premiumPartners
 Route::get('premium-partners', [PartnerController::class, 'premiumPartners']);
 
+//checkPartners
+Route::get('check-partner', [PartnerController::class, 'checkPartners']);
+
 
 //getPartnersByCategory
 Route::get('partners-by-category/{id}', [CategoryController::class, 'getPartnersByCategory']);

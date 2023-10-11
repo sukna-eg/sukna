@@ -28,6 +28,7 @@ class UserResource extends JsonResource
             'active'=> $this?->active,
             'is_block'=> $this?->is_block,
             'reason'=> $this?->reason,
+            'properties_count'=> $this?->properties_count,
             // 'partners' => PartnerResource::collection($this->partners),
         ];
     }

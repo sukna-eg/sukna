@@ -32,11 +32,57 @@ class PartnerController extends ApiController
         $this->repositry =  new Repository($this->model);
     }
 
+    public function checkPartners()
+    {
+        $currentDate = Carbon::now()->toDateString();
+        $notificationDate = Carbon::now()->addDays(2)->toDateString();
+
+        $partners = Partner::where('is_show', 1)->where('end_date', $currentDate)->get();
+
+        foreach ($partners as $partner) {
+
+            $userId = $partner->user_id;
+
+            // Update the is_show flag of the partner to 0
+            $partner->is_show = 0;
+            $partner->save();
+
+            // Update the properties_count of the user
+            $user = User::find($userId);
+            $user->properties_count -= 1;
+            $user->save();
+
+            // Send notification to the user if there are two days remaining
+            if ($partner->end_date === $notificationDate) {
+
+
+                $token = $user->device_token;
+
+                $this->send(' مرحبًا '.$user->name.'👋🏼',' نود أن نذكرك بأن باقتك سوف تنتهي بعد يومين وشكرا',$token);
+
+                    $note= new Notification();
+                    $note->title=' مرحبًا '.$user->name.'👋🏼';
+                    $note->content = ' نود أن نذكرك بأن باقتك سوف تنتهي بعد يومين وشكرا';
+                    $note->user_id = $user->id;
+                    $note->route_id = partner->id;
+                    $note->save();
+            }
+        }
+
+        return $this->returnSuccessMessage('Partners updated successfully');
+    }
+
+
     public function save( Request $request ){
 
+      $user=User::find($request->user_id);
+        if($request->type != 1 && $user->properties_count == 0){
 
+            return $this->returnError('Sorry! your package has expired');
+        }
 
             $partner = $this->repositry->save($request->except('images'));
+
 
             if (isset($request->images)) {
                 foreach ($request->images as $image) {
@@ -47,6 +93,11 @@ class PartnerController extends ApiController
 
                     $im->save();
                 }
+            }
+
+            if ($partner->type != 1) {
+                $user->properties_count = $user->properties_count - 1;
+                $user->save();
             }
 
             return $this->returnData('data', new PartnerResource($partner), __('Succesfully'));
