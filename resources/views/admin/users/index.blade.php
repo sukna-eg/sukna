@@ -51,7 +51,7 @@
                                                     <th>Active</th>
                                                     <th>Is Block</th>
                                                     <th>Properties Count</th>
-                                                    {{-- <th>Created At</th> --}}
+                                                    <th>Start Date</th>
                                                     <th>Image</th>
 
 
@@ -83,9 +83,9 @@
                                                             <span>{{ $user->properties_count }}</span>
                                                         </td>
 
-                                                        {{-- <td>
-                                                            <span>{{ $user->phone }}</span>
-                                                        </td> --}}
+                                                        <td>
+                                                            <span>{{ $user->start_date }}</span>
+                                                        </td>
 
                                                         <td>
                                                             <span><img src="{{ asset($user->image) }}"
