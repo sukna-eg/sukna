@@ -108,8 +108,10 @@ class PartnerController extends ApiController
                 $user->properties_count = $user->properties_count - 1;
                 $user->save();
 
+                $last_sub=$user->subscriptions?->last();
                 $partner->start_date=$user->start_date;
                 $partner->end_date = Carbon::parse($user->start_date)->addMonths(3);
+                $partner->plan_id=$last_sub->plan_id;
                 $partner->save();
             }
 

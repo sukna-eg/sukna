@@ -33,6 +33,8 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\PrimageController;
 use App\Http\Controllers\Admin\SmartController;
 use App\Http\Controllers\Admin\WorkController;
+use App\Http\Controllers\Admin\SubscriptionController;
+
 
 
 
@@ -47,6 +49,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
 
         // general
         Route::resource('plans', PlanController::class);
+        Route::resource('subscriptions', SubscriptionController::class);
         Route::resource('introductions', IntroductionController::class);
         Route::get('introductions/file/{id}', [IntroductionController::class, 'openFile'])->name('introductions.file');
         Route::resource('notifications', NotificationController::class)->except(['edit','update']);
@@ -60,6 +63,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
         // users
         Route::resource('profile-images', ProfileImageController::class);
         Route::resource('users', UserController::class);
+        Route::get('reports', [UserController::class, 'report'])->name('report');
 
         // cities
         Route::resource('cities', CityController::class);

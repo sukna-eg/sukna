@@ -111,7 +111,7 @@
 						</a>
                         <ul aria-expanded="false" class="mm-collapse">
                             <li><a href="{{ route('admin.users.index') }}">Users</a></li>
-                            {{-- <li><a href="{{ route('admin.profile-images.index') }}">Profile images</a></li> --}}
+                            <li><a href="{{ route('admin.report') }}">Reports</a></li>
                         </ul>
 					</li>
                     <li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
@@ -123,11 +123,11 @@
 								<path d="M17.0458 13.5045C18.4675 13.7163 19.4603 14.2149 19.4603 15.2416C19.4603 15.9483 18.9928 16.4067 18.2374 16.6936" stroke="#888888" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 						</div>
-						<span class="nav-text">Plans Info</span>
+						<span class="nav-text">Subscriptions</span>
 						</a>
                         <ul aria-expanded="false" class="mm-collapse">
                             <li><a href="{{ route('admin.plans.index') }}">Plans</a></li>
-
+                            <li><a href="{{ route('admin.subscriptions.index') }}">Subscriptions</a></li>
                         </ul>
 					</li>
 
