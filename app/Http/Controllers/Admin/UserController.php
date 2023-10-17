@@ -180,7 +180,7 @@ class UserController extends Controller
                     $total = ($partner->price * 0.15);
 
                     if ($first == 1 && $second == 0 && $third == 0) {
-                        $dpaid = $partner->price * 0.15;
+                        $paid = $partner->price * 0.15;
 
                         $total = $total * 3;
 

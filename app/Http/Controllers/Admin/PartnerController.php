@@ -154,20 +154,20 @@ class PartnerController extends Controller
 
 
         // Send notification to users
-        $FcmToken = User::whereNotNull('device_token')->pluck('device_token')->all();
-        $this->sendPartnerNoti('👋🏼 مرحبا ',' تم إضافة عقار جديد ربما يعجبك ، اضغط هنا للمشاهدة. ','partner',$partner->id,$FcmToken);
+        // $FcmToken = User::whereNotNull('device_token')->pluck('device_token')->all();
+        // $this->sendPartnerNoti('👋🏼 مرحبا ',' تم إضافة عقار جديد ربما يعجبك ، اضغط هنا للمشاهدة. ','partner',$partner->id,$FcmToken);
 
-        $users = User::whereNotNull('device_token')->get();
+        // $users = User::whereNotNull('device_token')->get();
 
-        foreach ($users as $user) {
-            $note = new Notification();
-            $note->title='👋🏼 مرحبا ';
-            $note->content = 'لقد تم إضافة عقار جديد يمكنك رؤيته من هنا';
-            $note->user_id = $user->id;
-            $note->type = 'partner';
-            $note->route_id = $partner->id;
-            $note->save();
-        }
+        // foreach ($users as $user) {
+        //     $note = new Notification();
+        //     $note->title='👋🏼 مرحبا ';
+        //     $note->content = 'لقد تم إضافة عقار جديد يمكنك رؤيته من هنا';
+        //     $note->user_id = $user->id;
+        //     $note->type = 'partner';
+        //     $note->route_id = $partner->id;
+        //     $note->save();
+        // }
     }
 
     // Update the partner
