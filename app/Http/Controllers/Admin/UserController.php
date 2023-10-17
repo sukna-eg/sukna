@@ -224,27 +224,27 @@ class UserController extends Controller
                     $maxPrice = $maxPrices[0] ?? null;
                     $secondMaxPrice = $maxPrices[1] ?? null;
 
-                    $paid = $maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1);
-                    $total = $maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1);
+                    $paid = 0;
+                    $total = ($maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1)) * 3;
 
                     if ($first == 1 && $second == 0 && $third == 0) {
-                        $paid = $paid;
+                        $paid = $maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1);
 
-                        $total = $total * 3;
+                        // $total = $total * 3;
 
                     }
 
                     if ($first == 1 && $second == 1 && $third == 0) {
 
-                        $total = $total * 3;
-                        $paid = $paid * 2;
+                        // $total = $total * 3;
+                        $paid = ($maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1))* 2;
 
                     }
 
                     if ($first == 1 && $second == 1 && $third == 1) {
 
-                        $total = $total * 3;
-                        $paid = $paid * 3;
+                        // $total = $total * 3;
+                        $paid =($maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1))* 3;
 
                     }
 
@@ -275,7 +275,7 @@ class UserController extends Controller
 
                         }
 
-                        $total = $total * 3;
+                        // $total = $total * 3;
 
                     }
 
