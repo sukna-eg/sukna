@@ -237,14 +237,14 @@ class UserController extends Controller
                     if ($first == 1 && $second == 1 && $third == 0) {
 
                         // $total = $total * 3;
-                        $paid = ($maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1))* 2;
+                        $paid = ($maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1)) * 2;
 
                     }
 
                     if ($first == 1 && $second == 1 && $third == 1) {
 
                         // $total = $total * 3;
-                        $paid =($maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1))* 3;
+                        $paid = ($maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1)) * 3;
 
                     }
 
@@ -262,6 +262,20 @@ class UserController extends Controller
                         ->where('plan_id', $lastPlan)
                         ->max('price');
 
+                    $maxId = Partner::where('user_id', $user->id)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->orderBy('price', 'desc')
+                        ->value('id');
+
+                    $mpartners = Partner::where('user_id', $user->id)
+                        ->where('id', '!=', $maxId)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->get();
+
                     $paid = 0;
                     $total = ($maxOne * 0.2);
 
@@ -275,7 +289,7 @@ class UserController extends Controller
 
                         }
 
-                        // $total = $total * 3;
+                        $total = $total * 3;
 
                     }
 
