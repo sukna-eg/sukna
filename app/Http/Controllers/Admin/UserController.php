@@ -710,8 +710,8 @@ class UserController extends Controller
 
                         foreach ($mpartners as $partner) {
 
-                            $mpaid = $mpaid + ($mpartner->price * 0.05);
-                            $mtotal = $mtotal + ($mpartner->price * 0.05);
+                            $mpaid = $mpaid + ($partner->price * 0.05);
+                            $mtotal = $mtotal + ($partner->price * 0.05);
 
                         }
 
