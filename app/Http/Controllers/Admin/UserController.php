@@ -1801,6 +1801,7 @@ class UserController extends Controller
 
         // Calculate the sum of 'total' for all users
         $sumTotal = $users->sum('total');
+        // dd($sumTotal);
 
         return view('admin.users.report', compact('users', 'sumPaid', 'sumTotal'));
 
