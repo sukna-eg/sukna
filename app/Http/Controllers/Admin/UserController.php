@@ -486,6 +486,21 @@ class UserController extends Controller
                         ->where('plan_id', $lastPlan)
                         ->max('price');
 
+
+                        $maxId = Partner::where('user_id', $user->id)
+                        ->where('show', 1)
+                        ->where('period', 0)
+                        ->where('plan_id', $lastPlan)
+                        ->orderBy('price', 'desc')
+                        ->value('id');
+
+                    $dpartners = Partner::where('user_id', $user->id)
+                        ->where('id', '!=', $maxId)
+                        ->where('show', 1)
+                        ->where('period', 0)
+                        ->where('plan_id', $lastPlan)
+                        ->get();
+
                     $paid = 0;
                     $total = $maxOne;
 
@@ -548,6 +563,20 @@ class UserController extends Controller
                         ->where('period', 1)
                         ->where('plan_id', $lastPlan)
                         ->max('price');
+
+                           $maxId = Partner::where('user_id', $user->id)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->orderBy('price', 'desc')
+                        ->value('id');
+
+                    $mpartners = Partner::where('user_id', $user->id)
+                        ->where('id', '!=', $maxId)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->get();
 
                     $paid = 0;
                     $total = ($maxOne * 0.15);
@@ -617,6 +646,34 @@ class UserController extends Controller
                         ->where('period', 0)
                         ->where('plan_id', $lastPlan)
                         ->max('price');
+
+                           $mmaxId = Partner::where('user_id', $user->id)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->orderBy('price', 'desc')
+                        ->value('id');
+
+                    $mpartners = Partner::where('user_id', $user->id)
+                        ->where('id', '!=', $mmaxId)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->get();
+
+                           $dmaxId = Partner::where('user_id', $user->id)
+                        ->where('show', 1)
+                        ->where('period', 0)
+                        ->where('plan_id', $lastPlan)
+                        ->orderBy('price', 'desc')
+                        ->value('id');
+
+                    $dpartners = Partner::where('user_id', $user->id)
+                        ->where('id', '!=', $dmaxId)
+                        ->where('show', 1)
+                        ->where('period', 0)
+                        ->where('plan_id', $lastPlan)
+                        ->get();
 
                     $dpaid = 0;
                     $mpaid = 0;
@@ -707,6 +764,20 @@ class UserController extends Controller
                         ->where('plan_id', $lastPlan)
                         ->max('price');
 
+                           $maxId = Partner::where('user_id', $user->id)
+                        ->where('show', 1)
+                        ->where('period', 0)
+                        ->where('plan_id', $lastPlan)
+                        ->orderBy('price', 'desc')
+                        ->value('id');
+
+                    $mpartners = Partner::where('user_id', $user->id)
+                        ->where('id', '!=', $maxId)
+                        ->where('show', 1)
+                        ->where('period', 0)
+                        ->where('plan_id', $lastPlan)
+                        ->get();
+
                     $partner = Partner::where('user_id', $user->id)
                         ->where('show', 1)
                         ->where('period', 1)
@@ -780,6 +851,20 @@ class UserController extends Controller
                         ->where('period', 1)
                         ->where('plan_id', $lastPlan)
                         ->max('price');
+
+                           $maxId = Partner::where('user_id', $user->id)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->orderBy('price', 'desc')
+                        ->value('id');
+
+                    $mpartners = Partner::where('user_id', $user->id)
+                        ->where('id', '!=', $maxId)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->get();
 
                     $partner = Partner::where('user_id', $user->id)
                         ->where('show', 1)

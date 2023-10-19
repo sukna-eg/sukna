@@ -57,7 +57,7 @@
                                                     <th>Paids</th>
 
 
-                                                    <th>actions</th>
+                                                    {{-- <th>actions</th> --}}
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -101,7 +101,7 @@
 
 
 
-
+{{--
                                                         <td>
                                                             <div class="dropdown">
                                                                 <button type="button"
@@ -132,7 +132,7 @@
                                                                     data-id="{{ $user->id }}" data-name="{{ $user->name }}">Delete</button>
                                                                 </div>
                                                             </div>
-                                                        </td>
+                                                        </td> --}}
                                                     </tr>
 
                                                 @empty
