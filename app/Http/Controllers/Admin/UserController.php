@@ -772,7 +772,7 @@ class UserController extends Controller
                         ->orderBy('price', 'desc')
                         ->value('id');
 
-                    $mpartners = Partner::where('user_id', $user->id)
+                    $dpartners = Partner::where('user_id', $user->id)
                         ->where('id', '!=', $maxId)
                         ->where('show', 1)
                         ->where('period', 0)
