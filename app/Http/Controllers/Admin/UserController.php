@@ -1034,7 +1034,7 @@ class UserController extends Controller
                     $total = ($maxOne * 0.15);
 
                     if ($first == 1 && $second == 0 && $third == 0) {
-                        $dpaid = $maxOne * 0.15;
+                        $paid = $maxOne * 0.15;
 
                         $total = $total * 3;
 
