@@ -1795,12 +1795,7 @@ class UserController extends Controller
                         $dpaid = $maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1);
                         $mpaid = $partner->price * 0.2;
 
-                        foreach ($dpartners as $partner) {
 
-                            $dpaid = $dpaid + ($partner->price * 0.1);
-                            $dtotal = $dtotal + ($partner->price * 0.1);
-
-                        }
 
                         $paid = $dpaid + $mpaid;
                         $total = ($mtotal + $dtotal) * 3;
@@ -1811,12 +1806,7 @@ class UserController extends Controller
                         $dpaid = $maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1);
                         $mpaid = $partner->price * 0.2;
 
-                        foreach ($dpartners as $partner) {
 
-                            $dpaid = $dpaid + ($partner->price * 0.1);
-                            $dtotal = $dtotal + ($partner->price * 0.1);
-
-                        }
 
                         $paid = ($dpaid + $mpaid) * 2;
                         $total = ($mtotal + $dtotal) * 3;
@@ -1828,12 +1818,7 @@ class UserController extends Controller
                         $dpaid = $maxPrice + (0.1 * $maxPrice) + ($secondMaxPrice * 0.1);
                         $mpaid = $partner->price * 0.2;
 
-                        foreach ($dpartners as $partner) {
 
-                            $dpaid = $dpaid + ($partner->price * 0.1);
-                            $dtotal = $dtotal + ($partner->price * 0.1);
-
-                        }
 
                         $paid = ($dpaid + $mpaid) * 3;
                         $total = ($mtotal + $dtotal) * 3;
