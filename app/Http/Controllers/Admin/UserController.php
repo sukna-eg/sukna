@@ -1126,7 +1126,7 @@ class UserController extends Controller
                         }
 
                         $total = $total * 3;
-
+                        $paid= $dpaid;
                     }
 
                     if ($first == 1 && $second == 1 && $third == 0) {
@@ -1141,7 +1141,7 @@ class UserController extends Controller
                         }
 
                         $total = $total * 3;
-                        $dpaid = $dpaid * 2;
+                        $paid = $dpaid * 2;
 
                     }
 
@@ -1157,7 +1157,7 @@ class UserController extends Controller
                         }
 
                         $total = $total * 3;
-                        $dpaid = $dpaid * 3;
+                        $paid = $dpaid * 3;
 
                     }
 
