@@ -65,7 +65,7 @@
                                         <select class="default-select form-control wide mb-3" name="user_id" tabindex="null">
                                             <option selected disabled>Select User</option>
                                             @foreach ($users as $user)
-                                                <option value="{{ $user->id }}" @selected(old('user_id')==$user->id)>{{ $user->name }}</option>
+                                                <option value="{{ $user->id }}" @selected(old('user_id')==$user->id)>{{ $user->id }}</option>
                                             @endforeach
 										</select>
                                         @error('user_id')
