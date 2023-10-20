@@ -1703,8 +1703,24 @@ class UserController extends Controller
                         ->limit(2)
                         ->pluck('price');
 
+
+
                     $maxPrice = $maxPrices[0] ?? null;
                     $secondMaxPrice = $maxPrices[1] ?? null;
+
+                           $maxId = Partner::where('user_id', $user->id)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->orderBy('price', 'desc')
+                        ->value('id');
+
+                        $mpartners = Partner::where('user_id', $user->id)
+                        ->where('id', '!=', $maxId)
+                        ->where('show', 1)
+                        ->where('period', 1)
+                        ->where('plan_id', $lastPlan)
+                        ->get();
 
                     $dpaid = 0;
                     $mpaid = 0;
