@@ -1203,6 +1203,7 @@ class UserController extends Controller
 
                         }
 
+                        $paid= $mpaid;
                         $total = $total * 3;
 
                     }
