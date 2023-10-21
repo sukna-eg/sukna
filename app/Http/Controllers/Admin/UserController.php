@@ -9,6 +9,9 @@ use App\Models\Subscription;
 use App\Models\User;
 use File;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\UsersDataExport;
+use App\Exports\UsersExport;
 
 class UserController extends Controller
 {
@@ -1918,4 +1921,9 @@ class UserController extends Controller
         return view('admin.users.report', compact('users', 'sumPaid', 'sumTotal'));
 
     }
+
+    public function exportExcel()
+{
+    return Excel::download(new UsersExport, 'users.xlsx');
+}
 }
