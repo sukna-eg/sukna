@@ -66,6 +66,8 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function (){
         Route::get('reports', [UserController::class, 'report'])->name('report');
         Route::get('export-excel', [UserController::class, 'exportExcel'])->name('export');
 
+       
+
 
         // cities
         Route::resource('cities', CityController::class);

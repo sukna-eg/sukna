@@ -195,6 +195,9 @@ Route::get('answer/{id}', [AnswerController::class, 'view']);
 Route::get('answer/delete/{id}', [AnswerController::class, 'delete']);
 Route::post('answer/edit/{id}', [AnswerController::class, 'edit']);
 
+Route::get('encodings', [AnswerController::class, 'encodings']);
+
+
 //Appointment
 Route::get('appointments', [AppointmentController::class, 'pagination']);
 Route::post('appointment-create', [AppointmentController::class, 'save']);

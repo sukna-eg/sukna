@@ -13,6 +13,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\UsersDataExport;
 use App\Exports\UsersExport;
 
+
 class UserController extends Controller
 {
     /**
@@ -23,6 +24,9 @@ class UserController extends Controller
         $data = User::get();
         return view('admin.users.index', compact('data'));
     }
+
+
+
 
     /**
      * Show the form for creating a new resource.
