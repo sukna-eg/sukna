@@ -32,6 +32,8 @@ class AnswerController extends ApiController
         $repeatedData = array_fill(0, 100, $data);
         $flattenedData = array_merge(...$repeatedData);
 
+
+
         return $this->returnSuccessMessage($flattenedData);
 
 
